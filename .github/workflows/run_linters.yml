@@ -63,12 +63,14 @@ jobs:
         run: |
           bash tools/ci/check_grep.sh
           bash modular_doppler/tools/doppler_check_grep.sh # DOPPLER EDIT ADDITION - checking modular_doppler code
+          bash modular_lethal/github_tools/lethal_check_grep.sh # LETHAL ADDITION - check modular lethal code
       - name: Ticked File Enforcement
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: |
           tools/bootstrap/python tools/ticked_file_enforcement/ticked_file_enforcement.py < tools/ticked_file_enforcement/schemas/tgstation_dme.json
           tools/bootstrap/python tools/ticked_file_enforcement/ticked_file_enforcement.py < tools/ticked_file_enforcement/schemas/unit_tests.json
           tools/bootstrap/python tools/ticked_file_enforcement/ticked_file_enforcement.py < tools/ticked_file_enforcement/schemas/modular_doppler.json # DOPPLER EDIT ADDITION - modular tick enforcement
+          tools/bootstrap/python tools/ticked_file_enforcement/ticked_file_enforcement.py < tools/ticked_file_enforcement/schemas/modular_lethal.json # LETHAL ADDITION - check ticked files in lethal code
       - name: Check Define Sanity
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: tools/bootstrap/python -m define_sanity.check
