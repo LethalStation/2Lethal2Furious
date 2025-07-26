@@ -26,7 +26,7 @@ const dependencies: Record<string, any> = await Bun.file("dependencies.sh")
   .then(formatDeps)
   .catch((err) => {
     Juke.logger.error(
-      "Failed to read dependencies.sh, please ensure it exists and is formatted correctly.",
+      "Failed to read dependencies.sh, please ensure it exists and is formatted correctly."
     );
     Juke.logger.error(err);
     throw new Juke.ExitCode(1);
@@ -174,7 +174,8 @@ export const DmTarget = new Juke.Target({
     "html/**",
     "icons/**",
     "interface/**",
-    'modular_doppler/**', // DOPPLER EDIT ADDITION - Making the CBT work.
+    "modular_doppler/**", // DOPPLER EDIT ADDITION - Making the CBT work.
+    "modular_lethal/**", // LETHAL ADDITION - Check lethal code
     "sound/**",
     "tgui/public/tgui.html",
     `${DME_NAME}.dme`,
@@ -226,7 +227,7 @@ export const DmTestTarget = new Juke.Target({
       "-trusted",
       "-verbose",
       "-params",
-      "log-directory=ci",
+      "log-directory=ci"
     );
     Juke.rm("*.test.*");
     try {
@@ -273,7 +274,7 @@ export const AutowikiTarget = new Juke.Target({
       "-trusted",
       "-verbose",
       "-params",
-      "log-directory=ci",
+      "log-directory=ci"
     );
     Juke.rm("*.test.*");
     if (!fs.existsSync("data/autowiki_edits.txt")) {
@@ -306,11 +307,11 @@ export const TgFontTarget = new Juke.Target({
     fs.mkdirSync("tgui/packages/tgfont/static", { recursive: true });
     fs.copyFileSync(
       "tgui/packages/tgfont/dist/tgfont.css",
-      "tgui/packages/tgfont/static/tgfont.css",
+      "tgui/packages/tgfont/static/tgfont.css"
     );
     fs.copyFileSync(
       "tgui/packages/tgfont/dist/tgfont.woff2",
-      "tgui/packages/tgfont/static/tgfont.woff2",
+      "tgui/packages/tgfont/static/tgfont.woff2"
     );
   },
 });
