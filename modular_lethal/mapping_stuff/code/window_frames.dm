@@ -23,7 +23,7 @@
 	base_icon_state = "low_wall"
 	smoothing_flags = SMOOTH_BITMASK|SMOOTH_OBJ
 	smoothing_groups = SMOOTH_GROUP_WINDOW_FRAMES
-	canSmoothWith = SMOOTH_GROUP_WINDOW_FRAMES
+	canSmoothWith = SMOOTH_GROUP_WINDOW_FRAMES + SMOOTH_GROUP_CLOSED_TURFS
 	pass_flags_self = PASSTABLE | LETPASSTHROW | PASSGRILLE | PASSWINDOW
 	opacity = FALSE
 	density = TRUE
