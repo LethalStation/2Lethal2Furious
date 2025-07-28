@@ -470,6 +470,7 @@
 #include "code\__DEFINES\~doppler_defines\vv.dm"
 #include "code\__DEFINES\~doppler_defines\wounds.dm"
 #include "code\__DEFINES\~doppler_defines\traits\declarations.dm"
+#include "code\__DEFINES\~lethal_defines\smoothing.dm"
 #include "code\__HELPERS\_auxtools_api.dm"
 #include "code\__HELPERS\_dreamluau.dm"
 #include "code\__HELPERS\_lists.dm"
@@ -7656,4 +7657,10 @@
 #include "modular_doppler\xenoarch\code\modules\research\xenoarch\xenoarch_machine.dm"
 #include "modular_doppler\xenoarch\code\modules\research\xenoarch\xenoarch_reward.dm"
 #include "modular_doppler\xenoarch\code\modules\research\xenoarch\xenoarch_tool.dm"
+#include "modular_lethal\mapping_stuff\code\floor_sprites.dm"
+#include "modular_lethal\mapping_stuff\code\super_doors.dm"
+#include "modular_lethal\mapping_stuff\code\wall_cladding.dm"
+#include "modular_lethal\mapping_stuff\code\wall_sprites.dm"
+#include "modular_lethal\mapping_stuff\code\window_frames.dm"
+#include "modular_lethal\mapping_stuff\code\windows.dm"
 // END_INCLUDE

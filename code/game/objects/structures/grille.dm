@@ -47,6 +47,8 @@
 		QUEUE_SMOOTH(src)
 
 /obj/structure/grille/update_icon_state()
+	if(!looks_when_damaged) // LETHAL EDIT ADD
+		return ..() // LETHAL EDIT ADD
 	if (broken)
 		icon_state = "broken[base_icon_state]"
 	else
