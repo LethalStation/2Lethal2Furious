@@ -4,7 +4,7 @@
 	power_environ = TRUE
 	power_equip = TRUE
 	power_light = TRUE
-	has_gravity = TRUE
+	default_gravity = STANDARD_GRAVITY
 	ambience_index = AMBIENCE_MAINT
 
 /area/gakster_location/filtre_spawn

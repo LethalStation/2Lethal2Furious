@@ -16,3 +16,21 @@ Fits best in better travelled areas, think like the cover for all the pipes
 and wires and stuff that would be on the wall behind it.
 
 ### Doors
+
+/obj/structure/mineral_door/lethal
+
+Manually operated doors that can be kicked open as well. These should be the
+main door type used around the map, rather than standard airlocks like before.
+
+The stronger and more industrial the door looks, the slower it is to open and
+harder it is to kick down.
+office > normal > industrial
+
+### Window frames
+
+/obj/structure/window_frame
+
+Window frames replace grilles as the base of a window, and are the new spawners
+that should be used for windows.
+See the has_window subtypes of frames for window frames that will spawn with a
+window in them.
