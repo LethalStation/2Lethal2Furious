@@ -5,12 +5,18 @@
 
 /obj/structure/window/reinforced/fulltile
 	icon = 'icons/icon_cutter_deez/windows/reinforced_window.dmi'
+	smoothing_flags = SMOOTH_BITMASK|SMOOTH_OBJ
+	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_CLOSED_TURFS
 
 /obj/structure/window/plasma/fulltile
 	icon = 'icons/icon_cutter_deez/windows/plasma_window.dmi'
+	smoothing_flags = SMOOTH_BITMASK|SMOOTH_OBJ
+	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_CLOSED_TURFS
 
 /obj/structure/window/reinforced/plasma/fulltile
 	icon = 'icons/icon_cutter_deez/windows/rplasma_window.dmi'
+	smoothing_flags = SMOOTH_BITMASK|SMOOTH_OBJ
+	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_CLOSED_TURFS
 
 /obj/structure/grille/window
 	name = "window grille"
