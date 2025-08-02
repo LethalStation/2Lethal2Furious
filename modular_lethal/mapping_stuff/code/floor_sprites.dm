@@ -1,7 +1,7 @@
 #define TG_TILE_FILE 'icons/turf/floors.dmi'
 
 /turf/open/floor/plating
-	icon = 'modular_lethal/mapping_stuff/icons/floors.dmi'
+	icon = 'icons/icon_cutter_deez/rtds_are_idiotic/floors.dmi'
 
 /turf/open/floor/plating/foam
 	icon = TG_TILE_FILE
@@ -19,7 +19,7 @@
 	icon = TG_TILE_FILE
 
 /turf/open/floor/iron
-	icon = 'modular_lethal/mapping_stuff/icons/floors.dmi'
+	icon = 'icons/icon_cutter_deez/rtds_are_idiotic/floors.dmi'
 
 /turf/open/floor/iron/small
 	icon = TG_TILE_FILE
