@@ -249,6 +249,3 @@ Always compile, always use that verb, and always make sure that it works for wha
 #define MINETYPE_NONE "none"
 #define MINETYPE_LAVALAND "lavaland"
 #define MINETYPE_ICE "ice"
-// DOPPLER ADDITION START
-#define MINETYPE_ICELAND "iceland"
-// DOPPLER ADDITION END

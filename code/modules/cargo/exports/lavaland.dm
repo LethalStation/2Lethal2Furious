@@ -14,8 +14,6 @@
 			unit_name = "lava planet artifact"
 		if (MINETYPE_ICE)
 			unit_name = "ice moon artifact"
-		if (MINETYPE_ICELAND)
-			unit_name = "snow artifact"
 
 	if (prefix)
 		unit_name = "[prefix] [unit_name]"
