@@ -7662,9 +7662,13 @@
 #include "modular_lethal\das_lethal\code\entrance_and_exit.dm"
 #include "modular_lethal\das_lethal\code\keycard_doors.dm"
 #include "modular_lethal\mapping_stuff\code\floor_sprites.dm"
+#include "modular_lethal\mapping_stuff\code\light_edits.dm"
 #include "modular_lethal\mapping_stuff\code\super_doors.dm"
 #include "modular_lethal\mapping_stuff\code\wall_cladding.dm"
 #include "modular_lethal\mapping_stuff\code\wall_sprites.dm"
 #include "modular_lethal\mapping_stuff\code\window_frames.dm"
 #include "modular_lethal\mapping_stuff\code\windows.dm"
+#include "modular_lethal\mapping_stuff\code\natural_turfs\floors.dm"
+#include "modular_lethal\mapping_stuff\code\natural_turfs\liquids.dm"
+#include "modular_lethal\mapping_stuff\code\natural_turfs\walls.dm"
 // END_INCLUDE
