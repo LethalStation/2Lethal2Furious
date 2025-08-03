@@ -8,6 +8,6 @@
 /obj/machinery/light/update_overlays()
 	. = ..()
 	if(wall_mounted_northward && (dir == NORTH))
-		pixel_y = 17
+		pixel_y = 16
 	else
 		pixel_y = 0
