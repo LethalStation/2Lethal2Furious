@@ -21,6 +21,18 @@
 /turf/open/floor/plating/elevatorshaft
 	icon = TG_TILE_FILE
 
+/turf/open/floor/engine
+	icon = 'icons/icon_cutter_deez/rtds_are_idiotic/floors.dmi'
+
+/turf/open/floor/engine/cult
+	icon = TG_TILE_FILE
+
+/turf/open/floor/engine/insulation
+	icon = TG_TILE_FILE
+
+/turf/open/floor/wood
+	icon = 'icons/icon_cutter_deez/rtds_are_idiotic/floors.dmi'
+
 /turf/open/floor/iron
 	icon = 'icons/icon_cutter_deez/rtds_are_idiotic/floors.dmi'
 
@@ -45,25 +57,7 @@
 /turf/open/floor/iron/white/herringbone
 	icon = TG_TILE_FILE
 
-/turf/open/floor/iron/cafeteria
-	icon = TG_TILE_FILE
-
 /turf/open/floor/iron/recharge_floor
-	icon = TG_TILE_FILE
-
-/turf/open/floor/iron/smooth
-	icon = TG_TILE_FILE
-
-/turf/open/floor/iron/smooth_edge
-	icon = TG_TILE_FILE
-
-/turf/open/floor/iron/smooth_half
-	icon = TG_TILE_FILE
-
-/turf/open/floor/iron/smooth_corner
-	icon = TG_TILE_FILE
-
-/turf/open/floor/iron/smooth_large
 	icon = TG_TILE_FILE
 
 /turf/open/floor/iron/terracotta
@@ -75,13 +69,7 @@
 /turf/open/floor/iron/chapel
 	icon = TG_TILE_FILE
 
-/turf/open/floor/iron/showroomfloor
-	icon = TG_TILE_FILE
-
 /turf/open/floor/iron/solarpanel
-	icon = TG_TILE_FILE
-
-/turf/open/floor/iron/freezer
 	icon = TG_TILE_FILE
 
 /turf/open/floor/iron/kitchen_coldroom
@@ -109,3 +97,12 @@
 	icon = TG_TILE_FILE
 
 #undef TG_TILE_FILE
+
+/turf/open/floor/catwalk_floor
+	icon = 'icons/icon_cutter_deez/rtds_are_idiotic/catwalk_plating.dmi'
+
+/turf/open/floor/catwalk_floor/colony_fabricator
+	icon = 'icons/turf/floors/catwalk_plating.dmi'
+
+/turf/open/floor/catwalk_floor/titanium
+	icon = 'icons/turf/floors/catwalk_plating.dmi'
