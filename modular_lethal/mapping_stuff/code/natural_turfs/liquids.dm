@@ -5,7 +5,7 @@
 	icon_state = "ammonia-255"
 	base_icon_state = "ammonia"
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_LIQ_AMMONIA
+	smoothing_groups = SMOOTH_GROUP_LIQ_AMMONIA + SMOOTH_GROUP_TURF_OPEN
 	canSmoothWith = SMOOTH_GROUP_LIQ_AMMONIA
 	baseturfs = /turf/open/water/lethal_ammonia
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
@@ -17,7 +17,7 @@
 	icon = 'icons/icon_cutter_deez/natural_floors/ammonia_deep.dmi'
 	icon_state = "ammonia_deep-255"
 	base_icon_state = "ammonia_deep"
-	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_DEEP_AMMONIA
+	smoothing_groups = SMOOTH_GROUP_DEEP_AMMONIA + SMOOTH_GROUP_TURF_OPEN
 	canSmoothWith = SMOOTH_GROUP_DEEP_AMMONIA
 	baseturfs = /turf/open/water/lethal_ammonia/deep
 	immerse_overlay_color = "#222222"
@@ -30,7 +30,7 @@
 	icon_state = "brine-255"
 	base_icon_state = "brine"
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_LIQ_METH
+	smoothing_groups = SMOOTH_GROUP_LIQ_METH + SMOOTH_GROUP_TURF_OPEN
 	canSmoothWith = SMOOTH_GROUP_LIQ_METH
 	baseturfs = /turf/open/water/lethal_methane
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
@@ -42,7 +42,7 @@
 	icon = 'icons/icon_cutter_deez/natural_floors/brine_deep.dmi'
 	icon_state = "brine_deep-255"
 	base_icon_state = "brine_deep"
-	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_DEEP_METH
+	smoothing_groups = SMOOTH_GROUP_DEEP_METH + SMOOTH_GROUP_TURF_OPEN
 	canSmoothWith = SMOOTH_GROUP_DEEP_METH
 	baseturfs = /turf/open/water/lethal_methane/deep
 	immerse_overlay_color = "#3a483d"
@@ -56,7 +56,7 @@
 	icon_state = "ketone-255"
 	base_icon_state = "ketone"
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_LIQ_KETONE
+	smoothing_groups = SMOOTH_GROUP_LIQ_KETONE + SMOOTH_GROUP_TURF_OPEN
 	canSmoothWith = SMOOTH_GROUP_LIQ_KETONE
 	baseturfs = /turf/open/water/lethal_ketone
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
@@ -72,7 +72,7 @@
 	icon = 'icons/icon_cutter_deez/natural_floors/ketone_deep.dmi'
 	icon_state = "ketone_deep-255"
 	base_icon_state = "ketone_deep"
-	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_DEEP_KETONE
+	smoothing_groups = SMOOTH_GROUP_DEEP_KETONE + SMOOTH_GROUP_TURF_OPEN
 	canSmoothWith = SMOOTH_GROUP_DEEP_KETONE
 	baseturfs = /turf/open/water/lethal_ketone/deep
 	immerse_overlay_color = "#51352d"
