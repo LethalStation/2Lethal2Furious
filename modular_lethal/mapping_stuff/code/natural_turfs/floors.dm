@@ -1,0 +1,59 @@
+/turf/open/misc/lethal_snow
+	name = "methane snow"
+	desc = "Powder snow made of a toxic brine of methane, ammonia, and copper salts in water. Please don't melt this in a pot."
+	icon = 'icons/icon_cutter_deez/natural_floors/snow.dmi'
+	icon_state = "snow-255"
+	base_icon_state = "snow"
+	tiled_dirt = FALSE
+	transform = TRANSLATE_MATRIX(-16,-16)
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = SMOOTH_GROUP_METH_SNOW + SMOOTH_GROUP_TURF_OPEN
+	canSmoothWith = SMOOTH_GROUP_METH_SNOW + SMOOTH_GROUP_CLOSED_TURFS
+	layer = MID_TURF_LAYER + 0.03
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/lethal_snow
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+
+/turf/open/misc/lethal_ice
+	name = "methane ice"
+	desc = "Dense ice made of a toxic brine of methane, ammonia, and copper salts in water. Please don't lick it."
+	icon = 'icons/icon_cutter_deez/natural_floors/ice.dmi'
+	icon_state = "ice-255"
+	base_icon_state = "ice"
+	tiled_dirt = FALSE
+	transform = TRANSLATE_MATRIX(-16,-16)
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = SMOOTH_GROUP_METH_ICE + SMOOTH_GROUP_TURF_OPEN
+	canSmoothWith = SMOOTH_GROUP_METH_ICE + SMOOTH_GROUP_METH_SNOW + SMOOTH_GROUP_CLOSED_TURFS
+	layer = MID_TURF_LAYER + 0.02
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/lethal_ice
+	footstep = FOOTSTEP_FLOOR
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+
+/turf/open/misc/lethal_fulgurite
+	name = "nuclear fulgurite"
+	desc = "Nuclear glass formed by the bomb that made this fine spot of Pluto into a crater."
+	icon = 'icons/icon_cutter_deez/natural_floors/rock.dmi'
+	icon_state = "rock-255"
+	base_icon_state = "rock"
+	tiled_dirt = FALSE
+	transform = TRANSLATE_MATRIX(-16,-16)
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = SMOOTH_GROUP_FULGURITE + SMOOTH_GROUP_TURF_OPEN
+	canSmoothWith = SMOOTH_GROUP_FULGURITE + SMOOTH_GROUP_METH_ICE + SMOOTH_GROUP_METH_SNOW + SMOOTH_GROUP_CLOSED_TURFS
+	layer = MID_TURF_LAYER + 0.01
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/lethal_fulgurite
+	footstep = FOOTSTEP_FLOOR
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY

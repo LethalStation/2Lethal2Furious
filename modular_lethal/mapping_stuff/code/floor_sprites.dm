@@ -1,5 +1,8 @@
 #define TG_TILE_FILE 'icons/turf/floors.dmi'
 
+/turf/open/indestructible/plating
+	icon = 'icons/icon_cutter_deez/rtds_are_idiotic/floors.dmi'
+
 /turf/open/floor/plating
 	icon = 'icons/icon_cutter_deez/rtds_are_idiotic/floors.dmi'
 
