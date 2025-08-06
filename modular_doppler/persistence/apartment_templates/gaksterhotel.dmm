@@ -1,0 +1,526 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/dim/directional/east,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"bR" = (
+/turf/open/space/bluespace,
+/area/misc/hilbertshotel)
+"cT" = (
+/obj/effect/decal/cleanable/food/tomato_smudge,
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"dS" = (
+/obj/machinery/light/small/broken/directional/south,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"eK" = (
+/obj/structure/table,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"eM" = (
+/obj/structure/table,
+/obj/machinery/light/small/dim/directional/north,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"fr" = (
+/obj/structure/broken_flooring/pile/directional/north,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"he" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"ie" = (
+/obj/effect/decal/cleanable/blood/gibs/old,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"iF" = (
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/item/broken_bottle,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"jn" = (
+/turf/closed/indestructible/reinforced,
+/area/misc/hilbertshotel)
+"kt" = (
+/obj/structure/mineral_door/lethal/standard,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"kE" = (
+/turf/closed/indestructible/hoteldoor,
+/area/misc/hilbertshotel)
+"kT" = (
+/obj/machinery/light/small/dim/directional/east,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"lx" = (
+/obj/structure/broken_flooring/pile/directional/east,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"na" = (
+/obj/structure/table/wood,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"nN" = (
+/obj/machinery/light_switch/directional/east,
+/obj/effect/decal/cleanable/blood/gibs/robot_debris,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"of" = (
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"pB" = (
+/obj/structure/rack/wooden,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"pU" = (
+/obj/structure/table,
+/obj/machinery/microwave{
+	pixel_y = 8
+	},
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"qt" = (
+/obj/machinery/light/small/broken/directional/south,
+/obj/effect/spawner/random/trash/mess,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"rR" = (
+/obj/structure/disposalpipe/broken,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"su" = (
+/obj/effect/decal/cleanable/food/flour,
+/obj/structure/closet/mini_fridge/grimy,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"uv" = (
+/obj/structure/rack/wooden,
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"vx" = (
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
+/obj/structure/window/reinforced/tinted/spawner/directional/north,
+/obj/item/soap/deluxe,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"vC" = (
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"vO" = (
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"we" = (
+/obj/structure/rack,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"yh" = (
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"yl" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"yy" = (
+/obj/structure/broken_flooring/pile/directional/west,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"AC" = (
+/obj/item/bikehorn/rubberducky,
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"BO" = (
+/obj/structure/chair/sofa/right/brown,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"Ct" = (
+/obj/structure/chair/sofa/left/brown,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"Cw" = (
+/obj/machinery/light/small/broken/directional/west,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"Eb" = (
+/turf/closed/wall,
+/area/misc/hilbertshotel)
+"El" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"Fq" = (
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"Ho" = (
+/obj/effect/spawner/random/trash/cigbutt,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"IN" = (
+/obj/item/chair/plastic,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"Jh" = (
+/obj/effect/decal/cleanable/plastic,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"Ka" = (
+/obj/machinery/light/small/directional/south,
+/obj/structure/table,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"Kl" = (
+/obj/machinery/light/small/dim/directional/west,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"MH" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/machinery/light/small/dim/directional/east,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"Nx" = (
+/obj/structure/window/reinforced/tinted/spawner/directional/north,
+/obj/structure/moisture_trap,
+/obj/machinery/light/small/red/dim/directional/east,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"QR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"RR" = (
+/obj/structure/curtain,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"UA" = (
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"Vl" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"VH" = (
+/obj/structure/sink/directional/east,
+/obj/structure/mirror/directional/west,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/random/trash/grime,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"VN" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"Wl" = (
+/obj/structure/chair/plastic{
+	dir = 4
+	},
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"WA" = (
+/obj/structure/bed/maint,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+"XZ" = (
+/obj/structure/sink/kitchen/directional/east{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/misc/hilbertshotel)
+"Yl" = (
+/obj/machinery/shower/directional/west,
+/obj/effect/spawner/random/trash/grime,
+/turf/open/indestructible/plating,
+/area/misc/hilbertshotel)
+"ZG" = (
+/obj/effect/spawner/random/trash/crushed_can,
+/turf/open/indestructible/dark/textured,
+/area/misc/hilbertshotel)
+
+(1,1,1) = {"
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+"}
+(2,1,1) = {"
+bR
+jn
+jn
+jn
+jn
+jn
+kE
+jn
+jn
+jn
+jn
+jn
+jn
+jn
+bR
+"}
+(3,1,1) = {"
+bR
+jn
+pB
+Vl
+UA
+Kl
+yh
+yh
+QR
+Cw
+fr
+El
+of
+jn
+bR
+"}
+(4,1,1) = {"
+bR
+jn
+uv
+UA
+iF
+yh
+yh
+yh
+BO
+of
+Ho
+of
+rR
+jn
+bR
+"}
+(5,1,1) = {"
+bR
+jn
+eM
+UA
+eK
+yh
+qt
+VN
+Ct
+yy
+Jh
+lx
+El
+jn
+bR
+"}
+(6,1,1) = {"
+bR
+jn
+pU
+cT
+UA
+yh
+yh
+yh
+yh
+yh
+of
+of
+dS
+jn
+bR
+"}
+(7,1,1) = {"
+bR
+jn
+su
+UA
+Ka
+VN
+yh
+yh
+QR
+yh
+Wl
+yh
+of
+jn
+bR
+"}
+(8,1,1) = {"
+bR
+jn
+he
+vC
+eK
+yh
+nN
+yh
+yh
+yh
+na
+yh
+yh
+jn
+bR
+"}
+(9,1,1) = {"
+bR
+jn
+Eb
+XZ
+Eb
+Eb
+Eb
+yh
+yh
+yl
+IN
+yh
+yh
+jn
+bR
+"}
+(10,1,1) = {"
+bR
+jn
+vO
+yh
+yh
+yh
+Eb
+yh
+yh
+kT
+yh
+yh
+VN
+jn
+bR
+"}
+(11,1,1) = {"
+bR
+jn
+WA
+QR
+yl
+QR
+Eb
+yh
+Eb
+Eb
+Eb
+Eb
+Eb
+jn
+bR
+"}
+(12,1,1) = {"
+bR
+jn
+yh
+yh
+yh
+yh
+kt
+yh
+kt
+yh
+VH
+yh
+of
+jn
+bR
+"}
+(13,1,1) = {"
+bR
+jn
+yh
+ZG
+yh
+yh
+Eb
+yl
+Eb
+ie
+Fq
+vx
+RR
+jn
+bR
+"}
+(14,1,1) = {"
+bR
+jn
+we
+yh
+bB
+yh
+Eb
+MH
+Eb
+yh
+AC
+Nx
+Yl
+jn
+bR
+"}
+(15,1,1) = {"
+bR
+jn
+jn
+jn
+jn
+jn
+jn
+jn
+jn
+jn
+jn
+jn
+jn
+jn
+bR
+"}
+(16,1,1) = {"
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+"}
