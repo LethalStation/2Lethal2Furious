@@ -1,0 +1,83 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/open/indestructible/dark/textured,
+/area/shuttle)
+"b" = (
+/turf/closed/indestructible/riveted,
+/area/shuttle)
+"i" = (
+/obj/machinery/computer/shuttle,
+/turf/open/indestructible/dark/textured,
+/area/shuttle)
+"p" = (
+/obj/docking_port/mobile,
+/turf/open/indestructible/dark/textured,
+/area/shuttle)
+"D" = (
+/obj/machinery/door/poddoor/preopen,
+/turf/open/indestructible/dark/textured,
+/area/shuttle)
+
+(1,1,1) = {"
+b
+b
+D
+D
+D
+b
+b
+"}
+(2,1,1) = {"
+b
+a
+a
+a
+a
+a
+b
+"}
+(3,1,1) = {"
+D
+a
+b
+a
+a
+a
+D
+"}
+(4,1,1) = {"
+D
+a
+i
+p
+a
+a
+D
+"}
+(5,1,1) = {"
+D
+a
+b
+a
+a
+a
+D
+"}
+(6,1,1) = {"
+b
+a
+a
+a
+a
+a
+b
+"}
+(7,1,1) = {"
+b
+b
+D
+D
+D
+b
+b
+"}
