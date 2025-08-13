@@ -7514,6 +7514,7 @@
 #include "modular_doppler\objects_and_structures\code\towel_bins.dm"
 #include "modular_doppler\objects_and_structures\code\watercloset.dm"
 #include "modular_doppler\pacificationcollar\code\shockcollar.dm"
+#include "modular_doppler\persistence\code\atom_save_data.dm"
 #include "modular_doppler\persistence\code\globals.dm"
 #include "modular_doppler\persistence\code\kiosk.dm"
 #include "modular_doppler\persistence\code\map_templates.dm"
