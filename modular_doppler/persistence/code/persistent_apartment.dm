@@ -26,8 +26,8 @@
 	owner_client = client_of_owner
 	owner_ckey = client_of_owner.ckey
 	pref_slot = client_of_owner.prefs?.default_slot
-
-	var/apartment_path = "data/player_saves/[owner_ckey[1]]/[owner_ckey]/[pref_slot]/saved_apartment.dmm"
+	var/base_save_dir = "data/player_saves/[owner_ckey[1]]/[owner_ckey]/[pref_slot]/"
+	var/apartment_path = base_save_dir+"saved_apartment.dmm"
 	if (rustg_file_exists(apartment_path))
 		apartment_template = new /datum/map_template(apartment_path, "Pentola Apartment")
 		message_admins("Attempting to load [owner_ckey]:[pref_slot] persistent apartment from [apartment_path]...")
@@ -43,12 +43,21 @@
 	)
 	if (!apartment_turf_reservation)
 		CRASH("failed to reserve area for apartment loading")
+	// load in our document blob first, if applicable
+	var/document_blob_path = base_save_dir+"exported_document_blob.json"
+	if (rustg_file_exists(document_blob_path))
+		// hooray we have one!!! YEAH!!!! let's trycatch this so SHIT DOESN'T FUCKING DIE if the json sucks from someone breaking it somehow, user input and all that
+		try
+			GLOB.map_export_document_blob = json_decode(file2text(document_blob_path))
+		catch(var/exception/e)
+			message_admins("Document blob import failed ([e]) (the JSON is shit somehow), continuing to load apartment")
+
 	var/turf/bottom_left = apartment_turf_reservation.bottom_left_turfs[1]
 	apartment_template.load(bottom_left, centered = FALSE)
 	// assuming we succeed with this, we should also clear the map_export_lookup global list 5 seconds or so after the template loading succeeds, since we don't need those pairings anymore.
-	// we need to do some funny area application stuff
+	// TODO: we need to do some funny area application stuff & renaming
 	for(var/turf/apartment_turf as anything in apartment_turf_reservation.reserved_turfs)
-		if (is_safe_turf(apartment_turf)) // this is broken at the moment
+		if (is_safe_turf(apartment_turf)) // this is broken at the moment for some reason??
 			entry_turf = apartment_turf
 			break
 	loaded = TRUE
@@ -66,12 +75,20 @@
 	if (!apartment_turf_reservation)
 		CRASH("attempted to save a persistent apartment with no turf reservation somehow")
 
+	GLOB.map_export_document_blob = list() // reset the export blob since we're about to use it
 	var/turf/first_corner = apartment_turf_reservation.bottom_left_turfs[1]
 	var/turf/second_corner = apartment_turf_reservation.top_right_turfs[1]
 	var/map_data = serializeMapAndContents(first_corner, second_corner, apartment_turf_reservation)
-	var/file_path = "data/player_saves/[owner_ckey[1]]/[owner_ckey]/[pref_slot]/saved_apartment.dmm"
+	var/base_save_dir = "data/player_saves/[owner_ckey[1]]/[owner_ckey]/[pref_slot]/"
 
-	rustg_file_write(map_data, file_path)
+	rustg_file_write(map_data, base_save_dir+"saved_apartment.dmm")
+
+	if (LAZYLEN(GLOB.map_export_document_blob)) // this gets written during write_map in serializeMapAndContents above as needed, so it may be 0
+		// we also now need to save the document/paper blob to disk in preparation for future loading
+		var/blob_to_save = json_encode(GLOB.map_export_document_blob)
+		rustg_file_write(blob_to_save, base_save_dir+"exported_document_blob.json")
+		message_admins("...writing [LAZYLEN(GLOB.map_export_document_blob)] document entries to file.")
+
 	message_admins("Persistent apartment ([owner_ckey]:[pref_slot]) successfully saved.")
 
 /datum/persistent_apartment/Del()
@@ -84,9 +101,8 @@
 	if (apartment_turf_reservation)
 		apartment_turf_reservation.Release()
 		QDEL_NULL(apartment_turf_reservation)
-	if (owner_client)
-		GLOB.persistent_apartments.Remove(owner_client)
-		owner_client = null
+	if (LAZYLEN(GLOB.persistent_apartments) && owner_ckey && pref_slot)
+		GLOB.persistent_apartments.Remove("[owner_ckey]:[pref_slot]")
 	if (apartment_area)
 		QDEL_NULL(apartment_area)
 	if (actions)

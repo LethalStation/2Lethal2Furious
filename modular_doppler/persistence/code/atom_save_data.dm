@@ -1,6 +1,7 @@
 GLOBAL_LIST_EMPTY(map_export_lookup) // used to link atom_storage hashes and other things temporarily, assoc list (hash -> direct (newly made from import) object ref)
 GLOBAL_VAR_INIT(map_export_storage_loads, 0)
 GLOBAL_VAR_INIT(map_export_moves_to_storage, 0)
+GLOBAL_LIST_EMPTY(map_export_document_blob) // contains paper/written document data prepared during the export process, saved to a file, resets on each use
 
 /atom/
 	var/export_lookup // MAP EXPORT ONLY: are we linked to an object that should be in the map_export lookup table?
@@ -61,14 +62,8 @@ GLOBAL_VAR_INIT(map_export_moves_to_storage, 0)
 	var/maxy = max(cornerA.y, cornerB.y)
 	var/maxz = max(cornerA.z, cornerB.z)
 
-	//FUN EXTRA SHIT!!!
-	// - FIND EVERY ATOM STORAGE WITH STUFF IN THEM IN THESE BOUNDS.
-	// - ASSIGN EVERY ATOM THAT HAS STUFF IN IT A UNIQUE HASH.
-	// - POP OPEN EVERY ATOM STORAGE AND SPILL ITS CONTENTS ONTO ITS BASE LOC (TURF).
-	// - TAG EVERY ITEM WE SPILL OUT WITH THE SOURCE ATOM'S HASH THAT WE ASSIGNED EARLIER.
-	// - during initialize we will check to see if there's a matching lookup hash. if there is, we will force move everything into the first object we find that matches our lookup hash's storage
-
-	//you know technically we can just iterate through the reservation's turfs...
+	// we now meander through all of our reservation's turfs, eject any objects in non-turf locs onto their host turf
+	// and then mark them for loading & readding later
 	for(var/turf/the_turf in reserve.reserved_turfs)
 		if (the_turf)
 			for (var/atom/thing as anything in the_turf.contents)
@@ -79,11 +74,24 @@ GLOBAL_VAR_INIT(map_export_moves_to_storage, 0)
 					our_locker.export_master = generate_hash()
 					our_locker.export_dump_contents(the_turf)
 
-
+	// export the map
 	var/dat = write_map(minx, miny, minz, maxx, maxy, maxz, save_flag, shuttle_flag)
 	GLOB.map_writing_running = FALSE
 
 	return dat
+
+// if we're an exported object, we don't want to populate with what we should have on mapload - what we've got saved/linked to us is enough.
+/obj/item/storage/PopulateContents()
+	if (export_master) // we have already been earmarked for shit so don't spawn in whatever our crap's supposed to be
+		return
+
+	return ..()
+
+/obj/structure/closet/PopulateContents()
+	if (export_master)
+		return
+
+	return ..()
 
 /obj/structure/closet/proc/export_dump_contents(turf/place_turf)
 	if (!place_turf || !export_master)
@@ -100,22 +108,7 @@ GLOBAL_VAR_INIT(map_export_moves_to_storage, 0)
 
 // Contains a bunch of additional overloads to enhance the map import/export experience.
 
-//the map exporter calls get_save_vars() on anything it tries to save, and will attempt to export those fields into the map save
-// theoretically this means we can add overloaded fields/variables on objects, making unique use of the /datum/serialize_list and other procs to save any special contents to said field, then overload an init to deserialize their special datum contents from said field and reload the object as it was when we saved it
-// this is most applicable for things with odd vars like written documents and photos and reagent containers. possibly mechs? modsuits? i dunno, it depends how far down we wanna go with this
-// this will be big and clunky and is really not efficient compared to doing manual db read/writes for stuff but it's also likely the quickest way to get this shit rolling
-
-// PHOTOS & PICTURES:
-// for /datum/picture you can likely just call log_to_file then ensure logpath is kept in the atom. at least for loose photos and pinned ones
-// idk what we do for ones attached to documents. this shit gonna get pretty crazy pretty quick
-
 // TODO: make sure when executing relocation via map_export_lookup hashes that you only do so after a timer so we can be sure the thing is still in the world
-
-// TODO: we can probably do some RATCHET ASS SHIT where we check for atoms or objects with atom_storage objects, then make them eject their contents onto their tile
-// but with a lookup var assigned to them that infers their parent. if they're on the base turf, we can check after they've all initialized after 5 seconds or so,
-// find their newly spawned object in the map_export_lookup table then move anything that was inside it back where it's supposed to be
-// as long as we go as deep as we possibly can (up to 2 bags deep should catch 99% of everything then) we should be gucchi
-
 
 // FOOD ITEMS: save number of bites taken out of it & its way towards decomposition. we may also need to save the existing reagents depending how much i give a shit
 
@@ -170,36 +163,29 @@ GLOBAL_VAR_INIT(map_export_moves_to_storage, 0)
 	. += NAMEOF(src, saved_picture_id)
 	return .
 
-// DOCUMENTS & PAPER
+// DOCUMENTS & PAPER - CURRENTLY SORT OF WORKS
 /obj/item/paper
 	/// USED EXCLUSIVELY FOR RECONSTRUCTING DOCUMENTS AFTER MAP EXPORT
-	var/saved_paperdata // Do we have saved paper data to export?
+	var/export_loadblob // If this is set to anything, we will attempt to load in our data contents from a JSON blob made during the export process.
 
 /obj/item/paper/get_save_vars()
 	. = ..()
+
 	if (LAZYLEN(raw_text_inputs) || LAZYLEN(raw_stamp_data) || LAZYLEN(raw_field_input_data))
-		saved_paperdata = json_encode(convert_to_data())
-		. += NAMEOF(src, saved_paperdata)
+		// assign ourselves an export hash and then add our data to the list
+		export_loadblob = generate_hash()
+		LAZYADDASSOCLIST(GLOB.map_export_document_blob, export_loadblob, convert_to_data())
+
+	. += NAMEOF(src, export_loadblob)
 	return .
 
 /obj/item/paper/Initialize(mapload)
 	. = ..()
-	if (saved_paperdata)
-		var/list/our_data = json_decode(saved_paperdata) // okay well this doesn't seem to work
-		// we're probably gonna need to try adding proper serialize_list stuff for all the paper datums
-		// set the whole thing up so we can serialize it to a blob, save the blob, then load the blob
-		if (our_data)
-			write_from_data(our_data)
-			saved_paperdata = null
-		else
-			message_admins("MAP IMPORT: Failed to load paper data from disk. Bummer. (decode)")
+	if (export_loadblob && GLOB.map_export_document_blob[export_loadblob])
+		// we have an export hash and data in the imported document blob, so reconstitute this object with that data
+		write_from_data(GLOB.map_export_document_blob[export_loadblob][1]) // its that shrimple
+		update_icon_state()
+		update_appearance()
 
 // TODO:
-// consider how bags are gonna work
 // do obj/machinery need special considerations?
-
-
-// weird types to serialize:
-// documents contain text input datums that need to have serialize_list set - NOPE NEVERMIND
-// pictures already serialize_list properly but do they actually save photos to disk? - THEY DO AND WE SHOULD HAVE AN EZ WAY TO DO THIS
-// reagent containers need to serialize their reagents value - WRITE A THING TO JSON_ENCODE THE REAGENTS_LIST THEN LOAD IT
