@@ -52,6 +52,13 @@
 		catch(var/exception/e)
 			message_admins("Document blob import failed ([e]) (the JSON is shit somehow), continuing to load apartment")
 
+	var/reagents_blob_path = base_save_dir+"exported_reagents_blob.json"
+	if (rustg_file_exists(reagents_blob_path))
+		try
+			GLOB.map_export_reagents_blob = json_decode(file2text(reagents_blob_path))
+		catch(var/exception/e)
+			message_admins("Reagents blob import failed ([e]) (the JSON is shit somehow), continuing to load apartment")
+
 	var/turf/bottom_left = apartment_turf_reservation.bottom_left_turfs[1]
 	apartment_template.load(bottom_left, centered = FALSE)
 	// assuming we succeed with this, we should also clear the map_export_lookup global list 5 seconds or so after the template loading succeeds, since we don't need those pairings anymore.
@@ -76,6 +83,8 @@
 		CRASH("attempted to save a persistent apartment with no turf reservation somehow")
 
 	GLOB.map_export_document_blob = list() // reset the export blob since we're about to use it
+	GLOB.map_export_reagents_blob = list() // do the same for our reagents blob
+
 	var/turf/first_corner = apartment_turf_reservation.bottom_left_turfs[1]
 	var/turf/second_corner = apartment_turf_reservation.top_right_turfs[1]
 	var/map_data = serializeMapAndContents(first_corner, second_corner, apartment_turf_reservation)
@@ -87,7 +96,12 @@
 		// we also now need to save the document/paper blob to disk in preparation for future loading
 		var/blob_to_save = json_encode(GLOB.map_export_document_blob)
 		rustg_file_write(blob_to_save, base_save_dir+"exported_document_blob.json")
-		message_admins("...writing [LAZYLEN(GLOB.map_export_document_blob)] document entries to file.")
+		message_admins("...written [LAZYLEN(GLOB.map_export_document_blob)] document entries to file.")
+
+	if (LAZYLEN(GLOB.map_export_reagents_blob))
+		var/reagent_blob_to_save = json_encode(GLOB.map_export_reagents_blob)
+		rustg_file_write(reagent_blob_to_save, base_save_dir+"exported_reagents_blob.json")
+		message_admins("...written [LAZYLEN(GLOB.map_export_reagents_blob)] reagent containers to file.")
 
 	message_admins("Persistent apartment ([owner_ckey]:[pref_slot]) successfully saved.")
 

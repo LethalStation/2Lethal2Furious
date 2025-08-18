@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(map_export_lookup) // used to link atom_storage hashes and oth
 GLOBAL_VAR_INIT(map_export_storage_loads, 0)
 GLOBAL_VAR_INIT(map_export_moves_to_storage, 0)
 GLOBAL_LIST_EMPTY(map_export_document_blob) // contains paper/written document data prepared during the export process, saved to a file, resets on each use
-
+GLOBAL_LIST_EMPTY(map_export_reagents_blob) // contains blobs of serialized /datum/reagents linked to export_master keys as an assoc list
 /atom/
 	var/export_lookup // MAP EXPORT ONLY: are we linked to an object that should be in the map_export lookup table?
 	var/export_master // MAP EXPORT ONLY: we had stuff in our atom_storage, and this value is now a hash on GLOB.map_export_lookup that other free items use to figure out that they need to go into us.
@@ -19,6 +19,14 @@ GLOBAL_LIST_EMPTY(map_export_document_blob) // contains paper/written document d
 		// we might also be a parent, in which case, we need to register ourselves with the export glob
 		LAZYADDASSOC(GLOB.map_export_lookup, export_master, src)
 		GLOB.map_export_storage_loads += 1
+		// we may also have reagents, so we need to check the global reagents export blob to see if we're in there
+		// if we are, reconstruct our .reagents stuff based on on what we have in the blob
+		if (GLOB.map_export_reagents_blob[export_master])
+			var/datum/reagents/import_reagents = new
+			if (!import_reagents.deserialize_list(GLOB.map_export_reagents_blob[export_master]))
+				message_admins("MAP IMPORT: failed to deserialize reagents blob for [src] ([export_master])")
+			else
+				reagents = import_reagents
 	if (export_lookup)
 		// we expect to be shunted inside a new object created with an export_master key, so we assign our special element (which waits for us and does the moving)
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(export_move_atom_to_master), src), 5 SECONDS) // we should probably replace this with a signal or something man
@@ -31,6 +39,7 @@ GLOBAL_LIST_EMPTY(map_export_document_blob) // contains paper/written document d
 			GLOB.map_export_moves_to_storage += 1
 			thing.export_lookup = null
 		else
+			// ok so this is basically an error that happens exclusively when saves *don't* happen. it shouldn't happen any other time
 			message_admins("MAP IMPORT: Tried to move into storage via lookup but couldn't find a master...")
 
 /proc/cascade_storage_lookup(atom/container, turf/target_turf)
@@ -187,5 +196,76 @@ GLOBAL_LIST_EMPTY(map_export_document_blob) // contains paper/written document d
 		update_icon_state()
 		update_appearance()
 
+// REAGENTS (chemicals and shit)
+// little more complicated: need to implement serialize_list/deserialize_list for things we want to save
+// then export serialize_list content associated with an export_master hash
+// then if our atom has any reagents we care about, we need to export it to a global reagents blob (complete with export_master hash)
+// on atom initialize, check if our export_master value is in the global reagents blob, and if it is, repopulate it
+
+/datum/reagents/serialize_list(list/options, list/semvers)
+	. = ..()
+	// may as well do this in assoc list form i guess?
+	.["reagent_list"] = list()
+	// per reagent in the list, save only the shit we care about - we'll reassemble during deserialize_list
+	for(var/datum/reagent/reagent as anything in reagent_list)
+		.["reagent_list"][reagent.type] = list()
+		.["reagent_list"][reagent.type]["volume"] = reagent.volume
+		.["reagent_list"][reagent.type]["ph"] = reagent.ph
+		.["reagent_list"][reagent.type]["purity"] = reagent.purity
+		.["reagent_list"][reagent.type]["color"] = reagent.color
+
+	.["chem_temp"] = chem_temp
+	.["ph"] = ph
+	.["flags"] = flags
+	.["total_volume"] = total_volume
+	.["maximum_volume"] = maximum_volume
+
+	SET_SERIALIZATION_SEMVER(semvers, "1.0.0")
+	return .
+
+/datum/reagents/deserialize_list(list/input, list/options)
+	. = ..()
+
+	if (!.)
+		return .
+
+	if (!input["reagent_list"])
+		return FALSE
+
+	for(var/reagent_type as anything in input["reagent_list"])
+		var/rpath = text2path(reagent_type)
+		var/datum/reagent/new_reagent = new rpath
+		if (new_reagent)
+			new_reagent.volume = input["reagent_list"][reagent_type]["volume"]
+			new_reagent.ph = input["reagent_list"][reagent_type]["ph"]
+			new_reagent.purity = input["reagent_list"][reagent_type]["purity"]
+			new_reagent.color = input["reagent_list"][reagent_type]["color"]
+			reagent_list += new_reagent
+
+	chem_temp = input["chem_temp"]
+	ph = input["ph"]
+	flags = input["flags"]
+	total_volume = input["total_volume"]
+	maximum_volume = input["maximum_volume"]
+
+	update_total()
+	return TRUE
+
+/atom/get_save_vars()
+	. = ..()
+	if (reagents && LAZYLEN(reagents.reagent_list))
+		// we have some reagent content to add to the principle blob
+		if (!export_master)
+			export_master = generate_hash()
+		LAZYADDASSOCLIST(GLOB.map_export_reagents_blob, export_master, reagents.serialize_list(semvers = list()))
+
 // TODO:
 // do obj/machinery need special considerations?
+// upgraded parts for obj/structures?
+// reagents (should be able to use the loadblob premise a la paper just with add_reagent reconstruction for no_react)
+// above will also need PopulateContents overriding
+
+//pretzel wants:
+// pizza boxes
+// safes
+// make sure money also works
