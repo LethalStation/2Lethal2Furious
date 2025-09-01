@@ -45,6 +45,10 @@
 		/obj/item/ammo_box/magazine/ammo_stack/c980/prefilled/phosphor = 1,
 		/obj/item/ammo_box/magazine/ammo_stack/c980/prefilled/sabot = 1,
 		/obj/item/ammo_box/magazine/ammo_stack/c980/prefilled/smoke = 2,
+		/obj/item/ammo_box/magazine/ammo_stack/c25euro/full = 2,
+		/obj/item/ammo_box/magazine/ammo_stack/c585naraka/full = 2,
+		/obj/item/ammo_box/magazine/ammo_stack/c6ng/full = 2,
+		/obj/item/ammo_box/magazine/ammo_stack/c34nb/full = 2,
 	)
 
 // Magazines
@@ -68,6 +72,12 @@
 		/obj/item/ammo_box/magazine/c980_grenade/chill_out = 2,
 		/obj/item/ammo_box/magazine/c980_grenade/drum/chill_out = 1,
 		/obj/item/ammo_box/magazine/smartgun = 2,
+		/obj/item/ammo_box/magazine/marcielle = 2,
+		/obj/item/ammo_box/magazine/marcielle/special = 1,
+		/obj/item/ammo_box/magazine/marcielle/squash = 1,
+		/obj/item/ammo_box/magazine/wt550m9 = 2,
+		/obj/item/ammo_box/magazine/wt550m9/wtap = 1,
+		/obj/item/ammo_box/magazine/wt550m9/wtic = 1,
 	)
 
 // The weapons themselves
@@ -77,19 +87,19 @@
 	icon = 'modular_lethal/epic_loot/icons/epic_loot.dmi'
 	icon_state = "random_common_gun_blue"
 	loot = list(
-		/obj/item/gun/ballistic/revolver/shotgun_revolver = 3,
+		/obj/item/gun/ballistic/revolver/shotgun_revolver = 2,
 		/obj/item/gun/ballistic/automatic/xhihao_smg = 2,
 		/obj/item/gun/ballistic/automatic/sol_rifle = 2,
 		/obj/item/gun/ballistic/automatic/sol_rifle/evil = 2,
-		/obj/item/gun/ballistic/revolver/sol = 3,
-		/obj/item/gun/ballistic/marsian_super_rifle = 3,
-		/obj/item/gun/ballistic/automatic/pistol/plasma_marksman = 3,
+		/obj/item/gun/ballistic/revolver/sol = 2,
+		/obj/item/gun/ballistic/marsian_super_rifle = 2,
+		/obj/item/gun/ballistic/automatic/pistol/plasma_marksman = 2,
 		/obj/item/gun/ballistic/automatic/karim = 1,
 		/obj/item/gun/ballistic/automatic/sol_grenade_launcher = 1,
 		/obj/item/gun/ballistic/automatic/sol_grenade_launcher/evil = 1,
 		/obj/item/gun/ballistic/automatic/lanca = 1,
-		/obj/item/gun/ballistic/automatic/pistol/sol = 3,
-		/obj/item/gun/ballistic/automatic/pistol/sol/evil = 3,
+		/obj/item/gun/ballistic/automatic/pistol/sol = 2,
+		/obj/item/gun/ballistic/automatic/pistol/sol/evil = 2,
 		/obj/item/gun/ballistic/automatic/miecz = 2,
 		/obj/item/gun/ballistic/automatic/nomi_shotgun = 1,
 		/obj/item/gun/ballistic/rifle/osako = 2,
@@ -105,6 +115,14 @@
 		/obj/item/gun/ballistic/revolver/takbok = 2,
 		/obj/item/gun/ballistic/automatic/suppressed_rifle = 1,
 		/obj/item/gun/ballistic/automatic/pistol/weevil = 2,
+		/obj/item/gun/ballistic/automatic/wt550 = 2,
+		/obj/item/gun/ballistic/automatic/marcielle = 2,
+		/obj/item/gun/ballistic/automatic/marcielle/sport = 2,
+		/obj/item/gun/ballistic/shotgun/riot = 2,
+		/obj/item/gun/ballistic/shotgun/automatic = 1,
+		/obj/item/gun/ballistic/shotgun/automatic/combat/compact = 1,
+		/obj/item/gun/ballistic/revolver/c38/detective = 2,
+		/obj/item/gun/ballistic/rifle/crash = 2,
 	)
 
 // Got a present for ya
