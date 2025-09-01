@@ -64,7 +64,7 @@
 /datum/outfit/job/gakster/proc/make_secure_container(mob/living/carbon/human/spawned_mob)
 	if(!spawned_mob.ckey)
 		return
-	var/obj/new_secure_container = new /obj/item/storage/toolbox/guncase/nova/pistol/trappiste_small_case/secure_container(get_turf(spawned_mob), spawned_mob.ckey)
+	var/obj/new_secure_container = new /obj/item/storage/toolbox/guncase/doppla/pistol/trappiste_small_case/empty/secure_container(get_turf(spawned_mob), spawned_mob.ckey)
 	spawned_mob.put_in_hands(new_secure_container)
 
 /datum/outfit/plasmaman/gakster
