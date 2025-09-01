@@ -29,7 +29,7 @@
 	wound = WOUND_ARMOR_HIGH
 
 /obj/item/flashlight/seclite/green
-	name = "filtre helmet light"
+	name = "filtre suit light"
 	desc = "The inbuilt light of a filtre's helmet, it's green because it looks cool."
 	light_color = "#77bd5d"
 

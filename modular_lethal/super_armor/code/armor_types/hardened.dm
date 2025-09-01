@@ -60,11 +60,12 @@
 		combine in such a way that bullets lose much of their armor penetrating energy before any damage can be done, rather than penetrate into it."
 	icon = 'modular_lethal/super_armor/icons/armor.dmi'
 	icon_state = "enclosed_standard"
+	base_icon_state = "enclosed_standard"
 	worn_icon = 'modular_lethal/super_armor/icons/armor_worn.dmi'
 	inhand_icon_state = "helmet"
 	armor_type = /datum/armor/armor_sf_hardened
-	toggle_message = "You extend the visor on"
-	alt_toggle_message = "You retract the visor on"
+	toggle_message = "You extend the visor"
+	alt_toggle_message = "You retract the visor"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
@@ -76,7 +77,6 @@
 
 /obj/item/clothing/head/helmet/toggleable/sf_hardened/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text, final_block_chance, damage, attack_type, damage_type)
 	. = ..()
-
 	if(istype(hitby, /obj/projectile))
 		var/obj/projectile/incoming_projectile = hitby
 		incoming_projectile.armour_penetration = 0
@@ -102,3 +102,4 @@
 		combine in such a way that bullets lose much of their armor penetrating energy before any damage can be done, rather than penetrate into it. \
 		This one has a red stripe down the front."
 	icon_state = "enclosed_emt"
+	base_icon_state = "enclosed_emt"
