@@ -40,7 +40,7 @@
 	uniform = /obj/item/clothing/under/frontier_colonist
 	box = null
 	backpack_contents = list(
-		/obj/item/gakster_phone = 1,
+		/obj/item/brick_phone_scryer/loaded/antag = 1,
 		/obj/item/reagent_containers/hypospray/medipen/deforest/captagon = 1,
 	)
 	belt = null

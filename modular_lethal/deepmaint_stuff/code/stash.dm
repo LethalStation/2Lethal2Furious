@@ -21,7 +21,7 @@ GLOBAL_LIST_EMPTY(ckey_to_storage_box)
 
 // Storage item
 
-/obj/item/storage/toolbox/guncase/nova/pistol/trappiste_small_case/secure_container
+/obj/item/storage/toolbox/guncase/doppla/pistol/trappiste_small_case/empty/secure_container
 	name = "Secure Container"
 	desc = "A thick yellow case with a seemingly impenetrable outer shell and locking mechanism. \
 		It uses a mysterous lock that seems to read not a passcode or DNA, but rather the user's \
@@ -29,7 +29,7 @@ GLOBAL_LIST_EMPTY(ckey_to_storage_box)
 	storage_type = /datum/storage/stash_storage
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
-/obj/item/storage/toolbox/guncase/nova/pistol/trappiste_small_case/secure_container/Initialize(mapload, storage_linked_ckey)
+/obj/item/storage/toolbox/guncase/doppla/pistol/trappiste_small_case/empty/secure_container/Initialize(mapload, storage_linked_ckey)
 	. = ..()
 	atom_storage.max_total_storage = WEIGHT_CLASS_BULKY * 6
 	atom_storage.max_slots = 6
@@ -45,7 +45,7 @@ GLOBAL_LIST_EMPTY(ckey_to_storage_box)
 	else
 		message_admins("Peep the horror in secure container code, because it broke. Control-F this exact line to see why!")
 
-/obj/item/storage/toolbox/guncase/nova/pistol/trappiste_small_case/secure_container/examine(mob/user)
+/obj/item/storage/toolbox/guncase/doppla/pistol/trappiste_small_case/empty/secure_container/examine(mob/user)
 	. = ..()
 	var/datum/storage/stash_storage/our_storage = atom_storage
 	if(user.client.ckey == our_storage.linked_ckey)
@@ -54,5 +54,5 @@ GLOBAL_LIST_EMPTY(ckey_to_storage_box)
 		. += span_engradio("This secure container is inaccessible to you.")
 	return .
 
-/obj/item/storage/toolbox/guncase/nova/pistol/trappiste_small_case/secure_container/PopulateContents()
+/obj/item/storage/toolbox/guncase/doppla/pistol/trappiste_small_case/empty/secure_container/PopulateContents()
 	return

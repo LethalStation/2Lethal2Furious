@@ -94,6 +94,10 @@
 		/datum/reagent/impurity = 10,
 	)
 
+/obj/item/reagent_containers/hypospray/medipen/deforest/captagon/Initialize(mapload)
+	. = ..()
+	amount_per_transfer_from_this = 40
+
 /obj/item/reagent_containers/hypospray/medipen/deforest/captagon/update_icon_state()
 	. = ..()
 	if(reagents.total_volume >= volume)
