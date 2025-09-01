@@ -94,6 +94,8 @@
 	add_seclight_point()
 	add_bayonet_point()
 
+	muzzle_flash = new(src, muzzleflash_iconstate) // LETHAL ADDITION
+
 /obj/item/gun/Destroy()
 	if(isobj(pin)) //Can still be the initial path, then we skip
 		QDEL_NULL(pin)
@@ -101,6 +103,8 @@
 		QDEL_NULL(chambered)
 	if(isatom(suppressed)) //SUPPRESSED IS USED AS BOTH A TRUE/FALSE AND AS A REF, WHAT THE FUCKKKKKKKKKKKKKKKKK
 		QDEL_NULL(suppressed)
+	if(muzzle_flash) // LETHAL ADDITION
+		QDEL_NULL(muzzle_flash) // LETHAL ADDITION
 	return ..()
 
 /obj/item/gun/apply_fantasy_bonuses(bonus)
@@ -208,6 +212,8 @@
 	if(recoil && !tk_firing(user))
 		shake_camera(user, recoil + 1, recoil)
 	fire_sounds()
+	var/firing_angle = get_angle(user, pbtarget) // LETHAL ADDITION
+	muzzle_flash(firing_angle, user) // LETHAL ADDITION
 	if(suppressed || !message)
 		return FALSE
 	if(tk_firing(user))
@@ -471,6 +477,7 @@
 		return FALSE
 	process_chamber()
 	update_appearance()
+	firing_animation(user, TRUE) // LETHAL EDIT
 	return TRUE
 
 ///returns true if the gun successfully fires
@@ -530,6 +537,7 @@
 		if (!QDELETED(src))
 			process_chamber()
 			update_appearance()
+			firing_animation(user, FALSE) // LETHAL ADDITION
 			fire_cd = TRUE
 			addtimer(CALLBACK(src, PROC_REF(reset_fire_cd)), modified_fire_delay)
 

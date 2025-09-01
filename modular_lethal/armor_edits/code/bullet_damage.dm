@@ -32,7 +32,7 @@
 		def_zone = def_zone,
 		blocked = min(ARMOR_MAX_BLOCK, armor_check - armor_damage),  //cap damage reduction at 90%
 		wound_bonus = proj.wound_bonus,
-		bare_wound_bonus = proj.bare_wound_bonus,
+		exposed_wound_bonus = proj.exposed_wound_bonus,
 		sharpness = proj.sharpness,
 		attack_direction = get_dir(proj.starting, src),
 	)
