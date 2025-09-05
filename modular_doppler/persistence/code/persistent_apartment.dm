@@ -84,6 +84,7 @@
 
 	GLOB.map_export_document_blob = list() // reset the export blob since we're about to use it
 	GLOB.map_export_reagents_blob = list() // do the same for our reagents blob
+	GLOB.map_export_lookup = list()
 
 	var/turf/first_corner = apartment_turf_reservation.bottom_left_turfs[1]
 	var/turf/second_corner = apartment_turf_reservation.top_right_turfs[1]

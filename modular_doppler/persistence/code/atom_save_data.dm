@@ -19,17 +19,20 @@ GLOBAL_LIST_EMPTY(map_export_reagents_blob) // contains blobs of serialized /dat
 		// we might also be a parent, in which case, we need to register ourselves with the export glob
 		LAZYADDASSOC(GLOB.map_export_lookup, export_master, src)
 		GLOB.map_export_storage_loads += 1
-		// we may also have reagents, so we need to check the global reagents export blob to see if we're in there
-		// if we are, reconstruct our .reagents stuff based on on what we have in the blob
-		if (GLOB.map_export_reagents_blob[export_master])
-			var/datum/reagents/import_reagents = new
-			if (!import_reagents.deserialize_list(GLOB.map_export_reagents_blob[export_master]))
-				message_admins("MAP IMPORT: failed to deserialize reagents blob for [src] ([export_master])")
-			else
-				reagents = import_reagents
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(export_load_reagents_from_blob), src), 5 SECONDS) //this is probably a bad way to do it
 	if (export_lookup)
 		// we expect to be shunted inside a new object created with an export_master key, so we assign our special element (which waits for us and does the moving)
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(export_move_atom_to_master), src), 5 SECONDS) // we should probably replace this with a signal or something man
+
+/proc/export_load_reagents_from_blob(atom/thing)
+	// we may also have reagents, so we need to check the global reagents export blob to see if we're in there
+	// if we are, reconstruct our .reagents stuff based on on what we have in the blob
+	if (!isnull(thing.reagents) && GLOB.map_export_reagents_blob[thing.export_master])
+		thing.reagents.remove_all(1, TRUE) // clear out anything existing if there is, there shouldn't be, but just make sure
+		if (thing.reagents.deserialize_list(GLOB.map_export_reagents_blob[thing.export_master][1]))
+			thing.update_appearance()
+		else
+			message_admins("MAP IMPORT: failed to deserialize reagents blob for [thing] ([thing.export_master])")
 
 /proc/export_move_atom_to_master(atom/movable/thing)
 	if (thing.export_lookup)
@@ -47,7 +50,7 @@ GLOBAL_LIST_EMPTY(map_export_reagents_blob) // contains blobs of serialized /dat
 	if(!container.atom_storage)
 		return
 	if(!container.export_master)
-		container.export_master = generate_hash()
+		container.export_master = generate_unique_lookup_hash()
 	for(var/atom/movable/item in container)
 		CHECK_TICK
 		item.export_lookup = container.export_master
@@ -59,6 +62,18 @@ GLOBAL_LIST_EMPTY(map_export_reagents_blob) // contains blobs of serialized /dat
 	var/random_input = "[rand(1, 999999)][world.time][rand(1, 999999)]"
 	var/full_hash = md5(random_input)
 	return copytext(full_hash, 1, length + 1)
+
+/proc/generate_unique_lookup_hash(max_attempts = 10)
+	var/hash
+	var/attempts = 0
+	do {
+		hash = generate_hash()
+		attempts++
+		if (attempts >= max_attempts)
+			CRASH("Unique lookup hashing failed after [max_attempts] attempts, somehow. What the fuck?")
+	}
+	while (hash in GLOB.map_export_lookup)
+	return hash
 
 /proc/serializeMapAndContents(turf/cornerA, turf/cornerB, datum/turf_reservation/reserve, save_flag = ALL, shuttle_flag = SAVE_SHUTTLEAREA_DONTCARE)
 	GLOB.map_writing_running = TRUE
@@ -80,7 +95,7 @@ GLOBAL_LIST_EMPTY(map_export_reagents_blob) // contains blobs of serialized /dat
 					cascade_storage_lookup(thing, the_turf)
 				if (istype(thing, /obj/structure/closet)) // dump out our contents
 					var/obj/structure/closet/our_locker = thing
-					our_locker.export_master = generate_hash()
+					our_locker.export_master = generate_unique_lookup_hash()
 					our_locker.export_dump_contents(the_turf)
 
 	// export the map
@@ -182,7 +197,7 @@ GLOBAL_LIST_EMPTY(map_export_reagents_blob) // contains blobs of serialized /dat
 
 	if (LAZYLEN(raw_text_inputs) || LAZYLEN(raw_stamp_data) || LAZYLEN(raw_field_input_data))
 		// assign ourselves an export hash and then add our data to the list
-		export_loadblob = generate_hash()
+		export_loadblob = generate_unique_lookup_hash()
 		LAZYADDASSOCLIST(GLOB.map_export_document_blob, export_loadblob, convert_to_data())
 
 	. += NAMEOF(src, export_loadblob)
@@ -210,15 +225,6 @@ GLOBAL_LIST_EMPTY(map_export_reagents_blob) // contains blobs of serialized /dat
 	for(var/datum/reagent/reagent as anything in reagent_list)
 		.["reagent_list"][reagent.type] = list()
 		.["reagent_list"][reagent.type]["volume"] = reagent.volume
-		.["reagent_list"][reagent.type]["ph"] = reagent.ph
-		.["reagent_list"][reagent.type]["purity"] = reagent.purity
-		.["reagent_list"][reagent.type]["color"] = reagent.color
-
-	.["chem_temp"] = chem_temp
-	.["ph"] = ph
-	.["flags"] = flags
-	.["total_volume"] = total_volume
-	.["maximum_volume"] = maximum_volume
 
 	SET_SERIALIZATION_SEMVER(semvers, "1.0.0")
 	return .
@@ -234,30 +240,28 @@ GLOBAL_LIST_EMPTY(map_export_reagents_blob) // contains blobs of serialized /dat
 
 	for(var/reagent_type as anything in input["reagent_list"])
 		var/rpath = text2path(reagent_type)
-		var/datum/reagent/new_reagent = new rpath
-		if (new_reagent)
-			new_reagent.volume = input["reagent_list"][reagent_type]["volume"]
-			new_reagent.ph = input["reagent_list"][reagent_type]["ph"]
-			new_reagent.purity = input["reagent_list"][reagent_type]["purity"]
-			new_reagent.color = input["reagent_list"][reagent_type]["color"]
-			reagent_list += new_reagent
+		add_reagent(rpath, input["reagent_list"][reagent_type]["volume"], no_react = TRUE)
 
-	chem_temp = input["chem_temp"]
-	ph = input["ph"]
-	flags = input["flags"]
-	total_volume = input["total_volume"]
-	maximum_volume = input["maximum_volume"]
-
-	update_total()
 	return TRUE
 
 /atom/get_save_vars()
 	. = ..()
-	if (reagents && LAZYLEN(reagents.reagent_list))
+	if (reagents)
 		// we have some reagent content to add to the principle blob
 		if (!export_master)
-			export_master = generate_hash()
+			export_master = generate_unique_lookup_hash()
 		LAZYADDASSOCLIST(GLOB.map_export_reagents_blob, export_master, reagents.serialize_list(semvers = list()))
+
+/obj/item/reagent_containers/add_initial_reagents()
+	if (export_master) // don't pregenerate reagent container contents if we have an export flag saved
+		return
+	else
+		..()
+
+/obj/item/reagent_containers/get_save_vars()
+	. = ..()
+	. += NAMEOF(src, can_have_cap)
+	. += NAMEOF(src, cap_on)
 
 // TODO:
 // do obj/machinery need special considerations?
