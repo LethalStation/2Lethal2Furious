@@ -1,5 +1,5 @@
 /obj/structure/rack
-	icon = 'modular_lethal/mapping_stuff/icons/rack.dmi
+	icon = 'modular_lethal/mapping_stuff/icons/rack.dmi'
 
 /obj/structure/rack/shelf
 	name = "shelf"
