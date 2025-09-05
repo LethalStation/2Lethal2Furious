@@ -7732,6 +7732,7 @@
 #include "modular_lethal\epic_loot\code\loot_spawns.dm"
 #include "modular_lethal\mapping_stuff\code\floor_sprites.dm"
 #include "modular_lethal\mapping_stuff\code\light_edits.dm"
+#include "modular_lethal\mapping_stuff\code\rack.dm"
 #include "modular_lethal\mapping_stuff\code\super_doors.dm"
 #include "modular_lethal\mapping_stuff\code\wall_cladding.dm"
 #include "modular_lethal\mapping_stuff\code\wall_sprites.dm"
