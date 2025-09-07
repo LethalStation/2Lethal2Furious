@@ -59,3 +59,19 @@
 /// Allows the grenade to explode on throw impact
 /obj/item/grenade/frag/impact/proc/ready_impact()
 	impact_explosion_ready = TRUE
+
+/obj/item/grenade/frag/impact/pipis
+	name = "Pipis"
+	desc = "An invasive species of freshwater clam."
+	icon = 'modular_lethal/paxilweapons_real/icons/grenades.dmi'
+	icon_state = "pipis"
+	shrapnel_type = /obj/projectile/bullet/shrapnel/pipis
+	shrapnel_radius = 3
+	ex_dev = 0
+	ex_heavy = 0
+	ex_light = 0
+	ex_flame = 1
+
+/obj/item/food/pie/cream/pipis
+	icon = 'modular_lethal/paxilweapons_real/icons/grenades.dmi'
+	icon_state = "pipis"

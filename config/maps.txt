@@ -60,6 +60,9 @@ map wawastation
 	minplayers 40
 endmap
 
+map Sector9beta
+endmap
+
 # Debug-only maps.
 
 map gateway_test

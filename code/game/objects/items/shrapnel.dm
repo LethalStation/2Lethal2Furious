@@ -133,3 +133,20 @@
 	name = "\improper AP shrapnel shard"
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 0.5)
 	weak_against_armour = TRUE
+
+/obj/projectile/bullet/shrapnel/pipis
+	name = "Pipis"
+	icon = 'modular_lethal/paxilweapons_real/icons/grenades.dmi'
+	icon_state = "pipis"
+	damage = 0
+	range = 20
+	weak_against_armour = TRUE
+	dismemberment = 0
+	ricochets_max = 2
+	ricochet_chance = 70
+	shrapnel_type = /obj/item/food/pie/cream/pipis
+	ricochet_incidence_leeway = 60
+	hit_prone_targets = TRUE
+	ignore_range_hit_prone_targets = TRUE
+	wound_bonus = 0
+	embed_type = /datum/embedding/shrapnel
