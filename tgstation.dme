@@ -6232,6 +6232,7 @@
 #include "code\modules\shuttle\shuttle_events\turbulence.dm"
 #include "code\modules\shuttle\stationary_port\port_types.dm"
 #include "code\modules\shuttle\stationary_port\stationary_port.dm"
+#include "code\modules\sillyman\vendor.dm"
 #include "code\modules\spatial_grid\cell_tracker.dm"
 #include "code\modules\spells\spell.dm"
 #include "code\modules\spells\spell_types\madness_curse.dm"

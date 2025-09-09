@@ -1087,7 +1087,9 @@
 /obj/structure/chair/office{
 	dir = 4
 	},
-/obj/effect/mob_spawn/corpse/human/intern,
+/obj/effect/mob_spawn/corpse/human/intern{
+	name = "poptar4551"
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/control)
