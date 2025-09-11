@@ -14,5 +14,3 @@
 #define CALIBER_8MMMARSIAN "8mm Marsian"
 /// Giant shotgun shells teehee
 #define CALIBER_6GAUGE "6 Gauge"
-/// Pulse rifle ammo YEAH ALIENS YEAH
-#define CALIBER_4MMEUROPAN "4mm Europan"
