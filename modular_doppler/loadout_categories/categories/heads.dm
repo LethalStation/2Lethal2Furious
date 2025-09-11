@@ -24,6 +24,10 @@
 
 // Loadout items
 
+/datum/loadout_item/head/mining_cap
+	name = "Explorer Cap"
+	item_path = /obj/item/clothing/head/mining_cap
+
 /datum/loadout_item/head/tv_head
 	name = "TV Head"
 	item_path = /obj/item/clothing/head/costume/tv_head
@@ -179,3 +183,11 @@
 /datum/loadout_item/head/breach_helmet
 	name = "Flowing Headband"
 	item_path = /obj/item/clothing/head/flowing_headband
+
+/datum/loadout_item/head/fullhelmet
+	name = "Yennika full helmet"
+	item_path = /obj/item/clothing/head/helmet/sec/fullhelmet
+
+/datum/loadout_item/head/fullhelmet/get_item_information()
+	. = ..()
+	.[FA_ICON_CIRCLE_EXCLAMATION] = "Cannot be taken off!"
