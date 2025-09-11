@@ -6199,6 +6199,13 @@
 	},
 /turf/open/floor/iron/dark,
 /area/gakster_location/war)
+"CU" = (
+/obj/structure/guncase,
+/obj/item/gun/ballistic/automatic/karim/unrestricted,
+/obj/item/gun/ballistic/automatic/karim/unrestricted,
+/obj/item/gun/ballistic/automatic/karim/unrestricted,
+/turf/open/floor/iron,
+/area/gakster_location/war)
 "CW" = (
 /obj/machinery/light/dim/directional/south,
 /turf/open/floor/mineral/titanium/white,
@@ -8687,10 +8694,10 @@
 /area/gakster_location/war)
 "OJ" = (
 /obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/karim,
-/obj/item/gun/ballistic/automatic/karim,
-/obj/item/gun/ballistic/automatic/karim,
 /obj/machinery/light/dim/directional/north,
+/obj/item/gun/ballistic/automatic/karim/unrestricted,
+/obj/item/gun/ballistic/automatic/karim/unrestricted,
+/obj/item/gun/ballistic/automatic/karim/unrestricted,
 /turf/open/floor/iron,
 /area/gakster_location/war)
 "OK" = (
@@ -9195,6 +9202,65 @@
 /obj/effect/decal/cleanable/fuel_pool,
 /obj/item/stack/sheet/mineral/plasma/five,
 /turf/open/floor/plating,
+/area/gakster_location/war)
+"Rf" = (
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 13;
+	pixel_x = 9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 9;
+	pixel_x = 9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 5;
+	pixel_x = 9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 1;
+	pixel_x = 9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = -4;
+	pixel_x = 9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 13;
+	pixel_x = -9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 9;
+	pixel_x = -9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 5;
+	pixel_x = -9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 1;
+	pixel_x = -9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = -4;
+	pixel_x = -9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 13
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = 1
+	},
+/obj/item/ammo_box/magazine/karim{
+	pixel_y = -4
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/turf/open/floor/iron,
 /area/gakster_location/war)
 "Rg" = (
 /obj/structure/railing{
@@ -34243,13 +34309,13 @@ Cw
 Cw
 aH
 aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+oa
+oa
+oa
+oa
+oa
+oa
+oa
 aH
 aH
 aH
@@ -34345,12 +34411,12 @@ Cw
 Cw
 cO
 aH
-aH
-aH
-cO
-aH
-aH
-aH
+oa
+OJ
+CU
+CU
+CU
+CU
 cO
 aH
 aH
@@ -34448,11 +34514,11 @@ oa
 oa
 oa
 oa
-oa
-oa
-oa
-oa
-oa
+KE
+KE
+KE
+KE
+KE
 oa
 aH
 aH
@@ -34550,11 +34616,11 @@ aP
 VM
 hL
 oa
-OJ
-tW
-tW
-tW
-tW
+Rf
+Rf
+Rf
+Rf
+KE
 oa
 ar
 Eq
@@ -34755,10 +34821,10 @@ Eb
 Os
 oa
 OJ
-tW
-tW
-tW
-tW
+CU
+CU
+CU
+CU
 oa
 Wp
 SR
