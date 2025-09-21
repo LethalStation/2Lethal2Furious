@@ -17,7 +17,7 @@
 /turf/open/floor/iron/white/smooth_large,
 /area/gakster_location/war)
 "af" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medpens_combat_based_redpilled,
 /turf/open/floor/mineral/plastitanium/red,
 /area/gakster_location/war)
@@ -167,7 +167,7 @@
 /turf/open/floor/wood/large,
 /area/gakster_location/war)
 "aN" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/item/stack/cable_coil/thirty,
 /obj/effect/spawner/random/epic_loot/random_components,
 /turf/open/floor/plating,
@@ -232,7 +232,7 @@
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/gakster_location/war)
 "ba" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medkit,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -419,7 +419,7 @@
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/gakster_location/war)
 "bV" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /turf/open/floor/plating,
 /area/gakster_location/war)
@@ -567,7 +567,7 @@
 /turf/open/misc/asteroid/snow/standard_air,
 /area/gakster_location/outside)
 "cx" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_other_military_loot,
 /turf/open/floor/iron,
 /area/gakster_location/war)
@@ -673,7 +673,7 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "cZ" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/war,
 /turf/open/floor/wood,
 /area/gakster_location/war)
@@ -746,7 +746,7 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/gakster_location/war)
 "dr" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medpens_combat_based_redpilled,
 /obj/effect/spawner/random/epic_loot/medpens_combat_based_redpilled,
 /obj/effect/spawner/random/epic_loot/chemical,
@@ -780,7 +780,7 @@
 /area/gakster_location/war)
 "dB" = (
 /obj/effect/spawner/random/epic_loot/random_construction,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/plating,
 /area/gakster_location/war)
 "dC" = (
@@ -855,7 +855,7 @@
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "dU" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medical_stack_item_advanced,
 /obj/effect/spawner/random/epic_loot/medical_everything,
 /obj/machinery/light/cold/directional/north,
@@ -894,11 +894,11 @@
 /area/gakster_location/war)
 "eb" = (
 /obj/effect/spawner/random/epic_loot/random_tools,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "ec" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /turf/open/floor/iron/smooth_large,
@@ -1040,7 +1040,7 @@
 /turf/open/floor/iron/dark,
 /area/gakster_location/war)
 "eL" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/war,
 /turf/open/floor/iron,
 /area/gakster_location/war)
@@ -1084,7 +1084,7 @@
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/gakster_location/war)
 "eZ" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_tools,
 /obj/effect/spawner/random/epic_loot/random_components,
 /turf/open/floor/plating,
@@ -1409,7 +1409,7 @@
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
 "gC" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/pocket_valuable,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
@@ -1463,7 +1463,7 @@
 /turf/open/floor/wood,
 /area/gakster_location/war)
 "gP" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/gakster_location/war)
@@ -1504,7 +1504,7 @@
 /turf/open/chasm,
 /area/gakster_location/war)
 "gW" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medpens_combat_based_redpilled,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -1525,7 +1525,7 @@
 /area/gakster_location/war)
 "hb" = (
 /obj/item/pipe_dispenser,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/hideout_real)
 "hd" = (
@@ -1943,7 +1943,7 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "iO" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
@@ -2055,7 +2055,7 @@
 /turf/open/indestructible/plating,
 /area/gakster_location/war)
 "jr" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "js" = (
@@ -2440,7 +2440,7 @@
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/gakster_location/war)
 "lq" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_construction,
 /turf/open/floor/plating,
 /area/gakster_location/war)
@@ -2794,7 +2794,7 @@
 /turf/open/indestructible/stone,
 /area/gakster_location/hideout_real)
 "ne" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_construction,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -2923,7 +2923,7 @@
 /turf/open/floor/iron/checker,
 /area/gakster_location/war)
 "nH" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/item/grenade/clusterbuster/antiweed,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
@@ -2982,7 +2982,7 @@
 /area/gakster_location/war)
 "nW" = (
 /obj/effect/spawner/random/epic_loot/random_construction,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/machinery/light/red/dim/directional/north,
 /turf/open/floor/plating,
 /area/gakster_location/war)
@@ -3069,7 +3069,7 @@
 /turf/open/floor/plating,
 /area/gakster_location/war)
 "oo" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_explosives,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -3149,7 +3149,7 @@
 /area/gakster_location/hideout_real)
 "oF" = (
 /obj/effect/spawner/random/epic_loot/medkit,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/hideout_real)
 "oG" = (
@@ -3283,7 +3283,7 @@
 /turf/open/indestructible/plating,
 /area/gakster_location/war)
 "pl" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/bullet_piles,
 /obj/effect/spawner/random/epic_loot/medpens,
 /turf/open/floor/iron/smooth_large,
@@ -3319,7 +3319,7 @@
 /area/gakster_location/war)
 "pu" = (
 /obj/effect/spawner/random/epic_loot/random_components,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "pv" = (
@@ -3570,7 +3570,7 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "qA" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_components,
 /turf/open/floor/plating,
 /area/gakster_location/war)
@@ -3821,7 +3821,7 @@
 /turf/open/indestructible/kitchen,
 /area/gakster_location/war)
 "rU" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medpens,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -4543,7 +4543,7 @@
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
 "vp" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medpens_combat_based_redpilled,
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/gakster_location/war)
@@ -4559,7 +4559,7 @@
 /turf/open/misc/dirt/station,
 /area/gakster_location/hideout_real)
 "vs" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_tools,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -5015,7 +5015,7 @@
 /turf/open/indestructible/dark/smooth_large,
 /area/gakster_location/war)
 "xC" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
@@ -5148,7 +5148,7 @@
 /turf/open/floor/iron/dark,
 /area/gakster_location/war)
 "yj" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/war,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -5264,7 +5264,7 @@
 /turf/open/misc/dirt/icemoon,
 /area/gakster_location/hideout_real)
 "yL" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medkit,
 /obj/effect/spawner/random/epic_loot/medpens,
 /obj/effect/spawner/random/epic_loot/medical_stack_item_advanced,
@@ -5517,7 +5517,7 @@
 /obj/item/holosign_creator/medical,
 /obj/effect/spawner/random/epic_loot/medical_stack_item_advanced,
 /obj/item/handheld_soulcatcher,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/hideout_real)
 "zV" = (
@@ -5688,7 +5688,7 @@
 /turf/open/indestructible/dark/smooth_large,
 /area/gakster_location/war)
 "AL" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /obj/effect/spawner/random/epic_loot/random_construction,
 /turf/open/floor/plating,
@@ -5740,7 +5740,7 @@
 /turf/open/indestructible/plating,
 /area/gakster_location/war)
 "AV" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/item/grenade/syndieminibomb/concussion/impact,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
@@ -5889,7 +5889,7 @@
 /turf/open/floor/plating,
 /area/gakster_location/war)
 "BE" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medical_tools,
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/hideout_real)
@@ -5905,7 +5905,7 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "BI" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_tools,
 /turf/open/floor/plating,
 /area/gakster_location/war)
@@ -5914,7 +5914,7 @@
 /turf/open/floor/plating,
 /area/gakster_location/war)
 "BK" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_tools,
 /obj/machinery/light/red/dim/directional/south,
 /turf/open/floor/plating,
@@ -6005,7 +6005,7 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "Cc" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_documents,
 /turf/open/floor/mineral/plastitanium/red,
 /area/gakster_location/war)
@@ -6069,7 +6069,7 @@
 /turf/open/floor/iron/dark/diagonal,
 /area/gakster_location/war)
 "Cp" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medpens_combat_based_redpilled,
 /turf/open/floor/iron/white/smooth_large,
 /area/gakster_location/war)
@@ -6118,7 +6118,7 @@
 /area/gakster_location/war)
 "CD" = (
 /obj/effect/spawner/random/epic_loot/random_computer_parts,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "CE" = (
@@ -6496,7 +6496,7 @@
 /area/gakster_location/war)
 "Ey" = (
 /obj/effect/spawner/random/epic_loot/chemical,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/iron/white/smooth_large,
 /area/gakster_location/war)
 "EA" = (
@@ -6545,7 +6545,7 @@
 /turf/open/floor/bamboo/tatami/black,
 /area/gakster_location/war)
 "EJ" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/item/stack/cable_coil/thirty,
 /turf/open/floor/plating,
 /area/gakster_location/war)
@@ -6608,7 +6608,7 @@
 /turf/open/indestructible/plating,
 /area/gakster_location/war)
 "Fb" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/bullet_piles,
 /turf/open/floor/mineral/plastitanium/red,
 /area/gakster_location/war)
@@ -6818,7 +6818,7 @@
 /turf/open/indestructible/plating,
 /area/gakster_location/war)
 "FW" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /turf/open/floor/iron/smooth,
@@ -6828,7 +6828,7 @@
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
 "FZ" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
 "Ga" = (
@@ -7140,7 +7140,7 @@
 /turf/open/floor/iron/freezer,
 /area/gakster_location/war)
 "Hw" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/pocket_medical,
 /obj/effect/spawner/random/epic_loot/pocket_medical,
 /obj/effect/spawner/random/epic_loot/pocket_medical,
@@ -7226,7 +7226,7 @@
 /area/gakster_location/hideout_real)
 "HN" = (
 /obj/effect/spawner/random/epic_loot/medpens,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/iron/white/smooth_large,
 /area/gakster_location/war)
 "HO" = (
@@ -7251,7 +7251,7 @@
 /turf/open/floor/plating,
 /area/gakster_location/war)
 "HT" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medpens_combat_based_redpilled,
 /obj/effect/spawner/random/epic_loot/medpens_combat_based_redpilled,
 /turf/open/floor/iron/smooth_large,
@@ -7469,7 +7469,7 @@
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
 "IW" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/pocket_medical,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -7623,7 +7623,7 @@
 /turf/open/indestructible/plating,
 /area/gakster_location/war)
 "JK" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_documents,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -8130,7 +8130,7 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "LZ" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
@@ -8347,7 +8347,7 @@
 /obj/item/reagent_containers/blood/o_minus,
 /obj/item/reagent_containers/blood/o_minus,
 /obj/item/reagent_containers/blood/o_minus,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/hideout_real)
 "MV" = (
@@ -8956,12 +8956,12 @@
 /turf/open/floor/iron/white,
 /area/gakster_location/war)
 "PX" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/structure/spacevine,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "PZ" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_other_military_loot,
 /turf/open/floor/wood,
 /area/gakster_location/war)
@@ -9065,7 +9065,7 @@
 /area/gakster_location/war)
 "Qu" = (
 /obj/effect/spawner/random/epic_loot/medical_stack_item,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/war)
 "Qw" = (
@@ -9306,7 +9306,7 @@
 /obj/effect/spawner/random/epic_loot/medical_stack_item,
 /obj/effect/spawner/random/epic_loot/medical_stack_item_advanced,
 /obj/effect/spawner/random/epic_loot/medkit,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/hideout_real)
 "Rp" = (
@@ -9349,7 +9349,7 @@
 	dir = 9
 	},
 /obj/effect/spawner/random/epic_loot/random_tools,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/catwalk_floor,
 /area/gakster_location/war)
 "RE" = (
@@ -9556,7 +9556,7 @@
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/hideout_real)
 "SJ" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medical_everything,
 /turf/open/floor/iron/white/smooth_large,
 /area/gakster_location/war)
@@ -9682,7 +9682,7 @@
 /area/gakster_location/war)
 "Tk" = (
 /obj/structure/sign/poster/official/safety_eye_protection/directional/east,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/random_engineering,
 /turf/open/floor/plating,
 /area/gakster_location/war)
@@ -9858,7 +9858,7 @@
 /obj/effect/spawner/random/epic_loot/medical_tools,
 /obj/effect/spawner/random/epic_loot/medical_stack_item,
 /obj/effect/spawner/random/epic_loot/medical_stack_item_advanced,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/hideout_real)
 "TZ" = (
@@ -10063,7 +10063,7 @@
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
 "Va" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medical_stack_item,
 /obj/effect/spawner/random/epic_loot/medical_everything,
 /turf/open/floor/iron/white/smooth_large,
@@ -10388,7 +10388,7 @@
 /area/gakster_location/war)
 "WH" = (
 /obj/effect/spawner/random/epic_loot/chemical,
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/structure/spacevine,
 /turf/open/floor/iron/white/smooth_large,
 /area/gakster_location/war)
@@ -10597,7 +10597,7 @@
 /turf/open/floor/iron/white/smooth_large,
 /area/gakster_location/war)
 "XC" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/war,
 /obj/effect/spawner/random/epic_loot/random_explosives,
 /turf/open/floor/iron,
@@ -10685,7 +10685,7 @@
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "XZ" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medical_stack_item_advanced,
 /obj/effect/spawner/random/epic_loot/medical_everything,
 /turf/open/floor/iron/white/smooth_large,
@@ -10853,7 +10853,7 @@
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
 "YQ" = (
-/obj/structure/rack/shelf,
+/obj/structure/shelf,
 /obj/effect/spawner/random/epic_loot/medpens,
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
