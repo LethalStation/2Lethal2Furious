@@ -2,7 +2,7 @@
 	var/attack_dir = get_vague_dir(attacker, target)
 	run_swing_attack(attack_dir, attacker, backwards)
 
-/obj/item/melee/proc/run_swing_attack(direction, mob/attacker, backwards)
+/obj/item/melee/proc/run_swing_attack(direction, mob/attacker, backwards, multihit)
 	var/list/target_turfs = get_turfs_and_adjacent_in_direction(attacker, direction, backwards)
 	var/turf_index = 1
 	var/list/debug_turf_colors = list(
@@ -30,7 +30,8 @@
 			if((new_victim.body_position == LYING_DOWN) && (HAS_TRAIT(new_victim, TRAIT_INCAPACITATED)))
 				continue // Swings miss you if you're incapacitated and floored
 			melee_attack_chain(attacker, new_victim)
-			return
+			if(!multihit)
+				return
 	// The animation is only played if we don't hit anything
 	animate_attack(attacker, get_step(attacker, direction), ATTACK_ANIMATION_SLASH)
 	playsound(attacker, 'sound/items/weapons/fwoosh.ogg', 50, TRUE)
