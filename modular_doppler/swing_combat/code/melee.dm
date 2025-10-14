@@ -19,7 +19,7 @@
 		turf_index++
 		if(target_turf.is_blocked_turf(exclude_mobs = TRUE))
 			if(target_turf.density)
-				animate_attack(attacker, target_turf, ATTACK_ANIMATION_PIERCE)
+				animate_attack_swing_combat(attacker, target_turf, ATTACK_ANIMATION_PIERCE)
 				do_sparks(2, FALSE, target_turf)
 				playsound(attacker, 'sound/items/weapons/parry.ogg', 50, TRUE)
 				return
@@ -37,7 +37,7 @@
 			if(!multihit)
 				return
 	// The animation is only played if we don't hit anything
-	animate_attack(attacker, get_step(attacker, direction), ATTACK_ANIMATION_SLASH)
+	animate_attack_swing_combat(attacker, get_step(attacker, direction), ATTACK_ANIMATION_SLASH, backwards)
 	playsound(attacker, 'sound/items/weapons/fwoosh.ogg', 50, TRUE)
 
 // For testing
