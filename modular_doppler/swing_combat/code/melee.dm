@@ -15,6 +15,7 @@
 		turf_index++
 		if(target_turf.is_blocked_turf(exclude_mobs = TRUE))
 			if(target_turf.density)
+				playsound(attacker, 'sound/items/weapons/block_shield.ogg', 50, TRUE)
 				return
 			for(var/atom/movable/potentially_blocking_thing as anything in target_turf.contents)
 				if(ismob(potentially_blocking_thing))
@@ -28,6 +29,7 @@
 			return
 	// The animation is only played if we don't hit anything
 	animate_attack(attacker, get_step(attacker, direction), ATTACK_ANIMATION_SLASH)
+	playsound(attacker, 'sound/items/weapons/fwoosh.ogg', 50, TRUE)
 
 // For testing
 /obj/item/melee/tizirian_sword/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
