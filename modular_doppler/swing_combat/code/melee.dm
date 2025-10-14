@@ -20,6 +20,7 @@
 		if(target_turf.is_blocked_turf(exclude_mobs = TRUE))
 			if(target_turf.density)
 				animate_attack_swing_combat(attacker, target_turf, ATTACK_ANIMATION_PIERCE)
+				attacker.Shake(1, 1, 0.5 SECONDS)
 				if(turf_index == 2)
 					animate_attack_swing_combat(attacker, target_turf, ATTACK_ANIMATION_SLASH)
 				do_sparks(2, FALSE, target_turf)
