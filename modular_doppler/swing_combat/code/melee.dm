@@ -1,9 +1,9 @@
-/obj/item/melee/proc/start_swing_attack(atom/target, mob/attacker)
+/obj/item/melee/proc/start_swing_attack(atom/target, mob/attacker, backwards)
 	var/attack_dir = get_vague_dir(attacker, target)
-	run_swing_attack(attack_dir, attacker)
+	run_swing_attack(attack_dir, attacker, backwards)
 
-/obj/item/melee/proc/run_swing_attack(direction, mob/attacker)
-	var/list/target_turfs = get_turfs_and_adjacent_in_direction(attacker, direction)
+/obj/item/melee/proc/run_swing_attack(direction, mob/attacker, backwards)
+	var/list/target_turfs = get_turfs_and_adjacent_in_direction(attacker, direction, backwards)
 	var/turf_index = 1
 	var/list/debug_turf_colors = list(
 		"#ff0000",
@@ -17,7 +17,7 @@
 			if(target_turf.density)
 				animate_attack(attacker, target_turf, ATTACK_ANIMATION_PIERCE)
 				do_sparks(2, FALSE, target_turf)
-				playsound(attacker, 'sound/items/weapons/block_shield.ogg', 50, TRUE)
+				playsound(attacker, 'sound/items/weapons/parry.ogg', 50, TRUE)
 				return
 			for(var/atom/movable/potentially_blocking_thing as anything in target_turf.contents)
 				if(ismob(potentially_blocking_thing))
@@ -26,7 +26,9 @@
 					continue
 				melee_attack_chain(attacker, potentially_blocking_thing)
 				return // If we hit something solid that's not a mob then we stop
-		for(var/mob/new_victim in target_turf.contents)
+		for(var/mob/living/new_victim in target_turf.contents)
+			if((new_victim.body_position == LYING_DOWN) && (HAS_TRAIT(new_victim, TRAIT_INCAPACITATED)))
+				continue // Swings miss you if you're incapacitated and floored
 			melee_attack_chain(attacker, new_victim)
 			return
 	// The animation is only played if we don't hit anything
@@ -36,4 +38,8 @@
 // For testing
 /obj/item/melee/tizirian_sword/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	start_swing_attack(interacting_with, user)
+	return ITEM_INTERACT_SUCCESS
+
+/obj/item/melee/tizirian_sword/ranged_interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
+	start_swing_attack(interacting_with, user, TRUE)
 	return ITEM_INTERACT_SUCCESS
