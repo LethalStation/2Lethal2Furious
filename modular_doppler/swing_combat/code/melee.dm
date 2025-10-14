@@ -10,12 +10,12 @@
 	var/list/target_turfs = get_turfs_and_adjacent_in_direction(attacker, direction, backwards)
 	var/turf_index = 1
 	var/list/debug_turf_colors = list(
-		"#ff0000",
+		"#ff0000", // Red is the first turf
 		"#00ff00",
-		"#0000ff",
+		"#0000ff", // Blue is the last
 	)
 	for(var/turf/target_turf in target_turfs)
-		target_turf.add_atom_colour(debug_turf_colors[turf_index], TEMPORARY_COLOUR_PRIORITY)
+		// target_turf.add_atom_colour(debug_turf_colors[turf_index], TEMPORARY_COLOUR_PRIORITY)
 		turf_index++
 		if(target_turf.is_blocked_turf(exclude_mobs = TRUE))
 			if(target_turf.density)
