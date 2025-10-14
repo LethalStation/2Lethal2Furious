@@ -30,24 +30,6 @@
 /proc/get_vague_dir(atom/source, atom/target)
 	return angle2dir(get_angle(source, target))
 
-/atom/movable/proc/do_item_attack_animation(atom/attacked_atom, visual_effect_icon, obj/item/used_item, animation_type)
-	if (!visual_effect_icon)
-		if (used_item)
-			used_item.animate_attack(src, attacked_atom, animation_type)
-		return
-
-	var/image/attack_image = image(icon = 'icons/effects/effects.dmi', icon_state = visual_effect_icon)
-	attack_image.plane = attacked_atom.plane + 1
-	// Scale the icon.
-	attack_image.transform *= 0.4
-	// The icon should not rotate.
-	attack_image.appearance_flags = APPEARANCE_UI
-	var/atom/movable/flick_visual/attack = attacked_atom.flick_overlay_view(attack_image, 1 SECONDS)
-	var/matrix/copy_transform = new(transform)
-	animate(attack, alpha = 175, transform = copy_transform.Scale(0.75), time = 0.3 SECONDS)
-	animate(time = 0.1 SECONDS)
-	animate(alpha = 0, time = 0.3 SECONDS, easing = CIRCULAR_EASING|EASE_OUT)
-
 /// Animate attack but specifically for swing combat, lets you choose which direction a swing arc takes rather than random
 /obj/item/proc/animate_attack_swing_combat(atom/movable/attacker, atom/attacked_atom, animation_type, swing_reversed)
 	var/list/image_override = list()
