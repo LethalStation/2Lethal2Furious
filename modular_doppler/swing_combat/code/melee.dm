@@ -25,7 +25,9 @@
 				do_sparks(2, FALSE, target_turf)
 				playsound(attacker, 'sound/items/weapons/parry.ogg', 50, TRUE)
 				return
-			for(var/atom/movable/potentially_blocking_thing as anything in target_turf.contents)
+			// This part stops grilles getting hit under windows and stuff
+			var/list/real_order_turf_contents = reverse_range(target_turf.contents)
+			for(var/atom/movable/potentially_blocking_thing as anything in real_order_turf_contents)
 				if(ismob(potentially_blocking_thing))
 					continue
 				if(!potentially_blocking_thing.density)
