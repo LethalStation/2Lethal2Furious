@@ -1,6 +1,10 @@
 /obj/item/melee/proc/start_swing_attack(atom/target, mob/attacker, backwards)
+	if(attacker.next_move > world.time)
+		return ITEM_INTERACT_SUCCESS
 	var/attack_dir = get_vague_dir(attacker, target)
 	run_swing_attack(attack_dir, attacker, backwards)
+	attacker.changeNext_move(attack_speed)
+	return ITEM_INTERACT_SUCCESS
 
 /obj/item/melee/proc/run_swing_attack(direction, mob/attacker, backwards, multihit)
 	var/list/target_turfs = get_turfs_and_adjacent_in_direction(attacker, direction, backwards)
@@ -38,9 +42,7 @@
 
 // For testing
 /obj/item/melee/tizirian_sword/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
-	start_swing_attack(interacting_with, user)
-	return ITEM_INTERACT_SUCCESS
+	return start_swing_attack(interacting_with, user)
 
 /obj/item/melee/tizirian_sword/ranged_interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
-	start_swing_attack(interacting_with, user, TRUE)
-	return ITEM_INTERACT_SUCCESS
+	return start_swing_attack(interacting_with, user, TRUE)
