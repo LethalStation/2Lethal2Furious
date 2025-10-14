@@ -15,6 +15,7 @@
 		// The animation is only played if we don't hit anything by turf two
 		if(turf_index == 2)
 			animate_attack_swing_combat(attacker, get_step(attacker, direction), ATTACK_ANIMATION_SLASH, backwards)
+			attacker.do_attack_animation(target_turf, no_effect = TRUE)
 			playsound(attacker, 'sound/items/weapons/fwoosh.ogg', 50, TRUE)
 		turf_index++
 		if(target_turf.is_blocked_turf(exclude_mobs = TRUE))
