@@ -137,7 +137,7 @@
 			attack.pixel_y = 14 * y_sign
 			var/x_rot_sign = 0
 			var/y_rot_sign = 0
-			var/attack_dir = (swing_reversed ? 1 : -1)
+			var/attack_dir = (swing_reversed ? -1 : 1)
 			var/anim_angle = dir2angle(direction) - 90 - used_icon_angle
 
 			if (x_sign)

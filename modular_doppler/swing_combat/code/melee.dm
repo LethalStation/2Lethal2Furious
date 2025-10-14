@@ -20,6 +20,8 @@
 		if(target_turf.is_blocked_turf(exclude_mobs = TRUE))
 			if(target_turf.density)
 				animate_attack_swing_combat(attacker, target_turf, ATTACK_ANIMATION_PIERCE)
+				if(turf_index == 2)
+					animate_attack_swing_combat(attacker, target_turf, ATTACK_ANIMATION_SLASH)
 				do_sparks(2, FALSE, target_turf)
 				playsound(attacker, 'sound/items/weapons/parry.ogg', 50, TRUE)
 				return
