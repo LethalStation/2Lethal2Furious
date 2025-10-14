@@ -1,4 +1,6 @@
-/obj/item/melee/proc/start_swing_attack(atom/target, mob/attacker, backwards)
+/obj/item/melee/proc/start_swing_attack(atom/target, mob/living/attacker, backwards)
+	if(!attacker.combat_mode)
+		return ITEM_INTERACT_SUCCESS
 	if(attacker.next_move > world.time)
 		return ITEM_INTERACT_SUCCESS
 	var/attack_dir = get_vague_dir(attacker, target)
@@ -9,20 +11,16 @@
 /obj/item/melee/proc/run_swing_attack(direction, mob/attacker, backwards, multihit)
 	var/list/target_turfs = get_turfs_and_adjacent_in_direction(attacker, direction, backwards)
 	var/turf_index = 1
-	var/list/debug_turf_colors = list(
-		"#ff0000", // Red is the first turf
-		"#00ff00",
-		"#0000ff", // Blue is the last
-	)
 	for(var/turf/target_turf in target_turfs)
-		// target_turf.add_atom_colour(debug_turf_colors[turf_index], TEMPORARY_COLOUR_PRIORITY)
+		// The animation is only played if we don't hit anything by turf two
+		if(turf_index == 2)
+			animate_attack_swing_combat(attacker, get_step(attacker, direction), ATTACK_ANIMATION_SLASH, backwards)
+			playsound(attacker, 'sound/items/weapons/fwoosh.ogg', 50, TRUE)
 		turf_index++
 		if(target_turf.is_blocked_turf(exclude_mobs = TRUE))
 			if(target_turf.density)
 				animate_attack_swing_combat(attacker, target_turf, ATTACK_ANIMATION_PIERCE)
 				attacker.Shake(1, 1, 0.5 SECONDS)
-				if(turf_index == 2)
-					animate_attack_swing_combat(attacker, target_turf, ATTACK_ANIMATION_SLASH)
 				do_sparks(2, FALSE, target_turf)
 				playsound(attacker, 'sound/items/weapons/parry.ogg', 50, TRUE)
 				return
@@ -39,9 +37,6 @@
 			melee_attack_chain(attacker, new_victim)
 			if(!multihit)
 				return
-	// The animation is only played if we don't hit anything
-	animate_attack_swing_combat(attacker, get_step(attacker, direction), ATTACK_ANIMATION_SLASH, backwards)
-	playsound(attacker, 'sound/items/weapons/fwoosh.ogg', 50, TRUE)
 
 // For testing
 /obj/item/melee/tizirian_sword/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
