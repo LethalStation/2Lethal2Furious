@@ -15,6 +15,8 @@
 		turf_index++
 		if(target_turf.is_blocked_turf(exclude_mobs = TRUE))
 			if(target_turf.density)
+				animate_attack(attacker, target_turf, ATTACK_ANIMATION_PIERCE)
+				do_sparks(2, FALSE, target_turf)
 				playsound(attacker, 'sound/items/weapons/block_shield.ogg', 50, TRUE)
 				return
 			for(var/atom/movable/potentially_blocking_thing as anything in target_turf.contents)
