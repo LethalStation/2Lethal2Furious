@@ -3,6 +3,8 @@
 	var/swing_attack_speed
 	/// The attack speed nextmove if doing a swing attack secondary
 	var/secondary_swing_attack_speed
+	/// If the weapon can hit multiple living targets in swing attacks
+	var/swing_multihits = FALSE
 
 /obj/item/melee/Initialize(mapload)
 	. = ..()
@@ -14,23 +16,35 @@
 		else
 			secondary_swing_attack_speed = swing_attack_speed
 
+/// To be overwritten by subtypes, determines the animation for each attack
+/obj/item/melee/proc/get_attack_anim_type(secondary)
+	return ATTACK_ANIMATION_SLASH
+
+/// Checks if a swing attack is valid before running the giant proc below, also handles attack cooldowns
 /obj/item/melee/proc/start_swing_attack(atom/target, mob/living/attacker, backwards, secondary)
 	if(!attacker.combat_mode)
 		return ITEM_INTERACT_SUCCESS
 	if(attacker.next_move > world.time)
 		return ITEM_INTERACT_SUCCESS
 	var/attack_dir = get_vague_dir(attacker, target)
-	run_swing_attack(attack_dir, attacker, backwards)
+	var/attack_type = get_attack_anim_type(secondary)
+	run_swing_attack(attack_dir, attacker, backwards, swing_multihits, secondary, attack_type)
 	attacker.changeNext_move(secondary ? secondary_swing_attack_speed : swing_attack_speed)
 	return ITEM_INTERACT_SUCCESS
 
-/obj/item/melee/proc/run_swing_attack(direction, mob/attacker, backwards, multihit)
-	var/list/target_turfs = get_turfs_and_adjacent_in_direction(attacker, direction, backwards)
+/// Handles swing attack targeting, includes handling for hitting walls and whatnot
+/obj/item/melee/proc/run_swing_attack(direction, mob/attacker, backwards, multihit, secondary, attack_type)
+	var/list/target_turfs = list()
+	if(secondary)
+		target_turfs = get_targets_secondary(attacker, direction, backwards)
+	else
+		target_turfs = get_targets(attacker, direction, backwards)
 	var/turf_index = 1
+	var/halfway_point = round(length(target_turfs) / 2)
 	for(var/turf/target_turf in target_turfs)
-		// The animation is only played if we don't hit anything by turf two
-		if(turf_index == 2)
-			animate_attack_swing_combat(attacker, get_step(attacker, direction), ATTACK_ANIMATION_SLASH, backwards)
+		// The animation is only played if we don't hit anything by half way through the swing
+		if(turf_index == halfway_point)
+			animate_attack_swing_combat(attacker, get_step(attacker, direction), attack_type, backwards)
 			attacker.do_attack_animation(target_turf, no_effect = TRUE)
 			playsound(attacker, 'sound/items/weapons/fwoosh.ogg', 50, TRUE)
 		turf_index++
@@ -58,6 +72,9 @@
 				return
 
 // For testing
+/obj/item/melee/tizirian_sword/get_attack_anim_type(secondary)
+	return ATTACK_ANIMATION_SLASH
+
 /obj/item/melee/tizirian_sword/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	return start_swing_attack(interacting_with, user)
 
