@@ -28,9 +28,7 @@
 /obj/item/melee/proc/replace_swing_animation(obj/item/source, atom/movable/attacker, atom/attacked_atom, animation_type, list/image_override, list/animation_override)
 	SIGNAL_HANDLER
 	animation_override += ATTACK_ANIMATION_BLUNT
-	// To be used on weapons themselves, use one of the following
-	// smash, punch, bite, claw, slash, kick, disarm, jet_plume (good overhead)
-	// image_override += image(icon = 'icons/effects/effects.dmi', icon_state = "slash")
+	image_override += get_swing_image()
 
 /// Checks if a swing attack is valid before running the giant proc below, also handles attack cooldowns
 /obj/item/melee/proc/start_swing_attack(atom/target, mob/living/attacker, backwards, secondary)
@@ -107,10 +105,8 @@
 /obj/item/melee/tizirian_sword/get_targets(mob/living/attacker, direction, backwards)
 	return get_turfs_and_adjacent_in_direction(attacker, direction, backwards)
 
-/obj/item/melee/tizirian_sword/replace_swing_animation(obj/item/source, atom/movable/attacker, atom/attacked_atom, animation_type, list/image_override, list/animation_override)
-	SIGNAL_HANDLER
-	animation_override += ATTACK_ANIMATION_BLUNT
-	image_override += image(icon = 'icons/effects/effects.dmi', icon_state = "slash")
+/obj/item/melee/tizirian_sword/get_swing_image()
+	return list(image(icon = 'icons/effects/effects.dmi', icon_state = "slash"))
 
 // Acts like a spear
 /obj/item/melee/tizirian_sword/acts_like_spear
@@ -128,7 +124,5 @@
 /obj/item/melee/tizirian_sword/acts_like_spear/get_targets(mob/living/attacker, direction, backwards, target)
 	return get_turfs_in_straight_line_toward(attacker, target, 2)
 
-/obj/item/melee/tizirian_sword/replace_swing_animation(obj/item/source, atom/movable/attacker, atom/attacked_atom, animation_type, list/image_override, list/animation_override)
-	SIGNAL_HANDLER
-	animation_override += ATTACK_ANIMATION_BLUNT
-	image_override += image(icon = 'icons/effects/effects.dmi', icon_state = "shove")
+/obj/item/melee/tizirian_sword/get_swing_image()
+	return list(image(icon = 'icons/effects/effects.dmi', icon_state = "shove"))
