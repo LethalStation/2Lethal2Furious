@@ -58,9 +58,14 @@
 	else
 		target_turfs = get_targets(attacker, direction, backwards, target)
 	var/turf_index = 1
-	var/halfway_point = round(length(target_turfs) / 2)
-	if(halfway_point <= 1)
+	var/halfway_point
+	var/turf_list_length = length(target_turfs)
+	if(turf_list_length <= 1)
 		halfway_point = 1 // Futureproofing for one tile swings
+	else if(turf_list_length == 2)
+		halfway_point = 2
+	else
+		halfway_point = round(turf_list_length / 2)
 	for(var/turf/target_turf in target_turfs)
 		// The animation is only played if we don't hit anything by half way through the swing
 		if(turf_index == halfway_point)
