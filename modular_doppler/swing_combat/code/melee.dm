@@ -30,6 +30,10 @@
 	animation_override += ATTACK_ANIMATION_BLUNT
 	image_override += get_swing_image()
 
+/// Gets the image to use for the actual mob impact animation, PLEASE OVERWRITE
+/obj/item/melee/proc/get_swing_image()
+	return list(image(icon = src.icon, icon_state = src.icon_state))
+
 /// Checks if a swing attack is valid before running the giant proc below, also handles attack cooldowns
 /obj/item/melee/proc/start_swing_attack(atom/target, mob/living/attacker, backwards, secondary)
 	if(!attacker.combat_mode)
