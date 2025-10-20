@@ -13,17 +13,27 @@
 	var/turf/left_turf = get_step(base, turn(general_dir, -45))
 	var/turf/middle_turf = get_step(base, general_dir)
 	var/turf/right_turf = get_step(base, turn(general_dir, 45))
-
 	if(istype(left_turf))
 		result_list += left_turf
 	if(istype(middle_turf))
 		result_list += middle_turf
 	if(istype(right_turf))
 		result_list += right_turf
-
 	if(reversed)
 		reverse_range(result_list)
+	return result_list
 
+/proc/get_turfs_in_straight_line_toward(atom/base, atom/target, attack_range = 2)
+	var/list/result_list = list()
+	var/reach_iterator = 1
+	var/turf/last_turf
+	while(reach_iterator <= attack_range)
+		if(!last_turf)
+			last_turf = get_step_towards(base, target)
+		else
+			last_turf = get_step_towards(last_turf, target)
+		result_list += last_turf
+		reach_iterator++
 	return result_list
 
 /// Gets a dir towards a target, so that 90% of attacks aren't diagonal

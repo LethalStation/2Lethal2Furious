@@ -28,19 +28,29 @@
 		return ITEM_INTERACT_SUCCESS
 	var/attack_dir = get_vague_dir(attacker, target)
 	var/attack_type = get_attack_anim_type(secondary)
-	run_swing_attack(attack_dir, attacker, backwards, swing_multihits, secondary, attack_type)
+	run_swing_attack(attack_dir, attacker, backwards, swing_multihits, secondary, attack_type, target)
 	attacker.changeNext_move(secondary ? secondary_swing_attack_speed : swing_attack_speed)
 	return ITEM_INTERACT_SUCCESS
 
+/// Handles how the weapon gets it's target turfs when swinging primary
+/obj/item/melee/proc/get_targets(mob/living/attacker, direction, backwards, atom/target)
+	return // Overwrite with whatever the tile getting proc should be
+
+/// Handles how the weapon gets it's target turfs when swinging secondary
+/obj/item/melee/proc/get_targets_secondary(mob/living/attacker, direction, backwards, atom/target)
+	return get_targets(attacker, direction, backwards, target)
+
 /// Handles swing attack targeting, includes handling for hitting walls and whatnot
-/obj/item/melee/proc/run_swing_attack(direction, mob/attacker, backwards, multihit, secondary, attack_type)
+/obj/item/melee/proc/run_swing_attack(direction, mob/living/attacker, backwards, multihit, secondary, attack_type, atom/target)
 	var/list/target_turfs = list()
 	if(secondary)
-		target_turfs = get_targets_secondary(attacker, direction, backwards)
+		target_turfs = get_targets_secondary(attacker, direction, backwards, target)
 	else
-		target_turfs = get_targets(attacker, direction, backwards)
+		target_turfs = get_targets(attacker, direction, backwards, target)
 	var/turf_index = 1
 	var/halfway_point = round(length(target_turfs) / 2)
+	if(halfway_point <= 1)
+		halfway_point = 1 // Futureproofing for one tile swings
 	for(var/turf/target_turf in target_turfs)
 		// The animation is only played if we don't hit anything by half way through the swing
 		if(turf_index == halfway_point)
@@ -80,3 +90,22 @@
 
 /obj/item/melee/tizirian_sword/ranged_interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
 	return start_swing_attack(interacting_with, user, TRUE, TRUE)
+
+/obj/item/melee/tizirian_sword/get_targets(mob/living/attacker, direction, backwards)
+	return get_turfs_and_adjacent_in_direction(attacker, direction, backwards)
+
+// Acts like a spear
+/obj/item/melee/tizirian_sword/acts_like_spear
+	name = "spear swing combat tester"
+
+/obj/item/melee/tizirian_sword/acts_like_spear/get_attack_anim_type(secondary)
+	return ATTACK_ANIMATION_PIERCE
+
+/obj/item/melee/tizirian_sword/acts_like_spear/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+	return start_swing_attack(interacting_with, user)
+
+/obj/item/melee/tizirian_sword/acts_like_spear/ranged_interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
+	return start_swing_attack(interacting_with, user)
+
+/obj/item/melee/tizirian_sword/acts_like_spear/get_targets(mob/living/attacker, direction, backwards, target)
+	return get_turfs_in_straight_line_toward(attacker, target, 2)
