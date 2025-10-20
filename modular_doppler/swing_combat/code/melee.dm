@@ -102,6 +102,9 @@
 				return
 
 // For testing
+/obj/item/melee/tizirian_sword
+	swing_combat_animations = TRUE
+
 /obj/item/melee/tizirian_sword/get_attack_anim_type(secondary)
 	return ATTACK_ANIMATION_SLASH
 
