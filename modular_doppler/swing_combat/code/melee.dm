@@ -1,6 +1,4 @@
 /obj/item/melee
-	/// If we use animations for swing combat instead of just the item
-	var/swing_combat_animations = FALSE
 	/// The attack speed nextmove if doing a swing type attack
 	var/swing_attack_speed
 	/// The attack speed nextmove if doing a swing attack secondary
@@ -10,8 +8,6 @@
 
 /obj/item/melee/Initialize(mapload)
 	. = ..()
-	if(swing_combat_animations)
-		RegisterSignal(src, COMSIG_ITEM_ATTACK_ANIMATION, PROC_REF(replace_swing_animation))
 	if(!swing_attack_speed)
 		swing_attack_speed = attack_speed
 	if(!secondary_swing_attack_speed)
@@ -23,16 +19,6 @@
 /// To be overwritten by subtypes, determines the animation for each attack
 /obj/item/melee/proc/get_attack_anim_type(secondary)
 	return ATTACK_ANIMATION_SLASH
-
-/// To override the default item swing animation for making swing combat animations work better
-/obj/item/melee/proc/replace_swing_animation(obj/item/source, atom/movable/attacker, atom/attacked_atom, animation_type, list/image_override, list/animation_override)
-	SIGNAL_HANDLER
-	animation_override += ATTACK_ANIMATION_BLUNT
-	image_override += get_swing_image()
-
-/// Gets the image to use for the actual mob impact animation, PLEASE OVERWRITE
-/obj/item/melee/proc/get_swing_image()
-	return list(image(icon = src.icon, icon_state = src.icon_state))
 
 /// Checks if a swing attack is valid before running the giant proc below, also handles attack cooldowns
 /obj/item/melee/proc/start_swing_attack(atom/target, mob/living/attacker, backwards, secondary)
@@ -117,8 +103,7 @@
 /obj/item/melee/tizirian_sword/get_targets(mob/living/attacker, direction, backwards)
 	return get_turfs_and_adjacent_in_direction(attacker, direction, backwards)
 
-/obj/item/melee/tizirian_sword/get_swing_image()
-	return list(image(icon = 'icons/effects/effects.dmi', icon_state = "slash"))
+// image(icon = 'icons/effects/effects.dmi', icon_state = "slash")
 
 // Acts like a spear
 /obj/item/melee/tizirian_sword/acts_like_spear
@@ -136,5 +121,4 @@
 /obj/item/melee/tizirian_sword/acts_like_spear/get_targets(mob/living/attacker, direction, backwards, target)
 	return get_turfs_in_straight_line_toward(attacker, target, 2)
 
-/obj/item/melee/tizirian_sword/get_swing_image()
-	return list(image(icon = 'icons/effects/effects.dmi', icon_state = "shove"))
+// image(icon = 'icons/effects/effects.dmi', icon_state = "shove")
