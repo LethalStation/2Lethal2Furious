@@ -10,7 +10,6 @@
 	baseturfs = /turf/open/water/lethal_ammonia
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
-	immerse_overlay_color = "#332e3b"
 
 /turf/open/water/lethal_ammonia/deep
 	name = "deep liquid ammonia"
@@ -20,7 +19,6 @@
 	smoothing_groups = SMOOTH_GROUP_DEEP_AMMONIA + SMOOTH_GROUP_TURF_OPEN
 	canSmoothWith = SMOOTH_GROUP_DEEP_AMMONIA
 	baseturfs = /turf/open/water/lethal_ammonia/deep
-	immerse_overlay_color = "#222222"
 	slowdown = 2
 
 /turf/open/water/lethal_methane
@@ -35,7 +33,6 @@
 	baseturfs = /turf/open/water/lethal_methane
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
-	immerse_overlay_color = "#629b7f"
 
 /turf/open/water/lethal_methane/deep
 	name = "deep methane brine"
@@ -45,7 +42,6 @@
 	smoothing_groups = SMOOTH_GROUP_DEEP_METH + SMOOTH_GROUP_TURF_OPEN
 	canSmoothWith = SMOOTH_GROUP_DEEP_METH
 	baseturfs = /turf/open/water/lethal_methane/deep
-	immerse_overlay_color = "#3a483d"
 	slowdown = 2
 
 /turf/open/water/lethal_ketone
@@ -61,7 +57,6 @@
 	baseturfs = /turf/open/water/lethal_ketone
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
-	immerse_overlay_color = "#9d7f4b"
 	light_range = 2
 	light_power = 0.5
 	light_color = "#d2c545"
@@ -75,5 +70,4 @@
 	smoothing_groups = SMOOTH_GROUP_DEEP_KETONE + SMOOTH_GROUP_TURF_OPEN
 	canSmoothWith = SMOOTH_GROUP_DEEP_KETONE
 	baseturfs = /turf/open/water/lethal_ketone/deep
-	immerse_overlay_color = "#51352d"
 	slowdown = 2
