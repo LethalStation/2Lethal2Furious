@@ -147,6 +147,7 @@ SUBSYSTEM_DEF(job)
 	type_occupations = list()
 
 	var/list/all_jobs = subtypesof(/datum/job/lethal) // LETHAL EDIT - var/list/all_jobs = subtypesof(/datum/job)
+	all_jobs += /datum/job/unassigned // LETHAL EDIT - It doesn't like me much :(
 	if(!length(all_jobs))
 		all_occupations = list()
 		joinable_occupations = list()
