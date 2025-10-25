@@ -53,6 +53,7 @@
 		/obj/item/flashlight/pen,
 		/obj/item/reagent_containers/hypospray/medipen,
 		/obj/item/cigarette,
+		/obj/item/holosynth_pen //DOPPLER EDIT ADDITION - Holosynth may live here if they choose
 	)
 
 /obj/item/modular_computer/pda/Initialize(mapload)
@@ -71,7 +72,7 @@
 		apps_to_download += default_programs + pda_programs
 	apps_to_download += starting_programs
 
-	for(var/programs as anything in apps_to_download)
+	for(var/programs in apps_to_download)
 		var/datum/computer_file/program/program_type = new programs
 		store_file(program_type)
 

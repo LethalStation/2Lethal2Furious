@@ -38,7 +38,7 @@ trait_name = "Station"
 
 # Icecats Camp Lower Level
 [templates.icebox_icecats_lower]
-map_files = ["icemoon_underground_icewalker_lower.dmm"]
+map_files = ["icemoon_underground_icewalker_lower_small.dmm"]
 directory = "_maps/RandomRuins/IceRuins/doppler/"
 required_map = "IceBoxStation.dmm"
 coordinates = [12, 9, 1]
@@ -46,7 +46,7 @@ trait_name = "Station"
 
 # Icecats Camp Middle Level
 [templates.icebox_icecats_middle]
-map_files = ["icemoon_underground_icewalker_middle.dmm"]
+map_files = ["icemoon_underground_icewalker_middle_small.dmm"]
 directory = "_maps/RandomRuins/IceRuins/doppler/"
 required_map = "IceBoxStation.dmm"
 coordinates = [12, 9, 2]
@@ -54,7 +54,7 @@ trait_name = "Station"
 
 # Icecats Camp Upper Level
 [templates.icebox_icecats_upper]
-map_files = ["icemoon_underground_icewalker_upper.dmm"]
+map_files = ["icemoon_underground_icewalker_upper_small.dmm"]
 directory = "_maps/RandomRuins/IceRuins/doppler/"
 required_map = "IceBoxStation.dmm"
 coordinates = [12, 9, 3]
@@ -63,7 +63,7 @@ trait_name = "Station"
 # ICELAND ADDITIONS
 # Icecats Camp Lower Level: ICELAND ADDITION
 [templates.icebox_icecats_lower_iceland]
-map_files = ["icemoon_underground_icewalker_lower.dmm"]
+map_files = ["icemoon_underground_icewalker_lower_small.dmm"]
 directory = "_maps/RandomRuins/IceRuins/doppler/"
 required_map = "Iceland.dmm"
 coordinates = [121, 203, 1]
@@ -71,7 +71,7 @@ trait_name = "Mining"
 
 # Icecats Camp Lower Level: ICELAND ADDITION
 [templates.icebox_icecats_middle_iceland]
-map_files = ["icemoon_underground_icewalker_middle.dmm"]
+map_files = ["icemoon_underground_icewalker_middle_small.dmm"]
 directory = "_maps/RandomRuins/IceRuins/doppler/"
 required_map = "Iceland.dmm"
 coordinates = [121, 203, 2]
@@ -79,7 +79,7 @@ trait_name = "Mining"
 
 # Icecats Camp Upper Level: ICELAND ADDITION
 [templates.icebox_icecats_upper_iceland]
-map_files = ["icemoon_underground_icewalker_upper.dmm"]
+map_files = ["icemoon_underground_icewalker_upper_small.dmm"]
 directory = "_maps/RandomRuins/IceRuins/doppler/"
 required_map = "Iceland.dmm"
 coordinates = [121, 203, 3]
@@ -92,42 +92,6 @@ map_files = ["tramstation_cryo.dmm"]
 directory = "_maps/doppler/automapper/templates/tramstation/"
 required_map = "tramstation.dmm"
 coordinates = [68, 102, 2]
-trait_name = "Station"
-
-# BIRDSHOT MAP EDITS
-# Birdshot Cryo
-[templates.birdshot_cryo]
-map_files = ["birdshot_cryo.dmm"]
-directory = "_maps/doppler/automapper/templates/birdshot/"
-required_map = "birdshot.dmm"
-coordinates = [142, 84, 1]
-trait_name = "Station"
-
-# NORTHSTAR MAP EDITS
-# Northstar Cryo
-[templates.northstar_cryo]
-map_files = ["northstar_cryo.dmm"]
-directory = "_maps/doppler/automapper/templates/northstar/"
-required_map = "north_star.dmm"
-coordinates = [130, 114, 3]
-trait_name = "Station"
-
-# WAWASTATION MAP EDITS
-# Wawastation Cryo
-[templates.wawastation_cryo]
-map_files = ["wawastation_cryo.dmm"]
-directory = "_maps/doppler/automapper/templates/wawastation/"
-required_map = "wawastation.dmm"
-coordinates = [83, 92, 1]
-trait_name = "Station"
-
-# CATWALKSTATION MAP EDITS
-# Catwalkstation Cryo
-[templates.catwalkstation_cryo]
-map_files = ["catwalkstation_cryo.dmm"]
-directory = "_maps/doppler/automapper/templates/catwalkstation/"
-required_map = "CatwalkStation_2023.dmm"
-coordinates = [128, 169, 1]
 trait_name = "Station"
 
 # NEBULASTATION MAP EDITS

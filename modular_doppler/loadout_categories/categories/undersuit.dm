@@ -172,6 +172,14 @@
 	name = "Long Skirt"
 	item_path = /obj/item/clothing/under/dress/skirt/long
 
+/datum/loadout_item/undersuit/pants/skirt/highwaisted_skirt
+	name = "High-Waisted Skirt"
+	item_path = /obj/item/clothing/under/dress/skirt/highwaisted_skirt
+
+/datum/loadout_item/undersuit/pants/skirt/miniskirt
+	name = "Miniskirt"
+	item_path = /obj/item/clothing/under/dress/skirt/miniskirt
+
 /datum/loadout_item/undersuit/pants/skirt/loincloth
 	name = "Loincloth"
 	item_path = /obj/item/clothing/under/dress/skirt/loincloth
@@ -294,6 +302,22 @@
 /datum/loadout_item/undersuit/dress/strapless
 	name = "Strapless Dress"
 	item_path = /obj/item/clothing/under/dress/doppler/strapless
+
+/datum/loadout_item/undersuit/dress/halter_dress
+	name = "Halter Dress"
+	item_path = /obj/item/clothing/under/dress/doppler/halter_dress
+
+/datum/loadout_item/undersuit/dress/sweaterdress
+	name = "Keyhole Sweater Dress"
+	item_path = /obj/item/clothing/under/dress/doppler/sweaterdress
+
+/datum/loadout_item/undersuit/dress/maid
+	name = "Maid Dress"
+	item_path = /obj/item/clothing/under/costume/maid
+
+/datum/loadout_item/undersuit/dress/maid_uniform
+	name = "Maid Uniform"
+	item_path = /obj/item/clothing/under/rank/civilian/janitor/maid
 
 /// JAPANESE/LUNAR BREAKER
 
