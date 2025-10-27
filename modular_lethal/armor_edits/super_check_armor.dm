@@ -1,5 +1,5 @@
 /datum/armor
-	special_armor_value = SOFT_ARMOR_TYPE
+	var/special_armor_value = SOFT_ARMOR_TYPE
 
 /// Checks if a body zone is protected by hard armor or soft armor,
 /mob/living/proc/get_zone_armor_type(obj/item/bodypart/def_zone)
