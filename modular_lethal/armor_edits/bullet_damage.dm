@@ -23,20 +23,19 @@
 // Override of living apply_projectile_effects that also damages the armor someone is wearing
 
 /mob/living/apply_projectile_effects(obj/projectile/proj, def_zone, armor_check)
-	var/flat_reduction = (getarmor(def_zone, proj.armor_flag) / 5) * ((100 - proj.armour_penetration) / 100)
-	var/armor_damage = proj.damage - (proj.damage - flat_reduction)
-
+	var/hard_protection = get_zone_armor_type(targeting)
+	if(hard_protection)
+		final_force = max(, 0)
 	apply_damage(
-		damage = max(0, proj.damage - flat_reduction),
+		damage = hard_protection ? (proj.damage - (armor_block / 4)) : proj.damage,
 		damagetype = proj.damage_type,
 		def_zone = def_zone,
-		blocked = min(ARMOR_MAX_BLOCK, armor_check - armor_damage),  //cap damage reduction at 90%
+		blocked = hard_protection ? (armor_check / 2) : armor_check,
 		wound_bonus = proj.wound_bonus,
 		exposed_wound_bonus = proj.exposed_wound_bonus,
 		sharpness = proj.sharpness,
 		attack_direction = get_dir(proj.starting, src),
 	)
-
 	apply_effects(
 		stun = proj.stun,
 		knockdown = proj.knockdown,
@@ -51,7 +50,6 @@
 		paralyze = proj.paralyze,
 		immobilize = proj.immobilize,
 	)
-
 	// If the damage type isn't one of the types that already does clothing damage, then we damage armor
 	if(proj.damage_type != BURN)
 		damage_armor(
@@ -59,11 +57,9 @@
 			proj.damage_type,
 			def_zone,
 		)
-
 	if(proj.dismemberment)
 		check_projectile_dismemberment(proj, def_zone)
-
-	if (proj.damage && armor_check < 100)
+	if(proj.damage && armor_check < 100)
 		create_projectile_hit_effects(proj, def_zone, armor_check)
 
 // Override take_damage_zone to allow stuff with only one covered zone to take damage
@@ -73,9 +69,59 @@
 	var/list/covered_limbs = cover_flags2body_zones(body_parts_covered) // what do we actually cover?
 	if(!(def_zone in covered_limbs))
 		return
-
-	var/damage_dealt = take_damage(damage_amount * 0.1, damage_type, "", FALSE, 1, 100) * 10 // only deal 10% of the damage to the general integrity damage, then multiply it by 10 so we know how much to deal to limb
+	var/damage_dealt = take_damage(damage_amount / 2, damage_type, "", FALSE, 1, 100) * 10 // only deal 10% of the damage to the general integrity damage, then multiply it by 10 so we know how much to deal to limb
 	LAZYINITLIST(damage_by_parts)
 	damage_by_parts[def_zone] += damage_dealt
 	if(damage_by_parts[def_zone] > limb_integrity)
 		disable_zone(def_zone, damage_type)
+
+/mob/living/attacked_by(obj/item/attacking_item, mob/living/user, list/modifiers, list/attack_modifiers)
+	var/targeting = check_zone(user.zone_selected)
+	if(user != src)
+		var/zone_hit_chance = 80
+		if(body_position == LYING_DOWN)
+			zone_hit_chance += 10
+		targeting = get_random_valid_zone(targeting, zone_hit_chance)
+	var/targeting_human_readable = parse_zone_with_bodypart(targeting)
+	if(!LAZYACCESS(attack_modifiers, SILENCE_DEFAULT_MESSAGES))
+		send_item_attack_message(attacking_item, user, targeting_human_readable, targeting)
+	var/armor_block = min(run_armor_check(
+			def_zone = targeting,
+			attack_flag = MELEE,
+			absorb_text = span_notice("Your armor has protected your [targeting_human_readable]!"),
+			soften_text = span_warning("Your armor has softened a hit to your [targeting_human_readable]!"),
+			armour_penetration = attacking_item.armour_penetration,
+			weak_against_armour = attacking_item.weak_against_armour,
+		), ARMOR_MAX_BLOCK)
+	var/final_force = CALCULATE_FORCE(attacking_item, attack_modifiers)
+	if(mob_biotypes & MOB_ROBOTIC)
+		final_force *= attacking_item.get_demolition_modifier(src)
+	var/wounding = attacking_item.wound_bonus
+	if((attacking_item.item_flags & SURGICAL_TOOL) && !user.combat_mode && body_position == LYING_DOWN && (LAZYLEN(surgeries) > 0))
+		wounding = CANT_WOUND
+	if(user != src)
+		// This doesn't factor in armor, or most damage modifiers (physiology). Your mileage may vary
+		if(check_block(attacking_item, final_force, "\the [attacking_item]", MELEE_ATTACK, attacking_item.armour_penetration, attacking_item.damtype))
+			return ATTACK_FAILED
+	SEND_SIGNAL(attacking_item, COMSIG_ITEM_ATTACK_ZONE, src, user, targeting)
+	if(final_force <= 0)
+		return 0
+	if(ishuman(src) || client) // istype(src) is kinda bad, but it's to avoid spamming the blackbox
+		SSblackbox.record_feedback("nested tally", "item_used_for_combat", 1, list("[attacking_item.force]", "[attacking_item.type]"))
+		SSblackbox.record_feedback("tally", "zone_targeted", 1, user.zone_selected)
+	var/hard_protection = get_zone_armor_type(targeting)
+	if(hard_protection)
+		final_force = max((final_force - (armor_block / 4)), 0)
+	var/damage_done = apply_damage(
+		damage = final_force,
+		damagetype = attacking_item.damtype,
+		def_zone = targeting,
+		blocked = hard_protection ? (armor_block / 2) : armor_block,
+		wound_bonus = wounding,
+		exposed_wound_bonus = attacking_item.exposed_wound_bonus,
+		sharpness = attacking_item.get_sharpness(),
+		attack_direction = get_dir(user, src),
+		attacking_item = attacking_item,
+	)
+	attack_effects(damage_done, targeting, armor_block, attacking_item, user)
+	return damage_done

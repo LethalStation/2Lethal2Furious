@@ -7765,6 +7765,8 @@
 #include "modular_doppler\wargaming\code\projectors.dm"
 #include "modular_lethal\armor_edits\armor_edits.dm"
 #include "modular_lethal\armor_edits\bullet_damage.dm"
+#include "modular_lethal\armor_edits\debug_armors.dm"
+#include "modular_lethal\armor_edits\super_check_armor.dm"
 #include "modular_lethal\combat_things\code\deafness_limit.dm"
 #include "modular_lethal\combat_things\code\fire_adjustment.dm"
 #include "modular_lethal\das_lethal\code\areas.dm"
