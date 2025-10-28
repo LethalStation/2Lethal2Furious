@@ -24,8 +24,15 @@
 
 /mob/living/apply_projectile_effects(obj/projectile/proj, def_zone, armor_check)
 	var/hard_protection = get_zone_armor_type(def_zone)
+	message_admins(hard_protection ? "HARD ARMOR" : "SOFT ARMOR")
+	if(hard_protection)
+		message_admins("DR = [armor_check / 4], FORCE = [proj.damage]")
+		message_admins("REDUCED FORCE = [max(proj.damage - (armor_check / 4), 0)]")
+		message_admins("SOFT ARMOR = [armor_check / 2]")
+	else
+		message_admins("SOFT ARMOR = [armor_check]")
 	apply_damage(
-		damage = hard_protection ? (proj.damage - (armor_check / 4)) : proj.damage,
+		damage = hard_protection ? (max(proj.damage - (armor_check / 4), 0)) : proj.damage,
 		damagetype = proj.damage_type,
 		def_zone = def_zone,
 		blocked = hard_protection ? (armor_check / 2) : armor_check,
@@ -108,8 +115,14 @@
 		SSblackbox.record_feedback("nested tally", "item_used_for_combat", 1, list("[attacking_item.force]", "[attacking_item.type]"))
 		SSblackbox.record_feedback("tally", "zone_targeted", 1, user.zone_selected)
 	var/hard_protection = get_zone_armor_type(targeting)
+	message_admins(hard_protection ? "HARD ARMOR" : "SOFT ARMOR")
 	if(hard_protection)
+		message_admins("DR = [armor_block / 4], FORCE = [final_force]")
 		final_force = max((final_force - (armor_block / 4)), 0)
+		message_admins("REDUCED FORCE = [final_force]")
+		message_admins("SOFT ARMOR = [armor_block / 2]")
+	else
+		message_admins("SOFT ARMOR = [armor_block]")
 	var/damage_done = apply_damage(
 		damage = final_force,
 		damagetype = attacking_item.damtype,
