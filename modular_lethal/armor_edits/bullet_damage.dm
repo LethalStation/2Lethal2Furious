@@ -24,11 +24,20 @@
 
 /mob/living/apply_projectile_effects(obj/projectile/proj, def_zone, armor_check)
 	var/hard_protection = get_zone_armor_type(def_zone)
+	var/used_armor_block = armor_check
+	if(hard_protection)
+		switch(used_armor_block)
+			if(-INFINITY to 50)
+				used_armor_block = 75
+			if(51 to 75)
+				used_armor_block = 50
+			else
+				used_armor_block = 25
 	apply_damage(
 		damage = hard_protection ? (max(proj.damage - (armor_check / 4), 0)) : proj.damage,
 		damagetype = proj.damage_type,
 		def_zone = def_zone,
-		blocked = hard_protection ? (armor_check / 2) : armor_check,
+		blocked = hard_protection ? used_armor_block : armor_check,
 		wound_bonus = proj.wound_bonus,
 		exposed_wound_bonus = proj.exposed_wound_bonus,
 		sharpness = proj.sharpness,
@@ -104,14 +113,21 @@
 		SSblackbox.record_feedback("tally", "zone_targeted", 1, user.zone_selected)
 	var/hard_protection = get_zone_armor_type(targeting)
 	var/stored_force = final_force
+	var/used_armor_block = armor_block
 	if(hard_protection)
+		switch(used_armor_block)
+			if(-INFINITY to 50)
+				used_armor_block = 75
+			if(51 to 75)
+				used_armor_block = 50
+			else
+				used_armor_block = 25
 		final_force = max((final_force - (armor_block / 4)), 0)
-	else
 	var/damage_done = apply_damage(
 		damage = final_force,
 		damagetype = attacking_item.damtype,
 		def_zone = targeting,
-		blocked = hard_protection ? (armor_block / 2) : armor_block,
+		blocked = hard_protection ? used_armor_block : armor_block,
 		wound_bonus = wounding,
 		exposed_wound_bonus = attacking_item.exposed_wound_bonus,
 		sharpness = attacking_item.get_sharpness(),
