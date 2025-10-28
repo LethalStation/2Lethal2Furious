@@ -1972,7 +1972,6 @@
 /area/gakster_location/hideout_real)
 "jm" = (
 /obj/structure/table/reinforced,
-/obj/structure/table/reinforced,
 /obj/effect/spawner/random/epic_loot/medkit,
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/hideout_real)
@@ -2862,7 +2861,6 @@
 /area/gakster_location/war)
 "nU" = (
 /obj/structure/table/reinforced,
-/obj/structure/table/reinforced,
 /obj/effect/spawner/random/epic_loot/bullet_piles,
 /turf/open/floor/wood,
 /area/gakster_location/war)
@@ -3176,7 +3174,6 @@
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "pv" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/gakster_location/war)
@@ -7768,9 +7765,6 @@
 /obj/structure/spacevine{
 	can_spread = 0
 	},
-/obj/structure/spacevine{
-	can_spread = 0
-	},
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/war)
 "Ml" = (
@@ -7867,7 +7861,6 @@
 /turf/open/floor/iron/dark,
 /area/gakster_location/war)
 "MK" = (
-/obj/structure/lattice,
 /obj/structure/lattice,
 /turf/open/chasm,
 /area/gakster_location/war)
