@@ -98,6 +98,8 @@
 		else if(!(worn_thing in held_items))
 			continue
 
+		if(!throw_mode) // Lethal addition
+			continue // Lethal addition
 		var/final_block_chance = worn_thing.block_chance - (clamp((armour_penetration - worn_thing.armour_penetration) / 2, 0, 100)) + block_chance_modifier
 		if(worn_thing.hit_reaction(src, hit_by, attack_text, final_block_chance, damage, attack_type, damage_type))
 			return SUCCESSFUL_BLOCK

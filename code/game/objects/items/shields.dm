@@ -102,6 +102,7 @@
 		var/mob/living/basic/critter = hitby
 		penetration = critter.armour_penetration
 	take_damage(damage, damage_type, armor_flag, armour_penetration = penetration)
+	owner.adjustStaminaLoss(damage) // Lethal addition
 
 /obj/item/shield/atom_destruction(damage_flag)
 	playsound(src, shield_break_sound, 50)
