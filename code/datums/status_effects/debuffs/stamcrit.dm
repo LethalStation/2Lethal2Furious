@@ -38,13 +38,15 @@
 
 	if(owner.stat == CONSCIOUS)
 		to_chat(owner, span_notice("You're too exhausted to keep going..."))
-	owner.add_traits(list(TRAIT_INCAPACITATED, TRAIT_IMMOBILIZED, TRAIT_FLOORED), STAMINA)
+	// owner.add_traits(list(TRAIT_INCAPACITATED, TRAIT_IMMOBILIZED, TRAIT_FLOORED), STAMINA) // Lethal removal
+	owner.next_move_modifier -= 0.5 // Lethal addition
 	return .
 
 /datum/status_effect/incapacitating/stamcrit/on_remove()
 	UnregisterSignal(owner, COMSIG_LIVING_HEALTH_UPDATE)
 	UnregisterSignal(owner, COMSIG_LIVING_ADJUST_STAMINA_DAMAGE)
-	owner.remove_traits(list(TRAIT_INCAPACITATED, TRAIT_IMMOBILIZED, TRAIT_FLOORED), STAMINA)
+	// owner.remove_traits(list(TRAIT_INCAPACITATED, TRAIT_IMMOBILIZED, TRAIT_FLOORED), STAMINA) // Lethal removal
+	owner.next_move_modifier += 0.5 // Lethal addition
 	return ..()
 
 /datum/status_effect/incapacitating/stamcrit/proc/update_diminishing_return(datum/source, type, amount, forced)

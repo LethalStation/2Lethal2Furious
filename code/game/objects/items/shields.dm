@@ -55,6 +55,8 @@
 	if(attack_type == OVERWHELMING_ATTACK)
 		effective_block_chance -= 25
 	final_block_chance = clamp(effective_block_chance, 0, 100)
+	if((owner.maxHealth - owner.getStaminaLoss()) <= owner.crit_threshold) // Lethal addition
+		final_block_chance = 0 // If you have no stamina, your block chance is NOTHING // Lethal addition
 	. = ..()
 	if(.)
 		on_shield_block(owner, hitby, attack_text, damage, attack_type, damage_type)
