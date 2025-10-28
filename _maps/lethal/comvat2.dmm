@@ -390,7 +390,6 @@
 /turf/open/floor/plating,
 /area/gakster_location/hideout_real)
 "cX" = (
-/obj/structure/lattice,
 /obj/structure/lattice/catwalk,
 /turf/open/chasm,
 /area/gakster_location/war)
@@ -1548,7 +1547,6 @@
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "lF" = (
-/obj/structure/lattice,
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/teal,
 /turf/open/chasm,
@@ -1611,7 +1609,6 @@
 /turf/open/floor/wood,
 /area/gakster_location/hideout_real)
 "mv" = (
-/turf/open/space/basic,
 /turf/open/misc/dirt/icemoon,
 /area/space)
 "mw" = (
@@ -2443,7 +2440,6 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "tr" = (
-/obj/machinery/door/airlock/maintenance_hatch,
 /obj/effect/mapping_helpers/airlock/welded,
 /turf/closed/wall,
 /area/gakster_location/war)
@@ -4081,7 +4077,6 @@
 /turf/open/openspace,
 /area/gakster_location/war)
 "EE" = (
-/obj/structure/lattice,
 /obj/structure/lattice/catwalk,
 /turf/open/openspace,
 /area/gakster_location/war)
@@ -5368,7 +5363,6 @@
 /turf/open/indestructible/dark/smooth_large,
 /area/gakster_location/hideout_real)
 "OA" = (
-/obj/machinery/door/airlock/grunge,
 /turf/closed/wall,
 /area/gakster_location/war)
 "OB" = (
@@ -5753,7 +5747,6 @@
 /turf/open/indestructible/dark/smooth_large,
 /area/gakster_location/war)
 "Rf" = (
-/obj/machinery/door/airlock/maintenance_hatch,
 /turf/closed/wall,
 /area/gakster_location/war)
 "Rh" = (

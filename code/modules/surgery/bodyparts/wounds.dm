@@ -263,11 +263,11 @@
 			// unlike normal armor checks, we tabluate these piece-by-piece manually so we can also pass on appropriate damage the clothing's limbs if necessary
 			armor_ablation += clothes.get_armor_rating(WOUND)
 			// Should attack also cause damage to the clothes?
-			if (wound_clothing)
+			/* if (wound_clothing) // Lethal removal, handled elsewhere
 				if(wounding_type == WOUND_SLASH)
 					clothes.take_damage_zone(body_zone, damage, BRUTE)
 				else if(wounding_type == WOUND_BURN)
-					clothes.take_damage_zone(body_zone, damage, BURN)
+					clothes.take_damage_zone(body_zone, damage, BURN) */
 
 	injury_mod += wound_bonus
 

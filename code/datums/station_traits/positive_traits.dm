@@ -297,6 +297,9 @@
 		/datum/job/bridge_assistant = /obj/item/organ/cyberimp/arm/toolkit/paperwork,
 		/datum/job/command_bodyguard = /obj/item/organ/eyes/robotic/shield,
 		// DOPPLER EDIT END
+		/datum/job/lethal/filtre = /obj/item/organ/eyes/robotic/xray,
+		/datum/job/lethal/pinata = /obj/item/organ/cyberimp/interaction_speeder,
+		/datum/job/lethal/gakster = /obj/item/organ/cyberimp/sensory_enhancer,
 	)
 
 /datum/station_trait/cybernetic_revolution/New()
