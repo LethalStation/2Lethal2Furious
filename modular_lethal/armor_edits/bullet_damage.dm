@@ -23,11 +23,9 @@
 // Override of living apply_projectile_effects that also damages the armor someone is wearing
 
 /mob/living/apply_projectile_effects(obj/projectile/proj, def_zone, armor_check)
-	var/hard_protection = get_zone_armor_type(targeting)
-	if(hard_protection)
-		final_force = max(, 0)
+	var/hard_protection = get_zone_armor_type(def_zone)
 	apply_damage(
-		damage = hard_protection ? (proj.damage - (armor_block / 4)) : proj.damage,
+		damage = hard_protection ? (proj.damage - (armor_check / 4)) : proj.damage,
 		damagetype = proj.damage_type,
 		def_zone = def_zone,
 		blocked = hard_protection ? (armor_check / 2) : armor_check,
@@ -53,7 +51,7 @@
 	// If the damage type isn't one of the types that already does clothing damage, then we damage armor
 	if(proj.damage_type != BURN)
 		damage_armor(
-			armor_damage,
+			proj.damage,
 			proj.damage_type,
 			def_zone,
 		)

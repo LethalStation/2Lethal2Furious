@@ -18,7 +18,6 @@
 		var/obj/item/bodypart/all_bodypart = X
 		if(fetch_me_their_flexibility(all_bodypart) == HARD_ARMOR_TYPE)
 			return TRUE
-		organnum++
 	return FALSE
 
 /// Compiles a list of all the armor types protecting a bodypart
@@ -26,6 +25,7 @@
 	var/list/covering_clothing = list(head, wear_mask, wear_suit, w_uniform, back, gloves, shoes, belt, s_store, glasses, ears, wear_id, wear_neck)
 	for(var/obj/item/clothing/clothing_item in covering_clothing)
 		if(clothing_item.body_parts_covered & def_zone.body_part)
-			if(clothing_item.armor.special_armor_value == HARD_ARMOR_TYPE)
+			var/datum/armor/clothing_armor = clothing_item.get_armor()
+			if(clothing_armor.special_armor_value == HARD_ARMOR_TYPE)
 				return TRUE // Hard armor is the most important bit to find here
 	return FALSE
