@@ -55,6 +55,8 @@
 	if(attack_type == OVERWHELMING_ATTACK)
 		effective_block_chance -= 25
 	final_block_chance = clamp(effective_block_chance, 0, 100)
+	if((owner.maxHealth - owner.getStaminaLoss()) <= owner.crit_threshold) // Lethal addition
+		final_block_chance = 0 // If you have no stamina, your block chance is NOTHING // Lethal addition
 	. = ..()
 	if(.)
 		on_shield_block(owner, hitby, attack_text, damage, attack_type, damage_type)
@@ -102,6 +104,7 @@
 		var/mob/living/basic/critter = hitby
 		penetration = critter.armour_penetration
 	take_damage(damage, damage_type, armor_flag, armour_penetration = penetration)
+	owner.adjustStaminaLoss(damage) // Lethal addition
 
 /obj/item/shield/atom_destruction(damage_flag)
 	playsound(src, shield_break_sound, 50)
