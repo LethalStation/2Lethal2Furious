@@ -807,8 +807,8 @@
 /mob/living/proc/get_shove_flags(mob/living/shover, obj/item/weapon)
 	if(shover.move_force >= move_resist)
 		. |= SHOVE_CAN_MOVE
-		if(!buckled)
-			. |= SHOVE_CAN_HIT_SOMETHING
+		// if(!buckled) // Lethal edit - removes shove knockdowns
+			// . |= SHOVE_CAN_HIT_SOMETHING // Lethal edit - removes shove knockdowns
 	if(HAS_TRAIT(src, TRAIT_BRAWLING_KNOCKDOWN_BLOCKED))
 		. |= SHOVE_KNOCKDOWN_BLOCKED
 
