@@ -1,4 +1,5 @@
 /obj/item/gun/ballistic/rifle/osako
+	fire_sound_volume = 50
 	gunshot_animation_information = list(
 		"pixel_x" = 35, \
 		"pixel_y" = 2, \

@@ -10,6 +10,7 @@
 	suppressed_sound = 'modular_lethal/paxilweapons_real/sound/zomushi/zomushi_silenced.wav'
 	pickup_sound = 'modular_lethal/paxilweapons_real/sound/pickup_sounds/drop_lightgun.wav'
 	drop_sound = 'modular_lethal/paxilweapons_real/sound/pickup_sounds/drop_lightgun.wav'
+	fire_sound_volume = 50
 	w_class = WEIGHT_CLASS_NORMAL
 	accepted_magazine_type = /obj/item/ammo_box/magazine/miecz
 	suppressor_x_offset = 7
