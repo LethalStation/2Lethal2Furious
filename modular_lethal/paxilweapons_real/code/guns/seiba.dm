@@ -18,6 +18,7 @@
 	rack_sound = 'modular_lethal/paxilweapons_real/sound/seiba/seiba_rack.wav'
 	fire_sound = 'modular_lethal/paxilweapons_real/sound/seiba/seiba.wav'
 	suppressed_sound = 'modular_lethal/paxilweapons_real/sound/seiba/seiba_silenced.wav'
+	fire_sound_volume = 50
 	can_suppress = TRUE
 	pickup_sound = 'modular_lethal/paxilweapons_real/sound/pickup_sounds/drop_lightgun.wav'
 	drop_sound = 'modular_lethal/paxilweapons_real/sound/pickup_sounds/drop_lightgun.wav'

@@ -71,7 +71,7 @@
 	var/list/covered_limbs = cover_flags2body_zones(body_parts_covered) // what do we actually cover?
 	if(!(def_zone in covered_limbs))
 		return
-	var/damage_dealt = take_damage(damage_amount / 2, damage_type, "", FALSE, 1, 100) * 10 // only deal 10% of the damage to the general integrity damage, then multiply it by 10 so we know how much to deal to limb
+	var/damage_dealt = take_damage(damage_amount / 2, damage_type, "", FALSE, 1, 100) * 2
 	LAZYINITLIST(damage_by_parts)
 	damage_by_parts[def_zone] += damage_dealt
 	if(damage_by_parts[def_zone] > limb_integrity)

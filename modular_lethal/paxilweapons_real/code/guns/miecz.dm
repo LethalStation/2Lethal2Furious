@@ -20,6 +20,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	accepted_magazine_type = /obj/item/ammo_box/magazine/miecz
 	fire_sound = 'modular_lethal/paxilweapons_real/sound/seiba/seiba.wav'
+	fire_sound_volume = 50
 	can_suppress = TRUE
 	suppressor_x_offset = 0
 	suppressor_y_offset = 0
