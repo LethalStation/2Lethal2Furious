@@ -17,7 +17,7 @@
 	max_total_storage = WEIGHT_CLASS_NORMAL * 8
 	screen_max_columns = 4
 	numerical_stacking = FALSE
-	opening_sound = 'modular_np_lethal/epic_loot/sound/containers/wood_crate_1.mp3'
+	opening_sound = 'modular_doppler/epic_loot/sound/wood_crate_1.mp3'
 
 /datum/storage/maintenance_loot_structure/epic_loot_grenade_box/New()
 	. = ..()

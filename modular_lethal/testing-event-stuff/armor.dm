@@ -33,7 +33,6 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	max_integrity = 200
 	limb_integrity = 300
-	repairable_by = /obj/item/stack/sheet/minerla/greatergem // you're not getting that one buddy
 
 /obj/item/clothing/suit/armor/lizard_bowman
 	name = "clan bowman armor"
