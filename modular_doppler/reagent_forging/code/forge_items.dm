@@ -19,6 +19,8 @@ GLOBAL_LIST_INIT(allowed_forging_materials, list(
 	/datum/material/copporcitite,
 	/datum/material/tinumium,
 	/datum/material/brussite,
+	/datum/material/lizard_bronze,
+	/datum/material/vulp_steel,
 ))
 
 /obj/item/forging
