@@ -9,7 +9,7 @@
 	anchored = TRUE
 	max_integrity = 200
 	can_atmos_pass = ATMOS_PASS_DENSITY
-	smoothing_groups = SMOOTH_GROUP_RIMWORLD_DOORS
+	smoothing_groups = SMOOTH_GROUP_LETHAL_DOORS
 	/// Is this door currently opened
 	var/door_open = FALSE
 	/// The sound it makes when opening

@@ -34,3 +34,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/lizard, 32)
 	icon_state = "yellow"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/tajaran, 32)
+
+/datum/map_template/ctf/lethal
+	name = "Medieval Clash"
+	description = "Clan Talunan and House Morikann duke it out in a fierce brawl for the flags."
+	mappath = "_maps/minigame/CTF/lethal.dmm"
