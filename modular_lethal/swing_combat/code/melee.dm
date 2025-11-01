@@ -37,7 +37,7 @@
 	return // Overwrite with whatever the tile getting proc should be
 
 /// Handles how the weapon gets it's target turfs when swinging secondary
-/obj/item/melee/proc/get_targets_secondary(mob/living/attacker, direction, backwards, atom/target)
+/obj/item/proc/get_targets_secondary(mob/living/attacker, direction, backwards, atom/target)
 	return get_targets(attacker, direction, backwards, target)
 
 /// Handles swing attack targeting, includes handling for hitting walls and whatnot

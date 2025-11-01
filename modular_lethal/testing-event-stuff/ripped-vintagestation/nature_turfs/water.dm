@@ -11,7 +11,6 @@
 	baseturfs = /turf/open/water/rimworld
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
-	immerse_overlay_color = "#3c6677"
 
 /turf/open/water/rimworld/deep
 	name = "deep water"
@@ -21,5 +20,4 @@
 	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_DEEP_WATER_HORIZON
 	canSmoothWith = SMOOTH_GROUP_DEEP_WATER_HORIZON
 	baseturfs = /turf/open/water/rimworld/deep
-	immerse_overlay_color = "#314755"
 	slowdown = 2
