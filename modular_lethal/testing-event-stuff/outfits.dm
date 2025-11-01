@@ -61,6 +61,7 @@
 	gloves = /obj/item/clothing/gloves/vulp_gloves
 	belt = /obj/item/forging/reagent_weapon/axe/lethal/tajaran
 	r_pocket = /obj/item/storage/pouch/medical/firstaid/lethal_loaded
+	l_hand = /obj/item/forging/reagent_weapon/axe/lethal/tajaran
 	back = /obj/item/shield/buckler/reagent_weapon/lethal
 	team_radio_freq = FREQ_CTF_YELLOW
 
@@ -96,3 +97,10 @@
 
 /obj/machinery/ctf/spawner/red
 	ctf_gear = list("Swordsman" = /datum/outfit/ctf/lethal_medieval/lizard, "Spearman" = /datum/outfit/ctf/lethal_medieval/lizard_spear, "Bowman" = /datum/outfit/ctf/lethal_medieval/lizard_bow)
+
+/obj/machinery/teambuilder/yellow
+	name = "Teambuilding Machine (Yellow)"
+	desc = "A machine that, when passed, colors you based on the color of your team. Go yellow team!"
+	humans_only = TRUE
+	team_color = COLOR_YELLOW
+	team_radio = FREQ_CTF_YELLOW

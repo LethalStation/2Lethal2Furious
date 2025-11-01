@@ -5,7 +5,7 @@
 	icon = 'modular_lethal/testing-event-stuff/ripped-vintagestation/war/icons/objects.dmi'
 	icon_state = "lamp"
 	inhand_icon_state = null
-	light_range = 3
+	light_range = 6
 	light_power = 0.8
 	light_color = "#ffcc66"
 	light_system = OVERLAY_LIGHT

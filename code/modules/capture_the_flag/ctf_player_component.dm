@@ -40,8 +40,8 @@
 ///Stamina and oxygen damage will not dust a player by themself.
 /datum/component/ctf_player/proc/damage_type_check(datum/source, damage, damage_type)
 	SIGNAL_HANDLER
-	if(damage_type != STAMINA && damage_type != OXY)
-		ctf_dust()
+	// if(damage_type != STAMINA && damage_type != OXY) LETHAL EDIT
+		// ctf_dust() LETHAL EDIT
 
 ///Dusts the player and starts a respawn countdown.
 /datum/component/ctf_player/proc/ctf_dust()

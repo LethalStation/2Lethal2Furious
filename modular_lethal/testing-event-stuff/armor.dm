@@ -69,7 +69,7 @@
 	armor_type = /datum/armor/armor_lethal_melee
 	slowdown = 1
 
-/obj/item/clohing/suit/armor/lizard/Initialize(mapload)
+/obj/item/clothing/suit/armor/lizard/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_ARMOR_RUSTLE, 2)
 

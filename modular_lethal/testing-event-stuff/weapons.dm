@@ -12,6 +12,7 @@
 	wound_bonus = 0
 	block_chance = 0
 	sharpness = SHARP_POINTY
+	icon_angle = 45
 
 /obj/item/forging/reagent_weapon/spear/lethal/lizard
 	custom_materials = list(/datum/material/lizard_bronze = SHEET_MATERIAL_AMOUNT)
@@ -38,6 +39,7 @@
 	armour_penetration = 0
 	throwforce = 18
 	throw_speed = 4
+	icon_angle = 45
 
 /obj/item/forging/reagent_weapon/axe/lethal/tajaran
 	custom_materials = list(/datum/material/vulp_steel = SHEET_MATERIAL_AMOUNT)
