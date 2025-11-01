@@ -1,4 +1,4 @@
-/obj/item/melee
+/obj/item
 	/// The attack speed nextmove if doing a swing type attack
 	var/swing_attack_speed
 	/// The attack speed nextmove if doing a swing attack secondary
@@ -6,7 +6,7 @@
 	/// If the weapon can hit multiple living targets in swing attacks
 	var/swing_multihits = FALSE
 
-/obj/item/melee/Initialize(mapload)
+/obj/item/Initialize(mapload)
 	. = ..()
 	if(!swing_attack_speed)
 		swing_attack_speed = attack_speed
@@ -17,11 +17,11 @@
 			secondary_swing_attack_speed = swing_attack_speed
 
 /// To be overwritten by subtypes, determines the animation for each attack
-/obj/item/melee/proc/get_attack_anim_type(secondary)
+/obj/item/proc/get_attack_anim_type(secondary)
 	return ATTACK_ANIMATION_SLASH
 
 /// Checks if a swing attack is valid before running the giant proc below, also handles attack cooldowns
-/obj/item/melee/proc/start_swing_attack(atom/target, mob/living/attacker, backwards, secondary)
+/obj/item/proc/start_swing_attack(atom/target, mob/living/attacker, backwards, secondary)
 	if(!attacker.combat_mode)
 		return ITEM_INTERACT_SUCCESS
 	if(attacker.next_move > world.time)
@@ -33,7 +33,7 @@
 	return ITEM_INTERACT_SUCCESS
 
 /// Handles how the weapon gets it's target turfs when swinging primary
-/obj/item/melee/proc/get_targets(mob/living/attacker, direction, backwards, atom/target)
+/obj/item/proc/get_targets(mob/living/attacker, direction, backwards, atom/target)
 	return // Overwrite with whatever the tile getting proc should be
 
 /// Handles how the weapon gets it's target turfs when swinging secondary
@@ -41,7 +41,7 @@
 	return get_targets(attacker, direction, backwards, target)
 
 /// Handles swing attack targeting, includes handling for hitting walls and whatnot
-/obj/item/melee/proc/run_swing_attack(direction, mob/living/attacker, backwards, multihit, secondary, attack_type, atom/target)
+/obj/item/proc/run_swing_attack(direction, mob/living/attacker, backwards, multihit, secondary, attack_type, atom/target)
 	var/list/target_turfs = list()
 	if(secondary)
 		target_turfs = get_targets_secondary(attacker, direction, backwards, target)

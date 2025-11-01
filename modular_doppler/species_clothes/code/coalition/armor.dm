@@ -39,7 +39,7 @@
 	flags_cover = EARS_COVERED
 	flags_inv = null
 	hair_mask = /datum/hair_mask/standard_hat_middle
-	uses_advanced_reskins = TRUE
+	/* uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Regular" = list(
 			RESKIN_ICON_STATE = "skirmisher",
@@ -49,7 +49,7 @@
 			RESKIN_ICON_STATE = "skirmisher_white",
 			RESKIN_WORN_ICON_STATE = "skirmisher_white"
 		)
-	)
+	) */
 
 // armor vest
 

@@ -1,6 +1,10 @@
 /obj/item/melee/tizirian_sword/no_ap
 	armour_penetration = 0
 
+/obj/item/storage/belt/lizard_sabre/no_ap/PopulateContents()
+	new /obj/item/melee/tizirian_sword/no_ap(src)
+	update_appearance()
+
 /obj/item/forging/reagent_weapon/spear/lethal
 	name = "spear"
 	force = 13

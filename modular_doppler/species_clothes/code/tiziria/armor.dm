@@ -55,8 +55,8 @@
 	worn_icon = 'modular_doppler/species_clothes/icons/tiziria/gear_worn.dmi'
 	worn_icon_state = "armor"
 	supported_bodyshapes = null
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
+	// uses_advanced_reskins = TRUE
+	/* unique_reskin = list(
 		"Regular" = list(
 			RESKIN_ICON_STATE = "armor",
 			RESKIN_WORN_ICON_STATE = "armor"
@@ -65,7 +65,7 @@
 			RESKIN_ICON_STATE = "armor_bronze",
 			RESKIN_WORN_ICON_STATE = "armor_bronze"
 		)
-	)
+	) */
 
 // leg armor
 
