@@ -1,3 +1,17 @@
+/area/centcom/ctf
+	area_has_base_lighting = TRUE
+	base_lighting_alpha = 100
+	base_lighting_color = "#85beea"
+	ambient_buzz = null
+	ambient_buzz_vol = 50
+	ambientsounds = list(
+		'modular_lethal/testing-event-stuff/1_Strike It Again.ogg',
+		'modular_lethal/testing-event-stuff/3_Bruising The Fat (Shar Ikal).ogg',
+		'modular_lethal/testing-event-stuff/7_Night Creature.ogg',
+	)
+	min_ambience_cooldown = 2 SECONDS
+	max_ambience_cooldown = 5 SECONDS
+
 /area/centcom/ctf/lizard_keep
 	name = "Fortress Talunan"
 	icon_state = "ctf_flag_a"
