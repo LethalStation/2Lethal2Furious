@@ -12,6 +12,7 @@
 
 /obj/item/flashlight/rimworld_lamp/on
 	start_on = TRUE
+	anchored = TRUE
 
 // Soap
 /obj/item/soap/rimworld
