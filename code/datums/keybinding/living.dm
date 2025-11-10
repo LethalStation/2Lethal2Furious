@@ -167,7 +167,7 @@
 	return TRUE
 
 /datum/keybinding/living/toggle_throw_mode
-	hotkey_keys = list("R") // END
+	hotkey_keys = list("R") /// Lethal edit, originally keypad end key (idiotic)
 	name = "toggle_throw_mode"
 	full_name = "Toggle throw mode"
 	description = "Toggle throwing the current item or not."
