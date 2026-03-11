@@ -46,6 +46,22 @@
 	purchase_path = /obj/item/ammo_box/magazine/c980_grenade/drum/starts_empty
 	cost_per_order = 200
 
+/datum/orderable_item/peacekeeper/kiram_rifle
+	name = "Kiram Electric Rifle"
+	purchase_path = /obj/item/gun/ballistic/automatic/karim
+	cost_per_order = 200
+
+/datum/orderable_item/peacekeeper/kiram_rifle_mag
+	name = "Kiram Electric Rifle"
+	purchase_path = /obj/item/ammo_box/magazine/karim
+	cost_per_order = 50
+
+/datum/orderable_item/peacekeeper/motiondetector
+	name = "Motion Detector"
+	purchase_path = /obj/item/motiondetector
+	cost_per_order = 350
+
+
 // nri larp stuff
 
 /datum/orderable_item/imperial
@@ -210,3 +226,38 @@
 	name = "calopine emergency stabilizant injector"
 	purchase_path = /obj/item/reagent_containers/hypospray/medipen/deforest/calopine
 	cost_per_order = 50
+
+//lasers and such
+/datum/orderable_item/pewpew
+	category_index = "Allstar"
+
+/datum/orderable_item/pewpew/basiclaser
+	name = "SC-1 Laser Rifle"
+	purchase_path = /obj/item/gun/energy/laser
+	cost_per_order = 150
+
+/datum/orderable_item/pewpew/basiclasercarbine
+	name = "SC-1c Laser Carbine"
+	purchase_path = /obj/item/gun/energy/laser/carbine
+	cost_per_order = 150
+
+/datum/orderable_item/pewpew/energygun
+	name = "SC-2 Energy Gun"
+	purchase_path = /obj/item/gun/energy/e_gun
+	cost_per_order = 200
+
+/datum/orderable_item/pewpew/fancylasercarbine
+	name = "REAL Allstar Laser Carbine (Legitimate)"
+	purchase_path = /obj/item/gun/energy/laser/carbine/cybersun
+	cost_per_order = 250
+
+/datum/orderable_item/pewpew/lasergatling
+	name = "Gatling Laser Kit"
+	purchase_path = /obj/item/minigunpack
+	cost_per_order = 600
+
+/datum/orderable_item/pewpew/pulserifle
+	name = "Military Pulse Rifle"
+	purchase_path = /obj/item/gun/energy/pulse
+	cost_per_order = 1000
+
