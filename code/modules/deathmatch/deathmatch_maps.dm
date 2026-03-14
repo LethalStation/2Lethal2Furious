@@ -244,5 +244,17 @@
 	map_name = "ragnarok"
 	key = "ragnarok"
 
+/datum/lazy_template/deathmatch/magpie
+	name = "The Magpie"
+	desc = "The Cardonas have let you watch their freighter while they're on vacation. Make sure nothing goes wrong while they're away!"
+	max_players = 8
+	allowed_loadouts = list(
+		/datum/outfit/deathmatch_loadout/assistant,
+		/datum/outfit/deathmatch_loadout/naked,
+	)
+	map_name = "the_magpie"
+	key = "the_magpie"
+
+
 /datum/turf_reservation/indestructible_plating
 	turf_type = /turf/open/indestructible/plating //a little hacky but i guess it has to be done

@@ -12,7 +12,7 @@
 	],
 	"shuttles": {
 		"cargo": "cargo_box",
-		"ferry": "ferry_fancy",
+		"ferry": "emergency_cramped",
 		"whiteship": "whiteship_box",
 		"emergency": "emergency_cramped"
 	}

@@ -102,3 +102,19 @@
 
 /datum/idle_behavior/idle_random_walk/mad_piano
 	walk_chance = 80
+
+
+/mob/living/basic/mad_piano/watercooler //hehe
+	name = "water cooler"
+	desc = "A machine that cools and dispenses liquids to drink. The 'hot' handle doesn't seem to do anything."
+	name_aggro = "water coolest"
+	desc_aggro = "This water seems cooler than you thought. Better watch out."
+	icon = 'icons/obj/medical/chemical_tanks.dmi'
+	icon_state = "water_cooler"
+	maxHealth = 5000
+	health = 5000
+	melee_damage_lower = 100
+	melee_damage_upper = 200
+	melee_attack_cooldown = 20 SECONDS
+	attack_verb_continuous = "effortlessly dispatches"
+	attack_verb_simple = "effortlessly dispatch"
