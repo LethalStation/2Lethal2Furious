@@ -1,6 +1,7 @@
 /obj/item/gun
 	light_system = OVERLAY_LIGHT
 	light_range = 0
+	light_on = 0
 	light_color = COLOR_WHITE
 	/// The effect of the muzzle flash
 	var/obj/effect/muzzle_flash/muzzle_flash
