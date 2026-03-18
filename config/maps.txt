@@ -70,7 +70,7 @@ endmap
 
 map lethal_cache_beta
     votable
-
+endmap
 
 # Debug-only maps.
 
