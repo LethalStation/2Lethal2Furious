@@ -1188,18 +1188,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/space)
-"sR" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 25;
-	height = 50;
-	json_key = "emergency";
-	name = "CentCom Emergency Shuttle Dock";
-	shuttle_id = "emergency_away";
-	width = 50
-	},
-/turf/open/space/basic,
-/area/space)
 "sV" = (
 /obj/machinery/atmospherics/components/unary/passive_vent{
 	dir = 4
@@ -4089,7 +4077,7 @@ yO
 cT
 zp
 gN
-sR
+RS
 RS
 RS
 RS
