@@ -2863,6 +2863,10 @@
 /obj/structure/window/reinforced/tinted/frosted/spawner/directional/south,
 /turf/open/floor/iron/white/small,
 /area/gakster_location/hideout_real)
+"lj" = (
+/obj/effect/decal/cleanable/blood/trail,
+/turf/open/floor/iron/white,
+/area/gakster_location/war)
 "lk" = (
 /obj/effect/spawner/random/structure/closet_empty/crate,
 /obj/effect/spawner/random/epic_loot/medkit,
@@ -3036,6 +3040,13 @@
 /obj/item/stack/tile/wood,
 /turf/open/indestructible/plating,
 /area/gakster_location/hideout_real)
+"lY" = (
+/obj/structure/bodycontainer/morgue{
+	dir = 2
+	},
+/mob/living/basic/fleshblob,
+/turf/open/floor/iron/dark,
+/area/gakster_location/war)
 "lZ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/gibs/old,
@@ -3363,6 +3374,10 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white/smooth_large,
+/area/gakster_location/war)
+"nr" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/turf/open/floor/iron/white,
 /area/gakster_location/war)
 "ns" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -8602,6 +8617,11 @@
 /obj/structure/maintenance_loot_structure/wall_jacket/random/directional/north,
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/gakster_location/war)
+"IY" = (
+/obj/machinery/light/dim/directional/east,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/iron/white,
+/area/gakster_location/war)
 "IZ" = (
 /obj/machinery/conveyor/auto,
 /turf/open/floor/plating,
@@ -8925,6 +8945,10 @@
 	id = "Donk_Trash_Chute"
 	},
 /turf/open/floor/plating,
+/area/gakster_location/war)
+"Kp" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/iron/white,
 /area/gakster_location/war)
 "Kq" = (
 /mob/living/basic/blankbody,
@@ -10086,6 +10110,11 @@
 /obj/effect/spawner/random/trash/grille_or_waste,
 /turf/open/indestructible/plating,
 /area/gakster_location/hideout_real)
+"Pn" = (
+/obj/machinery/camera/directional/north,
+/obj/effect/decal/cleanable/blood/gibs/core,
+/turf/open/floor/iron/white,
+/area/gakster_location/war)
 "Po" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/beer{
@@ -10688,6 +10717,11 @@
 	},
 /obj/machinery/light/floor,
 /turf/open/floor/iron/smooth,
+/area/gakster_location/war)
+"RE" = (
+/mob/living/basic/fleshblob,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/iron/white,
 /area/gakster_location/war)
 "RF" = (
 /obj/machinery/light/dim/directional/east,
@@ -27376,7 +27410,7 @@ cO
 wk
 KE
 cO
-Tx
+lY
 Xk
 wz
 cO
@@ -27475,7 +27509,7 @@ cH
 YW
 NX
 cO
-KE
+df
 KE
 cO
 XD
@@ -27680,7 +27714,7 @@ KE
 KE
 KE
 KE
-KE
+nr
 KE
 KE
 KE
@@ -27775,15 +27809,15 @@ TF
 cO
 hh
 KE
-KE
-KE
-KE
-KE
-KE
-KE
-KE
-KE
-dx
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+RE
 KE
 KE
 KE
@@ -27875,7 +27909,7 @@ cO
 cO
 TZ
 cO
-wk
+Pn
 KE
 KE
 cO
@@ -28080,12 +28114,12 @@ PK
 Se
 cO
 yL
-KE
+Kp
 KE
 cO
 aO
 qi
-Kq
+Pk
 cO
 YY
 KE
@@ -28284,7 +28318,7 @@ PH
 TF
 cO
 yL
-KE
+nr
 KE
 cO
 pg
@@ -28387,7 +28421,7 @@ TF
 cO
 CE
 rj
-CE
+IY
 cO
 en
 en
@@ -28793,7 +28827,7 @@ Se
 cO
 qT
 KE
-KE
+df
 rt
 KE
 rj
@@ -29100,7 +29134,7 @@ cO
 vU
 KE
 df
-dx
+KE
 KE
 KE
 DR
