@@ -3,7 +3,7 @@
 	"map_name": "Sector9beta",
 	"map_path": "lethal",
 	"map_file": "lethal_cache_beta.dmm",
-	"space_ruin_levels": 1,
+	"planetary": 1,
 	"ignored_unit_tests": [
 		"/datum/unit_test/cargo_dep_order_locations",
 		"/datum/unit_test/job_roundstart_spawnpoints",
