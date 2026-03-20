@@ -63,6 +63,20 @@
 		/obj/item/gun = PAYCHECK_COMMAND,
 	)
 
+/obj/machinery/computer/order_console/gakster/examine(mob/user)
+	. = ..()
+	. += span_engradio("<b>Components</b> and <b>keycards</b> can be exchanged for <b>cash</b> here.")
+	. += span_engradio("<b>Attack</b> the console with the items you wish to <b>sell</b>.")
+
+/obj/machinery/computer/order_console/gakster/attackby(obj/item/weapon, mob/user, params)
+	. = ..()
+	if(!(weapon.type in stuff_we_buy))
+		return
+	var/tha_money = stuff_we_buy[weapon.type]
+	new /obj/item/holochip(drop_location(src), tha_money)
+	playsound(src, 'sound/effects/cashregister.ogg', 50, TRUE)
+	qdel(weapon)
+
 /obj/machinery/computer/order_console/gakster/default_deconstruction_screwdriver(mob/user, icon_state_open, icon_state_closed, obj/item/screwdriver)
 	return NONE
 
