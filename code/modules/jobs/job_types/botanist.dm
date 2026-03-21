@@ -36,7 +36,7 @@
 		/obj/item/food/monkeycube/bee = 2
 	)
 
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 	rpg_title = "Gardener"
 
 /datum/outfit/job/botanist

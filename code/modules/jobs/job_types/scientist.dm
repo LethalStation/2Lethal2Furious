@@ -32,7 +32,7 @@
 		/obj/item/disk/design_disk/bepis = 2,
 	)
 	rpg_title = "Thaumaturgist"
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 
 	job_tone = "boom"
 

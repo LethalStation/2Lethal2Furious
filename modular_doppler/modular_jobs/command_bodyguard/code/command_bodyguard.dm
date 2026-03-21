@@ -35,7 +35,7 @@
 		/obj/item/clothing/head/collectable/captain = 4,
 	)
 
-	job_flags = STATION_JOB_FLAGS | JOB_CANNOT_OPEN_SLOTS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS | JOB_CANNOT_OPEN_SLOTS
 
 /datum/outfit/job/command_bodyguard
 	name = "Command Bodyguard"

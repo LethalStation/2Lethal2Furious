@@ -33,7 +33,7 @@
 		/obj/item/gun/ballistic/automatic/wt550 = 1,
 	)
 	rpg_title = "Merchantman"
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 
 
 /datum/outfit/job/cargo_tech

@@ -35,7 +35,7 @@
 		/obj/item/grenade/gas_crystal/nitrous_oxide_crystal = 5,
 	)
 
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 	rpg_title = "Aeromancer"
 
 /datum/outfit/job/atmos

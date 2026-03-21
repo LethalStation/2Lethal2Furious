@@ -37,7 +37,7 @@
 		/obj/item/clothing/head/utility/hardhat/red/upgraded = 1
 	)
 	rpg_title = "Crystallomancer"
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 
 
 /datum/outfit/job/engineer

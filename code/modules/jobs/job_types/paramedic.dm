@@ -36,7 +36,7 @@
 		/obj/item/storage/box/bandages = 5,
 	)
 	rpg_title = "Corpse Runner"
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 
 
 /datum/outfit/job/paramedic

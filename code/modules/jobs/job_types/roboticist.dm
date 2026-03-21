@@ -32,7 +32,7 @@
 
 	family_heirlooms = list(/obj/item/toy/plush/pkplush)
 	rpg_title = "Necromancer"
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 
 
 /datum/job/roboticist/New()

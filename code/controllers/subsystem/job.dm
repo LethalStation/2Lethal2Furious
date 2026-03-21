@@ -169,8 +169,6 @@ SUBSYSTEM_DEF(job)
 		if(!job.map_check()) //Even though we initialize before mapping, this is fine because the config is loaded at new
 			log_job_debug("Removed [job.title] due to map config")
 			continue
-		if(!istype(job_type, /datum/job/lethal)) // LETHAL ADDITION - ONLY ME
-			continue // LETHAL ADDITION - ONLY ME
 		new_all_occupations += job
 		name_occupations[job.title] = job
 		for(var/alt_title in job.alternate_titles)

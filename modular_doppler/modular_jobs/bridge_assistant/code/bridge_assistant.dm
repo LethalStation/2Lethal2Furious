@@ -31,7 +31,7 @@
 		/obj/item/vending_refill/cigarette = 1,
 		/obj/item/vending_refill/coffee = 1,
 	)
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 	rpg_title = "Royal Page"
 
 /datum/job/bridge_assistant/after_spawn(mob/living/spawned, client/player_client)

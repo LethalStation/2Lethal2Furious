@@ -41,7 +41,7 @@
 	)
 	family_heirlooms = list(/obj/item/storage/medkit/ancient/heirloom, /obj/item/scalpel, /obj/item/hemostat, /obj/item/circular_saw, /obj/item/retractor, /obj/item/cautery, /obj/item/statuebust/hippocratic)
 	rpg_title = "High Cleric"
-	job_flags = STATION_JOB_FLAGS | HEAD_OF_STAFF_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS | HEAD_OF_STAFF_JOB_FLAGS
 
 	human_authority = JOB_AUTHORITY_HUMANS_ONLY
 

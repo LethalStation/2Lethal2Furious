@@ -33,7 +33,7 @@ Assistant
 		/obj/item/crowbar/large = 1
 	)
 
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 	rpg_title = "Lout"
 	config_tag = "ASSISTANT"
 

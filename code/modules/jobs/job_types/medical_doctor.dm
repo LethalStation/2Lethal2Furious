@@ -36,7 +36,7 @@
 		/obj/effect/spawner/random/medical/memeorgans = 1
 	)
 	rpg_title = "Cleric"
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 
 
 /datum/outfit/job/doctor
