@@ -28,7 +28,7 @@
 		/obj/item/lightreplacer = 10
 	)
 	rpg_title = "Groundskeeper"
-	job_flags = STATION_JOB_FLAGS
+	// LETHAL REMOVAL - job_flags = STATION_JOB_FLAGS
 
 	job_tone = "slip"
 
