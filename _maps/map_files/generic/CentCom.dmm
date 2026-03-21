@@ -1263,7 +1263,6 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
 	},
-/obj/machinery/light/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/evacuation)
@@ -8027,12 +8026,8 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
-/obj/machinery/suit_storage_unit{
-	mask_type = /obj/item/clothing/mask/gas/explorer;
-	storage_type = /obj/item/tank/jetpack/oxygen/harness;
-	suit_type = /obj/item/mod/control/pre_equipped/traitor_elite
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/suit_storage_unit/standard_unit,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/control)
 "Cf" = (
@@ -11395,10 +11390,6 @@
 	},
 /turf/open/floor/wood/tile,
 /area/centcom/central_command_areas/evacuation/ship)
-"Pp" = (
-/obj/machinery/light/directional/west,
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/control)
 "Pq" = (
 /turf/open/floor/iron/grimy,
 /area/centcom/central_command_areas/prison)
@@ -12558,7 +12549,7 @@
 	map_pad_id = "latejoin_freighter"
 	},
 /turf/open/floor/iron/dark,
-/area/centcom/central_command_areas/evacuation)
+/area/ruin/space/has_grav/powered)
 "TG" = (
 /obj/item/kirbyplants/organic/plant21,
 /obj/structure/extinguisher_cabinet/directional/west,
@@ -74489,7 +74480,7 @@ XO
 kl
 pM
 kl
-Pp
+kl
 Px
 Px
 aa

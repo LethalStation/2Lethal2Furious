@@ -15,5 +15,28 @@
 		"ferry": "emergency_cramped",
 		"whiteship": "whiteship_box",
 		"emergency": "emergency_cramped"
-	}
+	},
+	"traits": [
+		{
+			"Gravity": true,
+			"Baseturf": "/turf/open/indestructible/plating",
+			"No Parallax": true
+		},
+		{
+			"Gravity": true,
+			"Baseturf": "/turf/open/indestructible/plating",
+			"No Parallax": true
+		},
+		{
+			"Gravity": true,
+			"Baseturf": "/turf/open/indestructible/plating",
+			"No Parallax": true
+		},
+		{
+			"Gravity": true,
+			"Weather_Snowstorm": true,
+			"Baseturf": "/turf/open/indestructible/plating",
+			"No Parallax": true
+		}
+	]
 }

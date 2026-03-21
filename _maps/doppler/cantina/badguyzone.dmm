@@ -2,7 +2,7 @@
 "ab" = (
 /obj/structure/chair/stool/bar/directional/north,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ac" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Janitorial Closet"
@@ -10,7 +10,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ai" = (
 /turf/closed/wall,
 /area/ruin/space/has_grav)
@@ -19,21 +19,21 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ak" = (
 /obj/structure/table/reinforced/rglass,
 /obj/machinery/light/cold/dim/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "al" = (
 /obj/machinery/gibber,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ax" = (
 /obj/machinery/light/floor,
 /turf/open/floor/plating,
-/area/space)
+/area/ruin/space/has_grav/powered)
 "aD" = (
 /obj/structure/lattice,
 /obj/structure/lattice/catwalk,
@@ -44,20 +44,20 @@
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "aT" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "bb" = (
 /obj/machinery/light/cold/dim/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "cb" = (
 /obj/structure/chair/stool/bar/directional/east,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ce" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/fuchsia,
@@ -66,11 +66,11 @@
 "cn" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "cs" = (
 /obj/effect/mob_spawn/ghost_role/human/cantina,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ct" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/condiment/peppermill{
@@ -80,68 +80,58 @@
 	pixel_x = -3
 	},
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "cP" = (
 /obj/structure/window/spawner/directional/east,
 /obj/machinery/light/dim/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/cigarette/syndicate,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "cU" = (
 /obj/machinery/light/red/dim/directional/south,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "de" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/noticeboard/directional/north{
 	dir = 2
 	},
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "dp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "dx" = (
 /obj/structure/chair/sofa/left/maroon,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "dA" = (
 /obj/machinery/shower/directional/west,
 /obj/structure/fluff/shower_drain,
 /obj/item/soap,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
-"dF" = (
-/obj/machinery/door/airlock/external/glass/ruin{
-	name = "The All-American Diner"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "the_all_american_diner"
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/plating,
-/area/space)
+/area/ruin/space/has_grav/powered)
 "dS" = (
 /obj/machinery/door/airlock/medical/glass,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ei" = (
 /obj/machinery/light/cold/dim/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ej" = (
 /obj/structure/table,
 /obj/machinery/microwave{
 	pixel_y = 10
 	},
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "es" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -150,13 +140,13 @@
 	pixel_y = -2
 	},
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ev" = (
 /obj/structure/toilet{
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ex" = (
 /turf/closed/mineral/random/low_chance,
 /area/space)
@@ -168,47 +158,47 @@
 	},
 /obj/item/multitool,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "eJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "eT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "eX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/extinguisher_cabinet/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "fx" = (
 /obj/structure/window/reinforced/tinted/spawner/directional/east,
 /obj/structure/chair/sofa/corner/maroon{
 	dir = 8
 	},
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "fD" = (
 /obj/structure/chair/stool/bar/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "fQ" = (
 /obj/structure/closet/secure_closet/freezer/meat/all_access,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "fS" = (
 /obj/structure/window/reinforced/tinted/spawner/directional/west,
 /obj/structure/chair/sofa/corner/maroon{
 	dir = 1
 	},
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "fZ" = (
 /obj/structure/sign/poster/contraband/donk_co/directional/north,
 /obj/structure/table,
@@ -232,7 +222,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "gi" = (
 /obj/machinery/door/window/left/directional/north,
 /obj/machinery/door/window/left/directional/south,
@@ -248,38 +238,38 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "gN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "gV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "gX" = (
 /obj/structure/closet/crate/secure/syndicrate,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "hb" = (
 /obj/structure/table/reinforced/rglass,
 /obj/effect/spawner/random/epic_loot/medkit,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "hp" = (
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "hu" = (
 /obj/structure/reagent_dispensers/cooking_oil,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "hH" = (
 /obj/machinery/button/crematorium,
 /turf/closed/wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "hL" = (
 /obj/structure/chair/sofa/right/maroon{
 	dir = 8
@@ -287,26 +277,26 @@
 /obj/structure/window/reinforced/tinted/spawner/directional/east,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "hN" = (
 /obj/structure/shipping_container/interdyne,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "hO" = (
 /obj/machinery/vending/deforest_medvend,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "hV" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "id" = (
 /obj/item/clothing/suit/jacket/straight_jacket,
 /obj/item/clothing/glasses/blindfold,
 /obj/structure/closet/crate/secure/syndicate/interdyne,
 /obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ig" = (
 /obj/machinery/chem_master/condimaster{
 	name = "CondiMaster Neo"
@@ -314,61 +304,61 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "io" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "is" = (
 /obj/structure/shipping_container/sunda,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "jb" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "jr" = (
 /turf/template_noop,
 /area/space)
 "jZ" = (
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "kd" = (
 /obj/machinery/light/red/dim/directional/north,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "km" = (
 /obj/item/kirbyplants/fern,
 /obj/structure/sign/poster/contraband/interdyne_gene_clinics/directional/north,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "kw" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "kN" = (
 /obj/structure/sign/poster/contraband/c20r/directional/north,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "kZ" = (
 /obj/effect/mob_spawn/ghost_role/human/cantina_bartender,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "la" = (
 /obj/structure/closet/crate/secure/syndicate/interdyne,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "lm" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "lw" = (
 /obj/structure/billboard/Phone_booth,
 /turf/template_noop,
@@ -379,7 +369,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "lS" = (
 /obj/structure/table,
 /obj/item/reagent_containers/condiment/peppermill{
@@ -389,79 +379,79 @@
 	pixel_x = -3
 	},
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "mf" = (
 /obj/structure/closet/crate/trashcart/filled,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "mp" = (
 /obj/structure/shipping_container/ntfid/defaced,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "mu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "my" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/dim/directional/south,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "mG" = (
 /obj/structure/closet/crate/eva,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "mL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/departments/restroom/directional/north,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "mR" = (
 /obj/machinery/vending/medical/syndicate,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "nf" = (
 /obj/structure/chair/sofa/right/maroon{
 	dir = 8
 	},
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ng" = (
 /obj/machinery/computer/arcade{
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ns" = (
 /obj/structure/chair/office/light,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "nv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/maint,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "nw" = (
 /obj/machinery/vending/imported/marsian,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "nz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "nT" = (
 /obj/machinery/griddle,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "oo" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/suit_storage_unit/open,
 /obj/machinery/light/small/directional/west,
+/obj/machinery/suit_storage_unit/syndicate,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ou" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder{
@@ -473,11 +463,11 @@
 	pixel_x = -7
 	},
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "oC" = (
 /obj/machinery/deepfryer,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "oX" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -488,18 +478,18 @@
 /obj/structure/cable,
 /obj/structure/sign/poster/contraband/the_big_gas_giant_truth/directional/west,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "oY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "pb" = (
 /obj/machinery/computer/personal_shuttle_order/cantina{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "pd" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/teal,
@@ -512,7 +502,7 @@
 /obj/item/knife/kitchen,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "pi" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external/glass/ruin{
@@ -522,13 +512,13 @@
 	cycle_id = "the_all_american_diner"
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "pp" = (
 /obj/structure/sink/directional/east,
 /obj/structure/mirror/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ps" = (
 /obj/machinery/light/dim/directional/west,
 /obj/structure/chair/sofa/left/maroon{
@@ -536,7 +526,7 @@
 	},
 /obj/structure/window/reinforced/tinted/spawner/directional/south,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "pE" = (
 /obj/item/ammo_casing/shotgun/buckshot/spent{
 	pixel_y = 7;
@@ -546,69 +536,69 @@
 	pixel_x = -4
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "pR" = (
 /obj/structure/shipping_container/green,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "pX" = (
 /obj/effect/mob_spawn/ghost_role/human/cantina,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ql" = (
 /obj/effect/mob_spawn/ghost_role/human/cantina,
 /obj/machinery/light/cold/dim/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "qm" = (
 /obj/structure/chair/plastic{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "qo" = (
 /obj/structure/table/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "qq" = (
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "qu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "qy" = (
 /obj/structure/sink/directional/west,
 /obj/structure/mirror/directional/east,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "qQ" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "qX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "rh" = (
 /obj/structure/table,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "rD" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "rR" = (
 /obj/structure/marker_beacon/fuchsia,
 /obj/structure/lattice/catwalk,
@@ -631,52 +621,52 @@
 	pixel_x = -5
 	},
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "sA" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8
 	},
 /obj/machinery/space_heater,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "sH" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/closed/wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "sP" = (
 /obj/structure/tank_holder/extinguisher,
 /obj/machinery/light/dim/directional/north,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "sS" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ti" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "tp" = (
 /obj/machinery/door/window/left/directional/east{
 	name = "Kitchen"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "tq" = (
 /obj/structure/table,
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "tw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "tF" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ua" = (
 /obj/structure/chair/sofa/right/maroon{
 	dir = 1
@@ -684,36 +674,36 @@
 /obj/structure/window/reinforced/tinted/spawner/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ub" = (
 /obj/structure/chair/plastic{
 	dir = 8
 	},
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "uh" = (
 /obj/machinery/door/airlock{
 	name = "Bathroom 1"
 	},
 /turf/open/floor/iron/freezer,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ui" = (
 /obj/structure/table/wood/poker,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "uk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "uw" = (
 /obj/structure/window_frame/reinforced/has_window,
 /turf/open/floor/plating,
-/area/space)
+/area/ruin/space/has_grav/powered)
 "ux" = (
 /obj/structure/table/optable,
 /obj/effect/mob_spawn/corpse/human/damaged,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "uS" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -724,80 +714,80 @@
 	pixel_x = -3
 	},
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "vm" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "vA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "vF" = (
 /obj/machinery/vending/dinnerware,
 /obj/machinery/light/dim/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "vG" = (
 /obj/structure/urinal/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "vV" = (
 /obj/structure/window/reinforced/tinted/spawner/directional/north,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "wG" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/suit_storage_unit/open,
 /obj/machinery/light/red/dim/directional/west,
+/obj/machinery/suit_storage_unit/syndicate,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "wL" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "xu" = (
 /obj/machinery/vending/drugs,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "xy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "xG" = (
 /obj/structure/table/wood/poker,
 /obj/item/toy/cards/deck/syndicate,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "xM" = (
 /obj/structure/chair/sofa/left/maroon,
 /obj/structure/window/reinforced/tinted/spawner/directional/north,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ye" = (
 /obj/structure/shipping_container/kahraman/alt,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "yf" = (
 /obj/machinery/vending/boozeomat/syndicate,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "yq" = (
 /obj/structure/sign/poster/contraband/moffuchis_pizza/directional/north{
 	name = "Ray's Pizza";
 	desc = "Ray's Famous Original Pizza: Family style pizza for 2 centuries."
 	},
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "yz" = (
 /obj/structure/falsewall,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "yE" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/atmospherics/components/tank/air/layer4{
@@ -807,48 +797,45 @@
 /area/ruin/space/has_grav)
 "yV" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/suit_storage_unit/open,
 /obj/machinery/light/small/directional/east,
+/obj/machinery/suit_storage_unit/syndicate,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "yX" = (
 /obj/structure/chair/sofa/corner/maroon{
 	dir = 8
 	},
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "yZ" = (
 /obj/structure/chair/sofa/right/maroon,
 /obj/structure/window/reinforced/tinted/spawner/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "zd" = (
 /obj/item/chair/plastic,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
-"zf" = (
-/turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "zg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "zt" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "zw" = (
 /obj/structure/chair/plastic,
 /obj/machinery/light/red/dim/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "zx" = (
 /obj/machinery/vending/wallmed/directional/north,
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "zD" = (
 /obj/structure/lattice,
 /obj/structure/lattice/catwalk,
@@ -859,23 +846,23 @@
 /obj/structure/window_frame/reinforced/has_window,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Aj" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Am" = (
 /obj/structure/chair/plastic{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "AF" = (
 /obj/structure/sink/kitchen/directional/west,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "AV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/lattice/catwalk,
@@ -891,68 +878,68 @@
 /obj/item/gun/energy/e_gun/old,
 /obj/item/gun/energy/laser/musket,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Bd" = (
 /obj/structure/chair/sofa/right/maroon{
 	dir = 1
 	},
 /obj/structure/window/reinforced/tinted/spawner/directional/south,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Be" = (
 /obj/machinery/light/cold/dim/directional/north,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Bw" = (
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Bz" = (
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "BO" = (
 /obj/structure/sign/poster/contraband/revolver/directional/east,
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "BU" = (
 /obj/structure/urinal/directional/north,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ca" = (
 /obj/structure/table/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Cb" = (
 /obj/structure/shipping_container/tiger_coop/text,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ci" = (
 /obj/structure/table/reinforced/rglass,
 /obj/machinery/computer/records/security/laptop/syndie{
 	pixel_y = 11
 	},
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "CB" = (
 /obj/structure/table/reinforced/rglass,
 /obj/effect/spawner/surgery_tray/full,
 /obj/item/reagent_containers/syringe/lethal/execution,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "De" = (
 /obj/machinery/shower/directional/west,
 /obj/structure/fluff/shower_drain,
 /obj/effect/mob_spawn/corpse/human/assistant,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Dn" = (
 /obj/machinery/door/airlock{
 	name = "Bathrooms"
 	},
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ds" = (
 /obj/effect/spawner/structure/window/hollow/reinforced,
 /turf/open/floor/plating/airless,
@@ -961,7 +948,7 @@
 /obj/machinery/computer/cryopod/directional/north,
 /obj/structure/table/reinforced/rglass,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "DR" = (
 /obj/structure/billboard/donk_n_go,
 /turf/template_noop,
@@ -972,31 +959,31 @@
 	dir = 8
 	},
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "DY" = (
 /obj/machinery/deepfryer,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ei" = (
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "El" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Eu" = (
 /obj/structure/maintenance_loot_structure/wall_jacket/random/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "EM" = (
 /obj/structure/sign/warning/radiation/directional/north,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Fb" = (
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
@@ -1007,7 +994,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Fd" = (
 /obj/structure/flora/rock/pile,
 /turf/open/misc/asteroid/airless,
@@ -1020,48 +1007,48 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "FE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "FH" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "FZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ga" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "DISCOUNT CRYO SOLUTIONS"
 	},
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Gf" = (
 /obj/machinery/light/cold/dim/directional/west,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Gp" = (
 /obj/machinery/light/red/dim/directional/north,
 /obj/structure/sign/warning/radiation/directional/north,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Gu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "GL" = (
 /obj/structure/shipping_container/donk_co,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "GT" = (
 /obj/structure/flora/rock/style_3,
 /turf/open/misc/asteroid/airless,
@@ -1070,7 +1057,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Hb" = (
 /obj/docking_port/stationary{
 	dir = 2;
@@ -1086,36 +1073,36 @@
 /obj/structure/table/reinforced/rglass,
 /obj/effect/spawner/random/epic_loot/medpens,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Hg" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Hi" = (
 /turf/open/floor/plating,
-/area/space)
+/area/ruin/space/has_grav/powered)
 "Hr" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/curtain,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Hw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "HB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "HE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "HM" = (
 /obj/machinery/shower/directional/west,
 /obj/structure/fluff/shower_drain,
@@ -1125,11 +1112,11 @@
 "HU" = (
 /obj/structure/sign/departments/maint,
 /turf/closed/wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ib" = (
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ie" = (
 /obj/structure/chair/sofa/left/maroon{
 	dir = 1
@@ -1137,22 +1124,22 @@
 /obj/structure/window/reinforced/tinted/spawner/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ip" = (
 /obj/structure/shipping_container/gorlex/red,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Is" = (
 /obj/structure/chair/sofa/middle/maroon{
 	dir = 1
 	},
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "It" = (
 /obj/structure/closet/crate/trashcart/filled,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "IL" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -1163,14 +1150,14 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Jp" = (
 /obj/effect/spawner/structure/electrified_grille,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Jt" = (
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "JQ" = (
 /obj/structure/flora/rock,
 /turf/open/misc/asteroid/airless,
@@ -1179,24 +1166,24 @@
 /obj/machinery/cryopod/quiet,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ka" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/epic_loot/random_maint_loot_structure,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Kh" = (
 /obj/machinery/light/red/dim/directional/west,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "KE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "KX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "KZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
@@ -1205,15 +1192,11 @@
 /obj/item/reagent_containers/cup/bucket,
 /obj/item/mop,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Li" = (
 /obj/structure/billboard/nanotrasen/defaced,
 /turf/open/misc/asteroid/airless,
 /area/space)
-"Ln" = (
-/obj/structure/window_frame/reinforced/has_window,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav)
 "Lr" = (
 /obj/structure/window/reinforced/tinted/spawner/directional/west,
 /obj/structure/chair/sofa/corner/maroon{
@@ -1221,57 +1204,57 @@
 	},
 /obj/machinery/light/dim/directional/south,
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "LF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "LL" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Mr" = (
 /obj/machinery/door/airlock/material/glass,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ms" = (
 /obj/structure/table/reinforced,
 /obj/structure/desk_bell{
 	pixel_y = 10
 	},
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "MA" = (
 /turf/open/misc/asteroid/airless,
 /area/space)
 "MO" = (
 /obj/structure/table/reinforced/rglass,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "MP" = (
 /obj/effect/spawner/random/epic_loot/random_maint_loot_structure,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Nc" = (
 /obj/structure/closet/crate/trashcart/filled,
 /obj/effect/spawner/random/entertainment/drugs,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Nl" = (
 /obj/machinery/vending/cola,
 /obj/structure/window/spawner/directional/east,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Nn" = (
 /obj/structure/closet/emcloset/anchored,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "NJ" = (
 /turf/closed/wall,
-/area/space)
+/area/ruin/space/has_grav/powered)
 "NP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1279,7 +1262,7 @@
 /obj/structure/sign/warning/explosives/directional/north,
 /obj/structure/window/plasma/spawner/directional/east,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Of" = (
 /obj/machinery/airalarm/directional/south,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -1295,11 +1278,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bodycontainer/crematorium,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ov" = (
 /obj/structure/shipping_container/kosmologistika,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "OJ" = (
 /obj/structure/lattice,
 /turf/template_noop,
@@ -1316,11 +1299,11 @@
 	dir = 6
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "OT" = (
 /obj/machinery/jukebox/no_access,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Pe" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -1333,48 +1316,48 @@
 	},
 /obj/item/food/drug/saturnx,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Px" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "PA" = (
 /obj/machinery/light/dim/directional/east,
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ql" = (
 /obj/machinery/power/rtg/advanced,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Qt" = (
 /obj/structure/chair/sofa/left/maroon{
 	dir = 4
 	},
 /obj/structure/window/reinforced/tinted/spawner/directional/west,
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "QO" = (
 /obj/structure/sign/eyechart/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "QW" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "QZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Rc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Rm" = (
 /obj/structure/lattice,
 /obj/structure/lattice/catwalk,
@@ -1388,40 +1371,30 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/toolbox/emergency/turret,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Rw" = (
 /obj/structure/sink/directional/west,
 /obj/structure/mirror/directional/east,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ry" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "RB" = (
 /obj/structure/shipping_container/nakamura,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "RG" = (
 /obj/structure/sign/poster/contraband/gorlex_recruitment/directional/north,
 /obj/machinery/light/red/dim/directional/north,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
-"RO" = (
-/obj/structure/fans/tiny,
-/obj/machinery/door/airlock/external/glass/ruin{
-	name = "The All-American Diner"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "the_all_american_diner"
-	},
-/turf/open/floor/plating,
-/area/space)
+/area/ruin/space/has_grav/powered)
 "Si" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/bin,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Sv" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/light/small{
@@ -1432,19 +1405,19 @@
 "Sy" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "SM" = (
 /obj/structure/chair/sofa/right/maroon,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Tn" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Janitorial Closet"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Tv" = (
 /obj/machinery/door/airlock/external/glass/ruin{
 	name = "The All-American Diner"
@@ -1454,13 +1427,13 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "TH" = (
 /obj/machinery/door/airlock{
 	name = "Bathroom 1"
 	},
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Uh" = (
 /obj/structure/flora/rock/style_2,
 /turf/open/misc/asteroid/airless,
@@ -1474,13 +1447,13 @@
 	pixel_y = 6
 	},
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "UM" = (
 /obj/machinery/door/airlock{
 	name = "Freezer Room"
 	},
 /turf/open/floor/iron/freezer,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Vl" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -1489,31 +1462,31 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Vv" = (
 /obj/structure/closet/crate,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "VG" = (
 /obj/structure/chair/stool/bar/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "VI" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Janitorial Closet"
 	},
 /turf/open/floor/iron/freezer,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "VQ" = (
 /obj/machinery/grill,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Wk" = (
 /obj/effect/spawner/random/epic_loot/medical_tools,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Wl" = (
 /obj/structure/mop_bucket/janitorialcart,
 /obj/item/storage/bag/trash,
@@ -1522,12 +1495,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/official/cleanliness/directional/east,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Wq" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Ws" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -1538,39 +1511,39 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Wy" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Janitorial Closet"
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "WX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/sofa/middle/maroon{
 	dir = 1
 	},
 /turf/open/floor/iron/grimy,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Xa" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "XH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/cold/dim/directional/north,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "XO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Yd" = (
 /obj/structure/table/reinforced/rglass,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Yj" = (
 /obj/machinery/atmospherics/components/unary/passive_vent/layer2{
 	desc = "Doesn't seem to be connected to anything."
@@ -1598,17 +1571,17 @@
 	},
 /obj/item/gun/ballistic/shotgun/doublebarrel,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Yv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Yw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Yx" = (
 /obj/structure/flora/rock/style_4,
 /turf/open/misc/asteroid/airless,
@@ -1617,27 +1590,27 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/oven,
 /turf/open/floor/iron/kitchen/small,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "YI" = (
 /mob/living/basic/bot/medbot/derelict,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "YQ" = (
 /obj/structure/closet/crate/secure/freezer/interdyne/blood,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "YU" = (
 /obj/structure/chair/stool/bar/directional/north{
 	dir = 2
 	},
 /turf/open/floor/wood,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Zd" = (
 /obj/structure/sign/poster/contraband/energy_swords/directional/west,
 /obj/effect/spawner/random/epic_loot/random_maint_loot_structure,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Zj" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 4
@@ -1656,21 +1629,21 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "Zt" = (
 /obj/structure/cable,
 /obj/machinery/power/smes,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ZC" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/suit_storage_unit/open,
+/obj/machinery/suit_storage_unit/syndicate,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ZG" = (
 /obj/machinery/light/cold/dim/directional/west,
 /turf/open/floor/iron/white/smooth_large,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 "ZK" = (
 /obj/machinery/holopad,
 /turf/open/floor/iron/dark,
@@ -1682,7 +1655,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav/powered)
 
 (1,1,1) = {"
 jr
@@ -2752,22 +2725,22 @@ jr
 jr
 jr
 jr
-ai
-Ln
-Ln
-ai
-ai
-ai
-ai
-ai
-ai
+NJ
+uw
+uw
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
 ex
 ex
-ai
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
+NJ
 ex
 jr
 jr
@@ -2814,32 +2787,32 @@ jr
 jr
 jr
 jr
-Ln
-zf
-zf
+uw
+Hi
+Hi
 Ka
-ai
+NJ
 Pi
-ai
+NJ
 pp
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
 pp
-ai
+NJ
 ev
-ai
-ai
-Ln
-ai
-ai
-Ln
-ai
-Ln
-ai
-ai
-ai
+NJ
+NJ
+uw
+NJ
+NJ
+uw
+NJ
+uw
+NJ
+NJ
+NJ
 jr
 jr
 jr
@@ -2876,9 +2849,9 @@ jr
 jr
 jr
 jr
-Ln
+uw
 sS
-zf
+Hi
 pE
 yz
 De
@@ -2891,7 +2864,7 @@ TH
 Bw
 Hr
 dA
-ai
+NJ
 SM
 uS
 Ie
@@ -2901,7 +2874,7 @@ ps
 vV
 OT
 ng
-ai
+NJ
 jr
 jr
 jr
@@ -2938,22 +2911,22 @@ jr
 jr
 jr
 jr
-ai
-ai
+NJ
+NJ
 kd
-zf
-ai
-ai
-ai
-ai
-ai
+Hi
+NJ
+NJ
+NJ
+NJ
+NJ
 Bw
 lm
-ai
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
+NJ
 dx
 rh
 ua
@@ -2963,7 +2936,7 @@ Bd
 vV
 hp
 ti
-Ln
+uw
 jr
 jr
 jr
@@ -3001,17 +2974,17 @@ jr
 jr
 jr
 jr
-ai
-ai
+NJ
+NJ
 qu
-zf
-zf
+Hi
+Hi
 Nc
-ai
+NJ
 BU
 oY
 Wq
-ai
+NJ
 mL
 ti
 ti
@@ -3025,7 +2998,7 @@ ti
 FE
 ti
 hp
-ai
+NJ
 gw
 jr
 jr
@@ -3064,20 +3037,20 @@ jr
 jr
 jr
 jr
-ai
+NJ
 HU
-zf
-zf
+Hi
+Hi
 mf
-ai
+NJ
 vG
 Ry
 Wq
-ai
+NJ
 Dn
-ai
-ai
-ai
+NJ
+NJ
+NJ
 de
 ti
 hp
@@ -3087,7 +3060,7 @@ hp
 vA
 ti
 my
-ai
+NJ
 jr
 jr
 jr
@@ -3127,11 +3100,11 @@ jr
 jr
 jr
 jr
-Ln
-zf
-zf
+uw
+Hi
+Hi
 cU
-ai
+NJ
 vG
 hV
 HE
@@ -3139,7 +3112,7 @@ Bw
 Bw
 Yw
 Yw
-ai
+NJ
 cP
 Nl
 tp
@@ -3149,7 +3122,7 @@ ab
 vA
 YU
 Sy
-Ln
+uw
 jr
 jr
 jr
@@ -3189,19 +3162,19 @@ jr
 jr
 jr
 jr
-Ln
+uw
 wL
-zf
+Hi
 qu
-ai
-ai
-ai
+NJ
+NJ
+NJ
 Wq
 Ib
 qy
 Rw
 qy
-ai
+NJ
 sP
 Bz
 Aj
@@ -3211,7 +3184,7 @@ ab
 vA
 YU
 Sy
-Ln
+uw
 jr
 jr
 jr
@@ -3251,19 +3224,19 @@ jr
 jr
 jr
 jr
-ai
-ai
+NJ
+NJ
 MP
-zf
-zf
+Hi
+Hi
 qQ
-ai
+NJ
 ac
-ai
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
+NJ
 ej
 El
 gN
@@ -3273,7 +3246,7 @@ fD
 rD
 YU
 Sy
-Ln
+uw
 jr
 jr
 jr
@@ -3314,18 +3287,18 @@ jr
 jr
 jr
 jr
-ai
-ai
+NJ
+NJ
 VQ
 qu
 qu
 Kh
 HB
-ai
+NJ
 al
 fQ
 fQ
-ai
+NJ
 fZ
 gN
 KE
@@ -3335,7 +3308,7 @@ hp
 FZ
 hp
 hp
-Ln
+uw
 MA
 MA
 jr
@@ -3377,17 +3350,17 @@ ex
 ex
 ex
 ex
-ai
-ai
-ai
+NJ
+NJ
+NJ
 It
-zf
+Hi
 HB
 VI
 Bw
 Bw
 Bw
-ai
+NJ
 nT
 gN
 ph
@@ -3397,7 +3370,7 @@ xy
 FZ
 hp
 hp
-ai
+NJ
 Fd
 MA
 jr
@@ -3434,22 +3407,22 @@ jr
 jr
 ex
 ex
-ai
-ai
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
 NP
-ai
-ai
-zf
+NJ
+NJ
+Hi
 HB
-ai
+NJ
 yq
-ai
-ai
-ai
+NJ
+NJ
+NJ
 sz
 LL
 Ms
@@ -3457,9 +3430,9 @@ VG
 Jt
 Qt
 Lr
-ai
+NJ
 Mr
-ai
+NJ
 NJ
 MA
 jr
@@ -3496,7 +3469,7 @@ jr
 jr
 ex
 ex
-ai
+NJ
 Ql
 Jp
 oX
@@ -3504,10 +3477,10 @@ nv
 kw
 gB
 KZ
-ai
+NJ
 EM
 HB
-ai
+NJ
 Bw
 UM
 Bz
@@ -3519,8 +3492,8 @@ VG
 zg
 es
 WX
-Ln
-zf
+uw
+Hi
 pb
 uw
 uw
@@ -3558,7 +3531,7 @@ jr
 ex
 ex
 ex
-ai
+NJ
 Ql
 Jp
 Zt
@@ -3569,9 +3542,9 @@ IL
 Wy
 FD
 HB
-ai
-ai
-ai
+NJ
+NJ
+NJ
 vF
 Bz
 yf
@@ -3581,17 +3554,17 @@ VG
 zg
 hL
 fx
-Ln
-zf
-zf
-dF
+uw
+Hi
+Hi
+Tv
 Hi
 ax
 Hi
 Hi
 ax
 Hi
-RO
+pi
 Hb
 jr
 jr
@@ -3620,7 +3593,7 @@ jr
 ex
 ex
 ex
-ai
+NJ
 Ql
 Jp
 eB
@@ -3628,12 +3601,12 @@ Vl
 sA
 Wl
 Ro
-ai
+NJ
 Gp
 HB
 qQ
 hu
-ai
+NJ
 YB
 KE
 Ys
@@ -3643,9 +3616,9 @@ VG
 Jt
 Qt
 fS
-Ln
-zf
-zf
+uw
+Hi
+Hi
 uw
 uw
 uw
@@ -3682,20 +3655,20 @@ jr
 ex
 ex
 ex
-ai
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
+NJ
 Zr
-ai
-ai
+NJ
+NJ
 hH
-zf
+Hi
 HB
 dp
 tF
-ai
+NJ
 DY
 KE
 ou
@@ -3705,9 +3678,9 @@ eT
 zg
 tq
 Is
-Ln
+uw
 qu
-zf
+Hi
 uw
 Yx
 jr
@@ -3748,11 +3721,11 @@ ex
 ex
 ex
 ex
-ai
-ai
-ai
+NJ
+NJ
+NJ
 ex
-ai
+NJ
 Os
 io
 HB
@@ -3767,9 +3740,9 @@ PA
 BO
 nf
 yX
-Ln
-zf
-zf
+uw
+Hi
+Hi
 uw
 MA
 MA
@@ -3814,26 +3787,26 @@ ex
 MA
 ex
 ex
-ai
-ai
-ai
+NJ
+NJ
+NJ
 Tn
 sH
-ai
+NJ
 jb
 qq
 AF
 Bz
-ai
-ai
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
 Mr
-ai
-ai
-ai
+NJ
+NJ
+NJ
 MA
 jr
 jr
@@ -3877,25 +3850,25 @@ MA
 ex
 ex
 ex
-ai
+NJ
 id
 eJ
 QO
-ai
-ai
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
 nw
-zf
+Hi
 QZ
 Ei
 Kh
-zf
-zf
+Hi
+Hi
 qu
-ai
+NJ
 MA
 jr
 jr
@@ -3939,25 +3912,25 @@ MA
 ex
 ex
 ex
-ai
+NJ
 YQ
 MO
 Gu
 ZG
-Ln
+uw
 xu
 Gf
 Si
-ai
+NJ
 kN
-zf
-zf
+Hi
+Hi
 GL
-zf
-zf
-zf
-zf
-ai
+Hi
+Hi
+Hi
+Hi
+NJ
 MA
 MA
 jr
@@ -4001,25 +3974,25 @@ MA
 MA
 ex
 ex
-ai
+NJ
 Be
 ux
 Yv
 FH
-Ln
+uw
 mR
 lm
 YI
-ai
+NJ
 Ba
-zf
-zf
+Hi
+Hi
 oC
-zf
+Hi
 Cb
-zf
+Hi
 cU
-ai
+NJ
 ex
 ex
 MA
@@ -4063,7 +4036,7 @@ MA
 MA
 ex
 ex
-ai
+NJ
 zx
 CB
 Gu
@@ -4072,16 +4045,16 @@ lK
 Wq
 Wq
 uk
-ai
+NJ
 hN
-zf
-zf
-zf
+Hi
+Hi
+Hi
 Px
-zf
-zf
-zf
-ai
+Hi
+Hi
+Hi
+NJ
 ex
 ex
 ex
@@ -4125,28 +4098,28 @@ MA
 MA
 ex
 ex
-ai
+NJ
 gV
 bb
 Wk
 jZ
-Ln
+uw
 Bw
 KX
 Wq
-ai
-zf
-zf
-zf
-zf
+NJ
+Hi
+Hi
+Hi
+Hi
 LF
 LF
 LF
 LF
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
 ex
 ex
 jr
@@ -4187,30 +4160,30 @@ MA
 MA
 ex
 ex
-ai
-ai
-ai
-Ln
+NJ
+NJ
+NJ
+uw
 Ga
-ai
+NJ
 XH
 Hd
 Wq
-ai
-zf
-zf
+NJ
+Hi
+Hi
 is
-zf
+Hi
 GZ
-zf
+Hi
 Ip
 LF
 Nn
 wG
 oo
-ai
-Ln
-ai
+NJ
+uw
+NJ
 OJ
 OJ
 OJ
@@ -4251,25 +4224,25 @@ MA
 ex
 MA
 ex
-ai
+NJ
 cs
 Rc
-ai
+NJ
 ns
 Yd
 HE
 dS
 HB
-zf
-zf
-zf
+Hi
+Hi
+Hi
 LF
-zf
-zf
+Hi
+Hi
 LF
 GZ
 LF
-zf
+Hi
 Tv
 Px
 pi
@@ -4313,23 +4286,23 @@ MA
 MA
 MA
 MA
-ai
+NJ
 cs
 jZ
-ai
+NJ
 Ci
 hb
 KX
-ai
+NJ
 aj
-zf
-zf
+Hi
+Hi
 la
 LF
-zf
-zf
+Hi
+Hi
 pR
-zf
+Hi
 LF
 LF
 Tv
@@ -4375,28 +4348,28 @@ MA
 MA
 MA
 GT
-ai
+NJ
 ql
 jZ
-ai
+NJ
 hO
 vm
 ei
-ai
+NJ
 eX
 HB
 Hw
 LF
 LF
-zf
+Hi
 MP
-zf
-zf
+Hi
+Hi
 ZC
 yV
-ai
-Ln
-ai
+NJ
+uw
+NJ
 OJ
 OJ
 OJ
@@ -4436,27 +4409,27 @@ jr
 jr
 jr
 jr
-ai
-ai
+NJ
+NJ
 pX
 jZ
-ai
+NJ
 km
 DT
 ub
-ai
+NJ
 mp
-zf
+Hi
 nz
 ye
 RB
-zf
-zf
-zf
+Hi
+Hi
+Hi
 cU
 aT
-ai
-ai
+NJ
+NJ
 jr
 jr
 jr
@@ -4498,26 +4471,26 @@ jr
 jr
 jr
 jr
-ai
+NJ
 kZ
 Rc
 Rc
-ai
-ai
-ai
-ai
-ai
-zf
-zf
+NJ
+NJ
+NJ
+NJ
+NJ
+Hi
+Hi
 nz
-zf
-zf
-zf
-zf
-zf
-zf
-ai
-ai
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+NJ
+NJ
 ex
 MA
 jr
@@ -4560,26 +4533,26 @@ jr
 jr
 jr
 jr
-ai
+NJ
 JZ
 jZ
 Rc
 ak
-ai
+NJ
 ex
 ex
-ai
-zf
-zf
+NJ
+Hi
+Hi
 nz
-zf
-zf
-zf
-zf
-zf
-zf
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
 Zd
-ai
+NJ
 ex
 MA
 jr
@@ -4622,26 +4595,26 @@ jr
 jr
 jr
 jr
-ai
-ai
+NJ
+NJ
 DG
 MO
 MO
-ai
+NJ
 ex
 ex
-ai
+NJ
 MP
 Eu
 nz
-zf
+Hi
 qm
-zf
-zf
+Hi
+Hi
 Ov
 qu
-zf
-Ln
+Hi
+uw
 MA
 MA
 MA
@@ -4685,25 +4658,25 @@ jr
 jr
 jr
 jr
-ai
-ai
-ai
-ai
-ai
+NJ
+NJ
+NJ
+NJ
+NJ
 MA
 Fd
-ai
-Ln
-ai
+NJ
+uw
+NJ
 zw
 ui
 ui
-zf
-zf
-zf
-zf
-zf
-Ln
+Hi
+Hi
+Hi
+Hi
+Hi
+uw
 Uh
 MA
 jr
@@ -4761,11 +4734,11 @@ nz
 ui
 xG
 Am
-zf
-zf
+Hi
+Hi
 cU
-ai
-ai
+NJ
+NJ
 MA
 MA
 jr
@@ -4818,15 +4791,15 @@ jr
 jr
 MA
 MA
-Ln
-zf
+uw
+Hi
 zt
-zf
-zf
-zf
-zf
-zf
-Ln
+Hi
+Hi
+Hi
+Hi
+Hi
+uw
 MA
 jr
 jr
@@ -4880,15 +4853,15 @@ jr
 jr
 jr
 MA
-ai
+NJ
 RG
 zd
-zf
-ai
-Ln
-Ln
-Ln
-ai
+Hi
+NJ
+uw
+uw
+uw
+NJ
 MA
 jr
 jr
@@ -4942,11 +4915,11 @@ jr
 jr
 jr
 jr
-Ln
-zf
-zf
+uw
+Hi
+Hi
 Vv
-Ln
+uw
 jr
 jr
 jr
@@ -5004,11 +4977,11 @@ jr
 jr
 jr
 jr
-Ln
+uw
 MP
-zf
+Hi
 MP
-Ln
+uw
 jr
 jr
 jr
@@ -5066,11 +5039,11 @@ jr
 jr
 jr
 jr
-Ln
+uw
 mG
 gX
 cn
-Ln
+uw
 jr
 jr
 jr
@@ -5128,11 +5101,11 @@ jr
 jr
 jr
 jr
-ai
-Ln
-Ln
-Ln
-ai
+NJ
+uw
+uw
+uw
+NJ
 jr
 jr
 jr
