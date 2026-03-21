@@ -8994,7 +8994,6 @@
 	},
 /obj/item/kirbyplants/random,
 /obj/machinery/light/directional/east,
-/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 8
 	},
